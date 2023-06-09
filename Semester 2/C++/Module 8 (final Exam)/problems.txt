@@ -1,0 +1,219 @@
+Problem Statement
+
+You will be given two strings S and X. You need to replace all X from string S with a '$' sign.
+
+Input Format
+
+First line will contain T, the number of test cases.
+Next T lines will contain a line with S and X.
+Constraints
+
+1 <= T <= 1000
+1 <= |S|, |X| <= 1000
+|X| <= |S|
+Output Format
+
+For each test cases output the modified string S.
+Sample Input 0
+
+2
+thatsagoodmomentforgoodrelations good
+canyoutellmewhereicanfindheriwillbegreatefultoyouifyoutellmetheanswer you
+Sample Output 0
+
+thatsa$momentfor$relations
+can$tellmewhereicanfindheriwillbegreatefulto$if$tellmetheanswer
+
+Problem Statement
+
+Write a program to determine if a given string contains the word "Ratul." If the word is present in the string, the program should output "YES," otherwise it should output "NO."
+
+NOTE: You need to find only "Ratul"; not "ratul" or "RatuL" or any other form. Words are separated by spaces.
+
+Input Format
+
+Input will contain a string S containing names. There is a space in between two names.
+Constraints
+
+1 <= |S| <= 1000; Here |S| means the length of the string.
+Output Format
+
+Output YES or NO according to the question.
+Sample Input 0
+
+Rahat Rifat Sakib Asif Sifat Ratul Munna
+Sample Output 0
+
+YES
+Sample Input 1
+
+Rahat Rifat Sakib Asif Sifat Munna
+Sample Output 1
+
+NO
+
+
+Problem Statement
+
+You will be given data for N students, where each student will have a name (nm), class (cls), section (s), math marks (math_marks), and English marks (**eng_mark**s).
+
+Your task is to print the data of the students in reverse order.
+
+Input Format
+
+First line will contain N.
+Next N lines will contain nm, cls, s, math_marks and eng_marks respectively.
+Constraints
+
+1 <= N <= 100
+1 <= |nm| <= 100 and will contain only English alphabets.
+1 <= cls <= 10
+'A' <= s <= 'Z'
+0 <= math_marks, eng_marks <= 100
+Output Format
+
+Output the students data in the reverse way. See the sample input output for more clarifications.
+Sample Input 0
+
+3
+Rakib 7 B 90 85
+Sakib 10 A 85 61
+Ahsan 9 C 36 58
+Sample Output 0
+
+Ahsan 9 C 36 58
+Sakib 10 A 85 61
+Rakib 7 B 90 85
+Sample Input 1
+
+5
+Munna 8 D 89 56
+Shojoy 9 E 56 10
+Asif 10 C 55 86
+Joy 9 G 66 45
+Bijoy 7 E 68 99
+Sample Output 1
+
+Bijoy 7 E 68 99
+Joy 9 G 66 45
+Asif 10 C 55 86
+Shojoy 9 E 56 10
+Munna 8 D 89 56
+
+
+
+Problem Statement
+
+You will be given data for N students, where each student will have a name (nm), class (cls), section (s) and student ID (id) which will be unique.
+
+Your task is reverse their id and print all the students data. That means the id of the first student will be replaced by the id of the last student, the id of the second student will be replaced by the id of the second last student and so on. See the sample input and output for more clarifications.
+
+Input Format
+
+First line will contain N.
+Next N lines will contain nm, cls, s, and id respectively.
+Constraints
+
+1 <= N <= 100
+1 <= |nm| <= 100 and will contain only English alphabets.
+1 <= cls <= 10
+'A' <= s <= 'Z'
+1 <= id <= 100
+Output Format
+
+Output all the students data after reversing their id.
+Sample Input 0
+
+3
+Rakib 7 B 90
+Sakib 10 A 85
+Ahsan 9 C 36
+Sample Output 0
+
+Rakib 7 B 36
+Sakib 10 A 85
+Ahsan 9 C 90
+Sample Input 1
+
+4
+Munna 8 D 10
+Shojoy 9 E 11
+Asif 10 C 12
+Joy 9 G 13
+Sample Output 1
+
+Munna 8 D 13
+Shojoy 9 E 12
+Asif 10 C 11
+Joy 9 G 10
+Sample Input 2
+
+4
+Munna 8 D 10
+Shojoy 9 E 11
+Asif 10 C 12
+Joy 9 G 13
+Sample Output 2
+
+Munna 8 D 13
+Shojoy 9 E 12
+Asif 10 C 11
+Joy 9 G 10
+
+
+Problem Statement
+
+You will be given data for N students, where each student will have a name (nm), class (cls), section (s), student ID (id), math marks (math_marks), and English marks (eng_marks).
+
+Your task is to sort the students data according to the total marks (sum of math_marks and eng_marks) in descending order. If multiple student have the same total marks then sort them according to the id in ascending order as the id will be unique.
+
+Input Format
+
+First line will contain N.
+Next N lines will contain nm, cls, s, id, math_marks and eng_marks respectively.
+Constraints
+
+1 <= N <= 100
+1 <= |nm| <= 100 and will contain only English alphabets.
+1 <= cls <= 10
+'A' <= s <= 'Z'
+1 <= id <= 1000
+0 <= math_marks, eng_marks <= 100
+Output Format
+
+Output the students data in descending order according to the total marks.
+Sample Input 0
+
+5
+Munna 8 D 25 50 30
+Shojoy 9 E 26 40 50
+Asif 10 C 27 55 60
+Joy 9 G 28 66 45
+Bijoy 7 E 29 68 99
+Sample Output 0
+
+Bijoy 7 E 29 68 99
+Asif 10 C 27 55 60
+Joy 9 G 28 66 45
+Shojoy 9 E 26 40 50
+Munna 8 D 25 50 30
+Sample Input 1
+
+6
+Munna 8 D 30 50 40
+Shojoy 9 E 25 40 50
+Asif 10 C 27 55 60
+Joy 9 G 28 66 45
+Bijoy 7 E 29 68 99
+Khadija 8 E 26 40 50
+Sample Output 1
+
+Bijoy 7 E 29 68 99
+Asif 10 C 27 55 60
+Joy 9 G 28 66 45
+Shojoy 9 E 25 40 50
+Khadija 8 E 26 40 50
+Munna 8 D 30 50 40
+
+
+

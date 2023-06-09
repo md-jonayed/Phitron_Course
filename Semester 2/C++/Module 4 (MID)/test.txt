@@ -1,0 +1,230 @@
+a
+Explain Stack and Heap memory.
+
+Stack memory: stack memoery is a kind of memmory that is used for storing local variables and function call information.It works as last in first out manner.when a function is called the function and its local variables are pushed into the stack memoery, when that function is returned it is romoved from the stack as well its all local variables.
+
+Heap Memory : It is kind of memmory where we can perform dynamic memoery allocation. During programm execution  it can dynamically allocate and deallocate the memoery space this is why it is more flexibale. we can access this memmory space using dereferencing method.
+
+Why do we need dynamic memory allocation? Explain with examples?
+
+ans : dynamic memoery allocation is important for several reasons:
+1. it helps declare variable sized data type during at compile time;
+2. we can increase data size according to our need without wasting memoery space.
+3. it helps efficient memoery utilization.
+4. it enables data sharing between several functions.
+5. we can create objects and data structures during program execution.
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int *a = new int[5];
+    // here we created an dynamic array of size 5
+    for(int i=0;i<5;i++){
+        cin>>a[i];
+    }
+    int *b = new int[7];
+    // as we need more data to store so we increased the array size and took new array of size 7
+    for(int i=0;i<5;i++){
+        b[i] = a[i];
+    }
+    cin>>b[5]>>b[6];
+    for(int i=0;i<7;i++){
+        cout<<b[i]<<endl;
+    }
+    // as here we assigned all the a array elements into b array and increased the size we can delete the a array and save some space 
+    delete []a;
+    return 0;
+}
+
+this is how we can create dynamic objects and save space and utilize memoery.
+
+
+
+
+How to create a dynamic array? What are the benefits of it?
+ans : we can create a dynamic array in this manner:
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int *a = new int[5];
+    // here we created an dynamic array of size 5
+    for(int i=0;i<5;i++){
+        cin>>a[i];
+    }
+}
+
+benifits of dynamic array:
+1. we can create it in heap memoery.
+2. its size can be increased easily without loosing previous data.
+3. when we pass a dynamic array into a function then return it back to main function its data won't loose.
+4. we can delete while compile time by doing so we can save memory.
+5. it increases memory utilization. 
+
+
+How does class and object work? How to declare an object?
+
+ans : Class is more like a blueprint depending on this we create an object. Objects are instances of a class. Class can have multiple data types. class is more like a template that defines attributes and methods that the object of that class can have. each objects under the same class can inherit properties and behaviors of that class from which the object is created. Objects are concreate representation of a class. we can also create dynamic object
+
+declaration of an object:
+
+#include<bits/stdc++.h>
+using namespace std;
+class Student{
+    public:
+    int roll;
+    char section;
+};
+
+int main(){
+    Student s1;
+    s1.roll = 1;
+    s1.section = 'A';
+    cout<<s1.roll<<" "<<s1.section<<endl;
+}
+
+What is a constructor and why do we need this? How to create a constructor show with an example.
+
+ans : Constructor is a specail kind of function which we need to initialize inside a class as well as it will have the same name as the class name. it is autometically called when an object of that class is created. it is used to initialize object members and other functionalities.
+constructor ensure that an object under certain class is properly enitialized. it is responsible for proper memory allocation and resources which is necessary for an object.
+
+constructor creation:
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+class Student{
+    public:
+    int roll;
+    char section;
+
+    Student(int r, char s){
+        roll = r;
+        section = s;
+    }
+};
+int main(){
+    Student s1(1,'A');
+
+    cout<<s1.roll<<" "<<s1.section<<endl;    
+    return 0;
+}
+
+
+Create a class named Person where the class will have properties name(string), height(float) and age(int). Make a constructor and create a dynamic object of that class and finally pass proper values using the constructor. 
+
+ans : 
+
+#include<bits/stdc++.h>
+using namespace std;
+class Person{
+    public:
+    char name[1001];
+    float height;
+    int age;
+};
+
+
+
+What is the size that an object allocates to the memory?
+ans : size of an object depends on various factors. The size of an object is depends on data types it contains. each data members contribites the overall size of an object. Objects size can very depending on the compiler and platform the user is using to create an object. 
+
+
+Can you return a static object from a function? If yes, show with an example.
+ans : yes i think i can, it is possible to return a static object from a function in C++. A static object is an object that persists throughout the lifetime of the program and retains its value between function calls.
+
+#include<bits/stdc++.h>
+using namespace std;
+
+class MyClass {
+public:
+    int value;
+
+    MyClass(int val) : value(val) {}
+};
+
+MyClass& getStaticObject() {
+    static MyClass staticObject(42);
+    return staticObject;
+}
+
+int main() {
+    MyClass& obj = getStaticObject();
+    cout << obj.value <<endl;  
+
+    obj.value = 99;
+    cout << obj.value << endl;  
+
+    MyClass& obj2 = getStaticObject();
+    cout << obj2.value << endl;  
+
+    return 0;
+}
+
+
+Why do we need -> (arrow sign)?
+ans: 
+The arrow sign (->) is used in C++ to access members of an object through a pointer to that object. It provides a convenient way to access members when working with pointers to objects, especially when dealing with dynamically allocated objects.
+
+Create two objects of the Person class from question 2-c and initialize them with proper value. Now compare whose age is greater, and print his/her name.
+
+ans: 
+#include<bits/stdc++.h>
+using namespace std;
+class Person{
+    public:
+    char name[1001];
+    float height;
+    int age;
+
+    Person(char *n,float h,int a){
+        strcpy(name,n);
+        height = h;
+        age = a;
+    }
+    
+};
+int main(){
+    Person *p1 = new Person("Jonayed",5.75,25);
+
+    Person *p2 = new Person("Mohammad",5.8,24);
+    cout<<p1->name<<" "<<p1->height<<" "<<p1->age<<endl;
+
+
+    cout<<p2->name<<" "<<p2->height<<" "<<p2->age<<endl;
+    
+    return 0;
+}
+
+#include<bits/stdc++.h>
+using namespace std;
+class Person{
+    public:
+    char name[1001];
+    float height;
+    int age;
+
+    Person(char *n,float h,int a){
+        strcpy(name,n);
+        height = h;
+        age = a;
+    }
+    
+};
+int main(){
+    Person *p1 = new Person("Jonayed",5.75,25);
+
+    Person *p2 = new Person("Mohammad",5.8,24);
+    if(p1->age>p2->age){
+        cout<<p1->name<<endl;
+    }
+    else{
+        cout<<p2->age<<endl;
+    }
+    
+    return 0;
+}
+
+

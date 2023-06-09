@@ -1,0 +1,204 @@
+V. Comparison
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Given a comparison symbol S between two numbers A and B. Determine whether it is Right or Wrong.
+
+The comparison is as follows: A < B, A > B, A = B.
+
+Where A, B are two integer numbers and S refers to the sign between them.
+
+Input
+Only one line containing A, S and B respectively (-100  ≤  A, B  ≤  100), S can be ('<', '>','=') without the quotes.
+
+Output
+Print "Right" if the comparison is true, "Wrong" otherwise.
+
+Examples
+inputCopy
+5 > 4
+outputCopy
+Right
+inputCopy
+9 < 1
+outputCopy
+Wrong
+inputCopy
+4 = 4
+outputCopy
+Right
+
+W. Mathematical Expression
+time limit per test0.25 seconds
+memory limit per test256 MB
+inputstandard input
+outputstandard output
+Given a mathematical expression. The expression will be one of the following expressions:
+
+A + B = C, A - B = C and A * B = C
+
+where A, B, C are three numbers, S is the sign between A and B, and Q the '=' sign
+
+Print "Yes" If the expression is Right , Otherwise print the right answer of the expression.
+
+Input
+Only one line containing the expression: A, S, B, Q, C respectively (0 ≤ A, B ≤ 100,  - 105 ≤ C ≤ 105) and S can be ('+', '-', '*') without the quotation.
+
+Output
+Output either "Yes" (without the quotation) or the right answer depending on the statement.
+
+Examples
+inputCopy
+5 + 10 = 15
+outputCopy
+Yes
+inputCopy
+3 - 1 = 2
+outputCopy
+Yes
+inputCopy
+2 * 10 = 19
+outputCopy
+20
+
+G. Palindrome Array
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Given a number 𝑁 and an array 𝐴 of 𝑁 numbers. Determine if it's palindrome or not.
+
+Note:
+
+An array is called palindrome if it reads the same backward and forward, for example, arrays { 1 } and { 1,2,3,2,1 } are palindromes, while arrays { 1,12 } and { 4,7,5,4 } are not.
+
+Input
+First line contains a number 𝑁 (1≤𝑁≤105) number of elements.
+
+Second line contains 𝑁 numbers (1≤𝐴𝑖≤109).
+
+Output
+Print "YES" (without quotes) if A is a palindrome array, otherwise, print "NO" (without quotes).
+
+Examples
+inputCopy
+5
+1 3 2 3 1
+outputCopy
+YES
+inputCopy
+4
+1 2 3 4
+outputCopy
+NO
+
+I. Smallest Pair
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Given a number N and an array A of N numbers. Print the smallest possible result of Ai + Aj + j - i , where 1  ≤  i < j  ≤  N.
+
+Input
+The first line contains a number T (1 ≤ T ≤ 100) number of test cases.
+
+Each test case contains two lines:
+
+The first line consists a number N (2 ≤ N ≤ 100) number of elements.
+The second line contains N numbers ( - 106 ≤ Ai ≤ 106).
+Output
+For each test case print a single line contains the smallest possible sum for the corresponding test case.
+
+Example
+inputCopy
+1
+4
+20 1 9 4
+outputCopy
+7
+Note
+First Case :
+
+All possibles (i,j) where (1  ≤  i < j  ≤  N) are :
+
+i = 1 , j = 2 then result = a1 + a2 + j - i = 20 + 1 + 2-1 = 22.
+
+i = 1 , j = 3 then result = a1 + a3 + j - i = 20 + 9 + 3-1 = 31.
+
+i = 1 , j = 4 then result = a1 + a4 + j - i = 20 + 4 + 4-1 = 27.
+
+i = 2 , j = 3 then result = a2 + a3 + j - i = 1 + 9 + 3-2 = 11.
+
+i = 2 , j = 4 then result = a2 + a4 + j - i = 1 + 4 + 4-2 = 7.
+
+i = 3 , j = 4 then result = a3 + a4 + j - i = 9 + 4 + 4-3 = 14.
+
+So the smallest possible result is 7.
+
+O. Sort String
+time limit per test7 seconds
+memory limit per test4 MB
+inputstandard input
+outputstandard output
+Given a number 𝑁 and a string 𝑆 of size 𝑁. Print 𝑆 after sorting it.
+
+Note : don't use built-in function and it's recommended to not solve this problem with python language.
+
+Input
+The first line contains a number 𝑁 (1≤𝑁≤107) size of string 𝑆.
+
+The second line contains a string 𝑆 consists of lowercase English letters.
+
+Output
+Print 𝑆 after sorting it.
+
+Examples
+inputCopy
+4
+deab
+outputCopy
+abde
+inputCopy
+5
+egypt
+outputCopy
+egpty
+
+H. Sorting
+time limit per test1 second
+memory limit per test64 megabytes
+inputstandard input
+outputstandard output
+Given a number N and an array A of N numbers. Print the numbers after sorting them.
+
+Note:
+
+Don't use built-in-functions.
+try to solve it with bubble sort algorithm or Selection Sort.
+for more information watch : https://www.youtube.com/watch?v=EnodMqJuQEo.
+Input
+First line contains a number N (0 < N < 103) number of elements.
+
+Second line contains N numbers ( - 100 ≤ Ai ≤ 100).
+
+Output
+Print the numbers after sorting them.
+
+Examples
+inputCopy
+3
+3 1 2
+outputCopy
+1 2 3 
+inputCopy
+4
+5 2 7 3
+outputCopy
+2 3 5 7 
+
+
+question: Create three static objects with the help of the constructor of the following class.Student{name;roll;section;math_marks;cls;}Then compare those 3 objects and print who got the highest math_marks and print his/her name.
+
+
+question: Create a dynamic object named dhoni of the following class. Don%E2%80%99t use a constructor here, that means you need to fill the data by yourself.Cricketer{jersey_no;country;}Then make another dynamic object named kohli and copy the data of the dhoni object to kohli and after that delete the dhoni object. Then print the jersey_no and country of kohli object.Note: At first try to do this, kohli=dhoni and see if it gives the correct output. If not, then think deeply why it didn%E2%80%99t work and try to copy the data manually like kohli->jersey_no=dhoni->jersey_no;

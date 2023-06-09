@@ -1,0 +1,100 @@
+G. Even Hate Odd
+time limit per test5 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given an array 𝑎 of 𝑛 integers. You have two kinds of operations
+
+increment any element in 𝑎 (increase it by one).
+decrement any element in 𝑎 (decrease it by one).
+What is the minimum number of operations to make the number of even elements equal to the number of odd elements, or detect that this is impossible?
+
+Input
+The first line contains a single integer 𝑡(1≤𝑡≤10) the number of test cases.
+
+The first line of each test case contains an integer 𝑛(1≤𝑛≤105) the number of elements in the array 𝑎 .
+
+The second line of each test case contains 𝑛 integers 𝑎𝑖(1≤𝑎𝑖≤105) the elements of the array 𝑎.
+
+Output
+For each test case, print the minimum number of operations required, or −1 if it's impossible
+
+Example
+inputCopy
+3
+4
+1 2 3 4
+4
+1 1 1 1
+3
+1 2 3
+outputCopy
+0
+2
+-1
+
+H. N Times
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Given a number 𝑁 and a character 𝐶. Print the character(𝐶) 𝑁 times.
+
+Note: Solve this problem using function.
+
+Input
+The first line contains a number 𝑇 (1≤𝑇≤50) the number of test cases.
+
+Next 𝑇 lines contains a number 𝑁 and a character 𝐶 (1≤𝑁≤100).
+
+Output
+Print 𝑇 lines, for every line print the character(𝐶) 𝑁 times separated by space.
+
+Examples
+inputCopy
+2
+1 n
+5 O
+outputCopy
+n 
+O O O O O 
+inputCopy
+1
+8 z
+outputCopy
+z z z z z z z z 
+
+F. Equation
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Given two numbers X and N. Print the result of the following equation:
+
+S = (X0 - 1) + (X2) + (X4) + (X6) + ............... + (XN)
+
+Note: Solve this problem using function and don't use built-in function.
+
+Input
+Only one line contains two numbers X and N (0 ≤ X, N ≤ 10)
+
+Output
+Print the equation result S.
+
+Example
+inputCopy
+5 5
+outputCopy
+650
+Note
+First Test :
+
+(50 - 1) + 52 + 54 = 0 + 25 + 625 = 650.
+
+question: Make a class named Student. Write a program to take a positive integer N as input and make an Student array of size N. Student {name;roll;marks;}Your task is to sort the Students data according to the marks in descending order. If multiple students have the same marks then sort them according to the roll in ascending order as the roll will be unique.Note: name will not contain any spaces.Sample InputSample Output5Asif 29 95Sakib 55 89Zubair 57 93Ahsan 39 86Joy 12 99Joy 12 99Asif 29 95Zubair 57 93Sakib 55 89Ahsan 39 865Asif 29 95Sakib 55 86Zubair 57 86Ahsan 39 86Joy 12 99Joy 12 99Asif 29 95Ahsan 39 86Sakib 55 86Zubair 57 86
+
+
+question: Make a class named Student. Write a program to take a positive integer N as input and make an Student array of size N. Student {name;roll;marks;}Your task is to reverse the array and print the array of Student.Note: name will not contain any spaces.Sample InputSample Output5Asif 29 95Sakib 55 89Zubair 57 93Ahsan 39 86Joy 12 99Joy 12 99Ahsan 39 86Zubair 57 93Sakib 55 89Asif 29 95
+
+
+question: Take a sentence S as input and then take another string word X as input. Then count how many times the word X appeared in the sentence. The words in the sentence are separated by spaces.Sample InputSample OutputSanju Samson shamanta samson jessica Bhatta Asif John takla john abraham john baby Shark tank john2

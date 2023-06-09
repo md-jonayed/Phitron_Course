@@ -1,0 +1,33 @@
+P. Count Words
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Given a string 𝑆. Print number of words in it.
+
+Word : consists of lowercase and uppercase English letters.
+
+Input
+Only one line contains 𝑆 (1≤|𝑆|≤106) where |S| is the length of the string and it consists of lowercase and uppercase English letters, spaces and ('!', '.', '?' and ',') symbols.
+
+Output
+Print the number of words in the given string.
+
+Examples
+inputCopy
+Meep Meep!
+outputCopy
+2
+inputCopy
+I tot I taw a putty tat.
+outputCopy
+7
+inputCopy
+I did! I did! I did taw a putty tat.
+outputCopy
+10
+inputCopy
+Shsssssssssh ... I am hunting wabbits. Heh Heh Heh Heh ...
+outputCopy
+9
+
