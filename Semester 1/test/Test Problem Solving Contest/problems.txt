@@ -1,0 +1,186 @@
+Problem Statement
+
+Welcome to this contest. This is just a simple problem. You just need to print Programming is fun!! to pass this problem. As simple as that.
+
+Input Format
+
+There is no input.
+Output Format
+
+Output the desired text
+Sample Output 0
+
+Programming is fun!!
+
+
+Problem Statement
+
+You will be given three non-negative integers A,B and C. You need to tell if these integers form an equilateral triangle (A triangle whose three sides are the same and each side contains a positive value). If the answer is yes, print "Yes" otherwise "No".
+
+Input Format
+
+Input will contain A,B and C.
+Constraints
+
+0 <= A,B,C <= 100
+Output Format
+
+Output "Yes" or "No" without quotation.
+Sample Input 0
+
+2 4 2
+Sample Output 0
+
+No
+Sample Input 1
+
+3 3 3
+Sample Output 1
+
+Yes
+Sample Input 2
+
+0 0 0
+Sample Output 2
+
+No
+Sample Input 3
+
+0 1 2
+Sample Output 3
+
+No
+
+
+Problem Statement
+
+There are N students in a class. Recently they got their Math course marks. One of them got the highest marks. So now they want to know how much more marks they need to get the highest mark. Can you calculate for every student what is the difference between their marks and the highest marks and print them!
+
+Input Format
+
+First line will contain N
+Second line will contain the marks of N students
+Constraints
+
+1 <= N <= 100
+0 <= Marks <= 100
+Output Format
+
+Output the difference between the marks of any student and highest marks
+Sample Input 0
+
+5
+15 25 50 24 48
+Sample Output 0
+
+35 25 0 26 2
+Sample Input 1
+
+3
+10 10 10
+Sample Output 1
+
+0 0 0
+
+Problem Statement
+
+Write a C program that will take an positive Odd integer N and create this pattern for the corresponding inputs. See the sample input output for understanding the pattern.
+
+Input Format
+
+You will be given a positive Odd integer N as input.
+Constraints
+
+1 <= N <= 21
+Output Format
+
+Output the pattern
+Sample Input 0
+
+7
+Sample Output 0
+
+***#***
+***#***
+***#***
+#######
+***#***
+***#***
+***#***
+Sample Input 1
+
+1
+Sample Output 1
+
+#
+Sample Input 2
+
+3
+Sample Output 2
+
+*#*
+###
+*#*
+
+Problem Statement
+
+You are given a list of numbers. Now find the position of a specific number from the list; if the number is not found in the given list then you have to print Not Found.
+
+Note: Find the first occurence of that number from left.
+
+Input Format
+
+Input starts with an integer T, denoting the number of test cases.
+Next line contains N, size of the list.
+Next line contains N, values of the list.
+Last integer contains S, the number that you need to find.
+Constraints
+
+1 <= T <=20
+1 <= N <=1000
+1 <= S <=1000
+Output Format
+
+For each test case you have to print “Case T: R” (except quotes) where T is the test case and R is the position of the S from N integers. If S is not found in the given N integers then you have to print “Case T: Not Found” in a line.
+
+Note: Don't forget to print a new line;
+
+Sample Input 0
+
+3
+5
+8 5 2 10 9 
+10
+3
+50 20 60 
+20
+4 
+1 2 2 4 
+5
+Sample Output 0
+
+Case 1: 4
+Case 2: 2
+Case 3: Not Found
+Sample Input 1
+
+2
+8
+935 992 900 960 988 952 996 998 
+917
+7
+932 953 970 979 925 907 958 
+933
+Sample Output 1
+
+Case 1: Not Found
+Case 2: Not Found
+Sample Input 2
+
+1
+5
+1 2 4 2 5
+2
+Sample Output 2
+
+Case 1: 2

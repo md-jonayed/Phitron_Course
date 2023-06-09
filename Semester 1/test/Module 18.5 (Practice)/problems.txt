@@ -1,0 +1,213 @@
+A. Print Recursion
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Given a number 𝑁
+N
+. Print "I love Recursion" 𝑁
+N
+ times.
+
+Note: Solve this problem using recursion.
+
+Input
+Only one line containing a number 𝑁
+N
+ (1≤𝑁≤100)
+(
+1
+≤
+N
+≤
+100
+)
+ .
+
+Output
+Print "I love Recursion" 𝑁
+N
+ times.
+
+Example
+inputCopy
+3
+outputCopy
+I love Recursion
+I love Recursion
+I love Recursion
+
+
+B. Print from 1 to N
+time limit per test1 second
+memory limit per test64 megabytes
+inputstandard input
+outputstandard output
+Given a number N. Print numbers from 1 to N in separate lines.
+
+Note: Solve this problem using recursion.
+
+Input
+Only one line containing a number N (1 ≤ N ≤ 103).
+
+Output
+Print N lines according to the required above.
+
+Example
+inputCopy
+5
+outputCopy
+1
+2
+3
+4
+5
+
+
+C. Print from N to 1
+time limit per test1 second
+memory limit per test64 megabytes
+inputstandard input
+outputstandard output
+Given a number N. Print all numbers from N to 1 separated by a single space.
+
+Note: Solve this problem using recursion.
+
+Input
+Only one line containing a number N (1 ≤ N ≤ 103).
+
+Output
+Print from N to 1 separated by a single space.
+
+Example
+inputCopy
+4
+outputCopy
+4 3 2 1
+Note
+Make sure don't print any leading or trailing spaces.
+
+
+F. Print Even Indices
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Given a number N and an array A of N numbers. Print the numbers in even indices in a reversed order.
+
+Note:
+
+Assume array A is 0-based indexing.
+Solve this problem using recursion.
+Input
+First line contains a number N (1 ≤ N ≤ 103) number of elements.
+
+Second line contains N numbers ( - 109 ≤ Ai ≤ 109).
+
+Output
+Print numbers in even indices in a reversed order separated by spaces.
+
+Examples
+inputCopy
+4
+1 4 2 7
+outputCopy
+2 1 
+inputCopy
+7
+1 5 8 2 3 9 11
+outputCopy
+11 3 8 1 
+
+
+L. Summation
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Given a number N and an array A of N numbers. Print the summation of the array elements.
+
+Note: Solve this problem using recursion.
+
+Input
+First line contains a number N (1 ≤ N ≤ 103) number of elements.
+
+Second line contains N numbers ( - 109 ≤ Ai ≤ 109).
+
+Output
+Print the summation of the N numbers.
+
+Examples
+inputCopy
+4
+1 4 2 7
+outputCopy
+14
+inputCopy
+4
+5 5 5 5
+outputCopy
+20
+
+
+T. Matrix
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Given a number N and a 2D array A of size N * N. Print the absolute difference between the summation of its two diagonals (primary diagonal and secondary diagonal).
+
+Input
+First line contains a number N (1 ≤ N ≤ 100) described above.
+
+Each of the next N lines will contain N numbers ( - 100 ≤ Ai ≤ 100).
+
+Output
+Print the absolute difference between the summation of the matrix main diagonals.
+
+Example
+inputCopy
+4
+1 5 12 1
+2 -4 6 7
+3 8 5 9
+3 5 23 -6
+outputCopy
+22
+Note
+First Example :
+
+
+S. Search In Matrix
+time limit per test2 seconds
+memory limit per test64 megabytes
+inputstandard input
+outputstandard output
+Given two numbers N and M, a 2D array of size N * M and a number X. Determine whether X exists in the 2D array A or not.
+
+Input
+First line contains two numbers N, M (2 ≤ N, M ≤ 100) N donates number of rows and M donates number of columns.
+
+Each of the next N lines will contain M numbers (1 ≤ Ai ≤ 105).
+
+Last line contains a number X (0 ≤ X ≤ 105) described above.
+
+Output
+Print "will take number" if the number doesn't exist in the 2D array otherwise, print "will not take number".
+
+Examples
+inputCopy
+2 2
+1 2
+3 4
+3
+outputCopy
+will not take number
+inputCopy
+2 2
+1 2
+3 4
+10
+outputCopy
+will take number
+ 
