@@ -67,5 +67,3 @@ Sample Output
 YES
 2 4 6 5 8 4 -1
 NO
-
-
