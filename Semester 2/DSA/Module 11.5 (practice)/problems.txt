@@ -1,0 +1,148 @@
+Given the head of a linked list and an integer val, remove all the nodes of the linked list that has Node.val == val, and return the new head.
+
+ 
+
+Example 1:
+
+
+Input: head = [1,2,6,3,4,5,6], val = 6
+Output: [1,2,3,4,5]
+Example 2:
+
+Input: head = [], val = 1
+Output: []
+Example 3:
+
+Input: head = [7,7,7,7], val = 7
+Output: []
+ 
+
+Constraints:
+
+The number of nodes in the list is in the range [0, 104].
+1 <= Node.val <= 50
+0 <= val <= 50
+
+
+19. Remove Nth Node From End of List
+Medium
+16.2K
+674
+Companies
+Given the head of a linked list, remove the nth node from the end of the list and return its head.
+
+ 
+
+Example 1:
+
+
+Input: head = [1,2,3,4,5], n = 2
+Output: [1,2,3,5]
+Example 2:
+
+Input: head = [1], n = 1
+Output: []
+Example 3:
+
+Input: head = [1,2], n = 1
+Output: [1]
+ 
+
+Constraints:
+
+The number of nodes in the list is sz.
+1 <= sz <= 30
+0 <= Node.val <= 100
+1 <= n <= sz
+ 
+
+Follow up: Could you do this in one pass?
+
+Accepted
+2.1M
+Submissions
+5M
+Acceptance Rate
+41.7%
+
+
+1721. Swapping Nodes in a Linked List
+Medium
+4.8K
+160
+Companies
+You are given the head of a linked list, and an integer k.
+
+Return the head of the linked list after swapping the values of the kth node from the beginning and the kth node from the end (the list is 1-indexed).
+
+ 
+
+Example 1:
+
+
+Input: head = [1,2,3,4,5], k = 2
+Output: [1,4,3,2,5]
+Example 2:
+
+Input: head = [7,9,6,6,7,8,3,0,9,5], k = 5
+Output: [7,9,6,6,8,7,3,0,9,5]
+ 
+
+Constraints:
+
+The number of nodes in the list is n.
+1 <= k <= n <= 105
+0 <= Node.val <= 100
+Accepted
+280K
+Submissions
+407.6K
+Acceptance Rate
+68.7%
+
+2181. Merge Nodes in Between Zeros
+Medium
+1.4K
+25
+Companies
+You are given the head of a linked list, which contains a series of integers separated by 0's. The beginning and end of the linked list will have Node.val == 0.
+
+For every two consecutive 0's, merge all the nodes lying in between them into a single node whose value is the sum of all the merged nodes. The modified list should not contain any 0's.
+
+Return the head of the modified linked list.
+
+ 
+
+Example 1:
+
+
+Input: head = [0,3,1,0,4,5,2,0]
+Output: [4,11]
+Explanation: 
+The above figure represents the given linked list. The modified list contains
+- The sum of the nodes marked in green: 3 + 1 = 4.
+- The sum of the nodes marked in red: 4 + 5 + 2 = 11.
+Example 2:
+
+
+Input: head = [0,1,0,3,0,2,2,0]
+Output: [1,3,4]
+Explanation: 
+The above figure represents the given linked list. The modified list contains
+- The sum of the nodes marked in green: 1 = 1.
+- The sum of the nodes marked in red: 3 = 3.
+- The sum of the nodes marked in yellow: 2 + 2 = 4.
+ 
+
+Constraints:
+
+The number of nodes in the list is in the range [3, 2 * 105].
+0 <= Node.val <= 1000
+There are no two consecutive nodes with Node.val == 0.
+The beginning and end of the linked list have Node.val == 0.
+Accepted
+79.8K
+Submissions
+92.7K
+Acceptance Rate
+86.0%
