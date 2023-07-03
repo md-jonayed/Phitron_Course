@@ -1,0 +1,57 @@
+Question: Take two stacks of size N and M as input and check if both of them are the same or not. Don’t use STL to solve this problem.
+
+Sample Input
+Sample Output
+5
+10 20 30 40 50
+5
+10 20 30 40 50
+YES
+5
+10 20 30 40 50
+4
+10 20 30 40
+NO
+5
+10 20 30 40 50
+5
+50 40 30 20 10
+NO
+
+Question: Take a stack of size N and a queue of size M as input. Then check if both of them are the same or not in the order of removing. You should use STL to solve this problem.
+
+Sample Input
+Sample Output
+5
+10 20 30 40 50
+5
+10 20 30 40 50
+NO
+5
+10 20 30 40 50
+4
+10 20 30 40
+NO
+5
+10 20 30 40 50
+5
+50 40 30 20 10
+YES
+
+Question: Take a stack of size N as input and copy those elements to another stack to get the values in the order they were inserted and print them. You should use STL to solve this problem.
+
+
+Sample Input
+Sample Output
+5
+10 20 30 40 50
+10 20 30 40 50
+
+Question: Take a queue of size N as input. You need to copy those elements in another queue in reverse order. You might use stack here. You should use STL to solve this problem. After copying in another queue, print the elements of that queue.
+
+Sample Input
+Sample Output
+5
+10 20 30 40 50
+50 40 30 20 10
+
