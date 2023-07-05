@@ -1,0 +1,188 @@
+20. Valid Parentheses
+Easy
+20.6K
+1.3K
+Companies
+Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+
+An input string is valid if:
+
+Open brackets must be closed by the same type of brackets.
+Open brackets must be closed in the correct order.
+Every close bracket has a corresponding open bracket of the same type.
+ 
+
+Example 1:
+
+Input: s = "()"
+Output: true
+Example 2:
+
+Input: s = "()[]{}"
+Output: true
+Example 3:
+
+Input: s = "(]"
+Output: false
+ 
+
+Constraints:
+
+1 <= s.length <= 104
+s consists of parentheses only '()[]{}'.
+
+844. Backspace String Compare
+Easy
+6.5K
+297
+Companies
+Given two strings s and t, return true if they are equal when both are typed into empty text editors. '#' means a backspace character.
+
+Note that after backspacing an empty text, the text will continue empty.
+
+ 
+
+Example 1:
+
+Input: s = "ab#c", t = "ad#c"
+Output: true
+Explanation: Both s and t become "ac".
+Example 2:
+
+Input: s = "ab##", t = "c#d#"
+Output: true
+Explanation: Both s and t become "".
+Example 3:
+
+Input: s = "a#c", t = "b"
+Output: false
+Explanation: s becomes "c" while t becomes "b".
+ 
+
+Constraints:
+
+1 <= s.length, t.length <= 200
+s and t only contain lowercase letters and '#' characters.
+
+Insert An Element At Its Bottom In A Given Stack
+Last Updated: 23 Feb, 2023
+Easy
+40/40
+15 mins
+85 %
+94 upvotes
+Problem Statement
+
+Detailed explanation ( Input/output format, Notes, Images )
+Sample Input 1 :
+2
+3 8
+4 3 2
+4 5
+6 2 4 9
+Sample Output 1 :
+8 4 3 2
+5 6 2 4 9
+Explanation For Sample Input 1 :
+Test Case 1:
+
+We are  given 'MY_STACK = [4,3,2] and 'X’ = 8.
+We insert ‘X’ at the bottom of ‘MY_STACK’. 
+So finally, we have 'MY_STACK' = [8, 4, 3, 2]. 
+
+Test Case 2:
+After inserting an element at its bottom, the stack will be 5 6 2 4 9
+Sample Input 2 :
+2
+1 0
+4 
+2 5
+1 9
+Sample Output 2 :
+0 4
+5 1 9
+Explanation For Sample Input 2 :
+Test Case 1:
+We are given 'MY_STACK = [4]’ and 'X’ = 0’.
+We insert ‘X’ at the bottom of ‘MY_STACK’. 
+So finally, 'MY_STACK' will become [0, 4]. 
+
+Test Case 2:
+We are given 'MY_STACK = [1,9]’ and 'X’ = 5.
+So finally, 'MY_STACK' will become [5, 1, 9]. 
+
+Maximum Equal Stack Sum
+Last Updated: 23 Feb, 2023
+Easy
+40/40
+15 mins
+85 %
+14 upvotes
+Problem Statement
+
+Detailed explanation ( Input/output format, Notes, Images )
+
+
+Reversing a Queue
+Last Updated: 23 Feb, 2023
+Easy
+0/40
+10 mins
+90 %
+27 upvotes
+Problem Statement
+Detailed explanation ( Input/output format, Notes, Images )
+Sample Input 1:
+2
+1
+9
+5
+10 6 8 12 3
+Sample Output 1:
+9 
+3 12 8 6 10
+Explanation 1:
+For the first test case, the queue has only one element, i.e. 9. So, even after reversing, our queue remains the same.
+
+For the second test case, the queue has elements in the order: 10, 6, 8, 12, 3. Reversing the queue changes the order of elements to - 3, 12, 8, 6, 10.
+Sample Input 2:
+2
+2
+99 89
+6
+1 2 3 4 5 6
+Sample Output 2:
+89 99
+6 5 4 3 2 1
+
+
+Reverse Stack Using Recursion
+Contributed by
+Ashwani
+Easy
+0/40
+21 mins
+80 %
+178 upvotes
+Problem Statement
+
+
+
+Detailed explanation ( Input/output format, Notes, Images )
+Sample Input 1 :
+3
+2 1 3
+Sample Output 1 :
+3 1 2
+Explanation To Sample Input 1 :
+Reverse of a give stack is 3 1 2 where first element becomes last and last becomes first.                   
+Sample Input 2 :
+2
+3 2
+Sample Output 2 :
+2 3
+Constraints :
+0 <= N <= 10^3
+Where 'N' is the number of elements in the given stack.
+
+Time Limit: 1 sec
