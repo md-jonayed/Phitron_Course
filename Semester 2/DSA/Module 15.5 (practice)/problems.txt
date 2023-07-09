@@ -1,0 +1,184 @@
+Implement Stack With Linked List
+Contributed by
+Ankit Kharb
+Medium
+0/80
+30 mins
+73 %
+34 upvotes
+Problem Statement
+
+Detailed explanation ( Input/output format, Notes, Images )
+Sample Input 1:
+4
+3 5
+3 4
+1
+2
+Sample Output 1:
+2
+false    
+Explanation For Sample Output 1:
+The first two queries ('3') push 5 and 4 on the stack. So the size of stack becomes 2. Therefore the third query ('1') prints the size and since the stack is not empty, the fourth and final query ('2') outputs "false"
+Sample Input 2:
+4
+3 5
+3 4
+4
+5
+Sample Output 2:
+5   
+Explanation For Sample Output 2:
+The first two queries ('3') push 5 and 4 on the stack. The third query ('4') removes the top element of the stack which is 4 and the fourth and final query ('5') print the top element of the stack, 5
+
+Problem Statement
+Detailed explanation ( Input/output format, Notes, Images )
+Sample Input 1 :
+1
+7
+1 17
+1 23
+1 11
+2
+2
+2
+2
+Sample Output 1 :
+17
+23
+11
+-1
+Explanation For Sample Output 1 :
+The first three queries are of enQueue, so we will push 17, 23, and 11 into the queue.
+
+The next four queries are of deQueue, so we will starting removing elements from the queue, so the first element will be 17, then 23, and then 11. And after the third dequeue query, the queue is now empty so for the fourth query, we will return -1.
+Sample Input 2 :
+1
+3
+2
+1 10
+3
+Sample Output 2 :
+-1 
+10
+
+Reverse First K elements of Queue
+Last Updated: 23 Feb, 2023
+Easy
+40/40
+10 mins
+90 %
+239 upvotes
+Problem Statement
+Detailed explanation ( Input/output format, Notes, Images )
+Sample Input 1:
+2
+5 3
+1 2 3 4 5
+4 2
+6 2 4 1
+Sample Output 1:
+3 2 1 4 5
+2 6 4 1
+Explanation:
+For test case 1: Refer to the example explained above.
+
+For test case 2:
+The queue after reversing the first 2 elements i.e., 6 and 2 will be { 2, 6, 4, 1 }.
+Sample Input 2:
+2
+5 2
+5 3 2 6 4
+4 4
+1 2 3 4
+Sample Output 2:
+3 5 2 6 4
+4 3 2 1
+
+Min Stack
+Contributed by
+TanishkTonk
+Easy
+0/40
+18 upvotes
+Problem Statement
+Detailed explanation ( Input/output format, Notes, Images )
+Sample Input 1 :
+2
+5
+1 1
+1 2
+4
+2
+3
+4
+1 13
+2
+3
+4
+Sample Output 1 :
+1 2 1
+13 -1 -1
+Explanation For Sample Input 1 :
+For First Case - Similar to the example explained above. 
+
+For Second Case - 
+For the first operation, we will just insert 13 into the stack which was empty earlier. So now the stack is => [13]
+In the second operation, we need to remove the topmost element 13 and return it for printing. Now the stack is => [] (empty)
+For the third operation, we need to return the topmost element of the stack. As the stack is empty we will return -1. Now the stack is => [] (empty)
+ In the fourth operation, we return the minimum element of the stack if it is not empty, i.e. -1 as it has no elements. Now the stack is => [] (empty)
+Sample Input 2 :
+2
+4 
+4
+2
+1 4
+3
+6
+1 19
+1 45
+3
+4
+2
+3
+Sample Output 2 :
+-1 -1 4
+45 19 45 19
+
+
+Kevin’s stack problem
+Contributed by
+Dhruv Sharma
+Easy
+40/40
+20 mins
+80 %
+6 upvotes
+Problem Statement
+Detailed explanation ( Input/output format, Notes, Images )
+Sample Input 1:
+2
+CODINGNINJAS
+WelcomeToCodeStudio  
+Sample Output 1:
+SAJNINGNIDOC
+oidutSedoCoTemocleW
+Explanation Of Sample Input 1:
+In the first test case, the reverse of the given string is “SAJNINGNIDOC”.
+
+In the second test case, the reverse of the given string is “oidutSedoCoTemocleW”.
+Sample Input 2:
+3
+A
+Aa
+aA
+Sample Output 2:
+A
+aA
+Aa
+Explanation For Sample Input 2:
+In the first test case, the reverse of the given string is “A”.
+
+In the second test case, the reverse of the given string is “aA”.
+
+In the third test case, the reverse of the given string is “Aa”.
