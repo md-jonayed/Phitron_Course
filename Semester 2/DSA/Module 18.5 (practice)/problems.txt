@@ -1,0 +1,194 @@
+Problem Statement
+Detailed explanation ( Input/output format, Notes, Images )
+Sample Input 1:
+2
+1 2 3 4 -1 -1 5 6 7 -1 -1 -1 -1 -1 -1
+5 6 10 2 3 -1 -1 -1 -1 -1 9 -1 -1
+Sample Output 1:
+6 7 4 2 5 3 1
+2 9 3 6 10 5 
+Explanation:
+For the first test case, the given tree is:
+Postorder traversal for the given tree will be [6, 7, 4, 2, 5, 3, 1]. Hence, the answer is [6, 7, 4, 2, 5, 3, 1].
+
+For the second test case, the given tree is
+Postorder traversal for the given tree will be [2, 9, 3, 6, 10, 5]. Hence, the answer is [2, 9, 3, 6, 10, 5].
+Sample Input 2:
+2
+1 2 3 4 -1 7 8 5 -1 9 -1 -1 -1 6 -1 -1 -1 -1 -1
+10 20 11 -1 -1 -1 -1
+Sample Output 2:
+6 5 4 2 9 7 8 3 1
+20 11 10
+
+Problem Statement
+Detailed explanation ( Input/output format, Notes, Images )
+Sample Input 1:
+1 2 3 4 5 6 7 -1 -1 -1 -1 -1 -1 -1 -1
+ Sample Output 1:
+1 2 4 5 3 6 7
+Sample Input 2:
+5 6 10 2 3 -1 -1 -1 -1 -1 9 -1 -1
+ Sample Output 1:
+5 6 2 3 9 10
+
+Inorder Traversal
+Contributed by
+Yash Chaudhari
+Easy
+40/40
+24 upvotes
+Problem Statement
+Detailed explanation ( Input/output format, Notes, Images )
+Sample Input 1 :
+2
+1 2 3 -1 -1 -1  6 -1 -1
+1 2 3 -1 -1 -1 -1
+Sample Output 1 :
+2 1 3 6
+2 1 3
+Explanation Of Sample Output 1 :
+ In test case 1, the given binary tree is shown below:
+ Inorder traversal of given tree = [2, 1, 3, 6]
+
+In test case 2, the given binary tree is shown below:
+ Inorder traversal of given tree = [2, 1, 3]
+Sample Input 2 :
+2
+1 -1 -1
+1 2 4 5 3 -1 -1 -1 -1 -1 -1
+Sample Output 2 :
+1
+5 2 3 1 4
+Explanation Of Sample Output 2 :
+In test case 1, there is only one node, so In-Order traversal will be only [1].
+
+In test case 2, the given binary tree is shown below:
+Inorder traversal of given tree = [5, 2, 3, 1, 4]
+
+
+Level Order Traversal
+Contributed by
+Pankaj Sharma
+Easy
+40/40
+15 mins
+85 %
+57 upvotes
+Problem Statement
+Detailed explanation ( Input/output format, Notes, Images )
+Sample Input 1:
+3
+1 2 3 4 -1 5 6 -1 7 -1 -1 -1 -1 -1 -1
+1 2 3 -1 -1 -1 -1
+1 3 -1 2 -1 -1 -1
+Sample Output 1:
+1 2 3 4 5 6 7
+1 2 3
+1 3 2
+Explanation Of Sample Input 1:
+ For the first test case, {1} is at level 1 and {2,3} are at level 2 and {4,5,6} are at level 3 and {7} is at level 4. So combinations of all levels are {1, 2, 3 ,4, 5, 6, 7}.
+
+For the second test case, {1} is at level 1 and {2,3} are at level 2. So combinations of level are {1, 2, 3}.
+
+For the third test case, {1} is at level 1 and {3} is at level 2 and {2} is at level 3. So combinations of all levels are {1,3,2}.
+Sample Input 2:
+2
+2 7 5 2 6 -1 9 -1 -1 5 11 4 -1 -1 -1 -1 -1 -1 -1
+1 2 3 4 -1 5 6 -1 -1 -1 -1 -1 -1  
+Sample Output 2:
+2 7 5 2 6 9 5 11 4
+1 2 3 4 5 6
+Explanation Of Sample Input 2:
+For the first test case, {2} is at level 1 and {7,5} are at level 2 and {2,6,9} are at level 3 and {5,11,4} are at level 4. So combinations of all levels are {2, 7, 5, 2, 6, 9, 5, 11, 4}.
+
+For the second test case, {1} is at level 1 and {2,3} are at level 2 and {4,5,6} are at level 3. So combinations of all levels are {1, 2, 3, 4, 5, 6}.
+
+
+Day 17 : Count Leaf Nodes
+Contributed by
+Omkar Deshmukh
+Easy
+0/40
+10 mins
+90 %
+34 upvotes
+Problem Statement
+Detailed explanation ( Input/output format, Notes, Images )
+Sample Input 1:
+3
+1 -1 -1
+1  2  3  -1 -1 -1 4 -1 -1
+1  2 -1 -1 3 -1 4 -1 -1
+Sample Output 1:
+1
+2
+1
+Explanation For Sample Input 1:
+(i) 1 is the only node present in the tree, and hence it is the only leaf node.
+(ii) 2 and 4 are two leaf nodes present in the tree; all other nodes have at least one child (1 has 2 and 3 and 3 has 4).
+(iii) 4 is the only leaf node present in the tree as all other nodes have at least one child node (1 has 2, 2 has 3 and 3 has 4)
+Sample Input 2:
+3
+1 2 3 4 5 6 7 -1 -1 -1 -1 -1 -1 -1 -1
+1 -1 2 -1 3 -1 -1
+1 2 -1 3 4 5 6 7 8 -1 - 1 -1 -1 -1 -1 -1 -1
+Sample Output 2:
+4
+1
+4
+Explanation For Sample Input 2:
+(i) 4, 5, 6 and 7 are 4 leaf nodes present in the tree, all other nodes have at least one child (1 has 2 and 3, 2 has 4 and 5 and 3 has 6 and 7).
+(ii) 3 is the only leaf node present in the tree as all other nodes have at least one child node (1 has 2 and 2 has 3)
+(iii) 5, 6, 7 and 8 are 4 leaf nodes present in the tree, all other nodes have at least one child (1 has 2, 2 has 3 and 4, 3 has 5 and 6 and 4 has 7 and 8).
+
+
+Left Sum
+Contributed by
+Deepanshu_1780
+Easy
+40/40
+10 mins
+90 %
+26 upvotes
+Problem Statement
+Detailed explanation ( Input/output format, Notes, Images )
+Sample Input 1 :
+2
+3 5 1 6 2 0 8 -1 -1 7 4 -1 -1 -1 -1 -1 -1 -1 -1
+1 2 3 4 5 -1 -1 6 -1 -1 -1 -1 -1
+Sample Output 1 :
+18
+12
+Explanation For Sample Input 1 :
+
+Test Case 1 :
+The nodes 5, 6, 7, and 0 are the only nodes that were the left child of any other node. S, they sum up to make the sum 18.
+
+Test Case 2 :
+The nodes 2, 4, and 6 are the only nodes that were the left child of any other node. S, they sum up to make the sum 12.
+Sample Input 2 :
+2
+5 2 3 8 1 -1 -1 7 9 -1 -1 5 6 -1 -1 -1 -1 -1 -1
+1 5 7 -1 -1 6 3 9 8 -1 -1 -1 -1 13 -1 -1 -1
+Sample Output 2 :
+22
+33
+
+Problem Statement
+Detailed explanation ( Input/output format, Notes, Images )
+Sample Input 1:
+2
+3 1 2 -1 -1 -1 -1
+3 -1 1 2 -1 -1 -1
+Sample Output 1:
+1
+2
+Explanation For Sample Input 1:
+For the first test case, the given tree is :
+For each child left or right or node, we have the utmost one node so height is 1.
+
+For the second test case, the given tree is
+The root node has only a right node and the right node has only one node which is the left node so total of two nodes are there so the height is 2.
+
+
