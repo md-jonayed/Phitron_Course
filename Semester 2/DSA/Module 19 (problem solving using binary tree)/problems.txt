@@ -1,0 +1,181 @@
+Is Node Present?
+Contributed by
+Arindam Majumder
+Easy
+40/40
+10 mins
+98 %
+5 upvotes
+Problem Statement
+Detailed explanation ( Input/output format, Notes, Images )
+Sample Input 1:
+8 3 10 1 6 -1 14 -1 -1 4 7 13 -1 -1 -1 -1 -1 -1 -1
+7
+Sample Output 1:
+true
+Explanation For Output 1:
+Clearly, we can see that 7 is present in the tree. So, the output will be true.
+Sample Input 2:
+2 3 4 -1 -1 -1 -1
+10
+Sample Output 2:
+false
+
+
+Node Level
+Contributed by
+Aditya Agarwal
+Easy
+40/40
+15 mins
+85 %
+18 upvotes
+Problem Statement
+Detailed explanation ( Input/output format, Notes, Images )
+Sample Input 1:
+2
+1 2 3 -1 -1 -1  6 -1 -1
+6
+1 2 -1 -1 -1
+1
+Sample Output 1:
+3
+1
+Explanation Of Sample Input 1:
+ For the first test case, the given binary tree is shown below.
+ Here, we see that node 6 is at a distance of 2 units from the root(node 1). Hence, our level will be 3.
+For the second test case, the given binary tree is shown below.
+As we are looking for node 1 which is itself the root node, hence our level is 1.
+Sample Input 2:
+1
+1 3 8 5 -1 7 -1 -1 -1 -1 -1
+10
+Sample Output 2:
+0
+Explanation Of Sample Input 2:
+For the first test case, the given binary tree is shown below.
+As node 10 is not present in the tree, so we return 0.
+
+Left View Of a Binary Tree
+Contributed by
+Nishant Chitkara
+Easy
+0/40
+10 mins
+90 %
+51 upvotes
+Problem Statement
+Detailed explanation ( Input/output format, Notes, Images )
+Sample Input 1:
+2
+3 4 -1 -1 -1 
+2 8 7 -1 5 -1 -1 1 -1 -1 -1
+Sample Output 1:
+3 4
+2 8 5 1
+Explanation Of Sample Input 1:
+For the first test case, node 3 and node 4 are visible when the binary tree is viewed from the left.
+
+For the second test case, nodes 2, 8, 5, 1 are visible when the binary tree is viewed from the left.
+Sample Input 2:
+2
+1 3 5 12 -1 8 -1 -1 -1 -1 -1 
+9 6 3 -1 -1 4 8 -1 -1 -1 -1 
+Sample Output 2:
+1 3 12
+9 6 4
+Explanation Of Sample Input 2:
+For the first test case, nodes 1, 3, 12 are visible when the binary tree is viewed from the left.
+
+For the second test case, nodes 9, 6, 4 are visible when the binary tree is viewed from the left.
+
+
+
+Diameter Of Binary Tree
+Contributed by
+Anup Kumar Singh
+Easy
+0/40
+10 mins
+90 %
+38 upvotes
+Problem Statement
+Detailed explanation ( Input/output format, Notes, Images )
+Sample Input 1 :
+2
+1 2 3 4 7 -1 -1 -1 -1 -1 -1
+1 2 3 -1 -1 -1 -1
+Sample Output 1 :
+3
+2
+Explanation Of Sample Input 1 :
+Test Case 1: The binary tree in the given test case will look like
+The length of the diameter of the above tree is the length of the path between nodes 4 and 3, i.e., 4->2->1->3. Hence the output will be 3.
+
+Test Case 2: The binary tree in the given test case will look like
+The length of the diameter of the above tree is the length of the path between nodes 2 and 3, i.e., 2.
+Sample Input 2 :
+2
+2 4 -1 5 -1 -1 -1
+1 4 2 -1 -1 -1 3 -1 -1
+Sample Output 2 :
+2
+3
+
+
+Special Binary Tree.
+Contributed by
+Deepanshu_1780
+Easy
+40/40
+15 mins
+90 %
+25 upvotes
+Problem Statement
+Detailed explanation ( Input/output format, Notes, Images )
+Sample Input 1:
+2
+3 5 1 6 2 0 8 -1 -1 7 4 -1 -1 -1 -1 -1 -1 -1 -1
+1 2 3 4 5 -1 -1 6 -1 -1 -1 -1 -1    
+Sample Output 1:
+True
+False
+Explanation For Sample Input 1:
+Test Case1: 
+
+The tree given in Test Case 1, is shown in the image above. Note that nodes with the values 6, 7, 4, 0, 8, are leaf nodes and have no children, other nodes in the tree have two children each. So the given binary tree is special.
+Test Case 2:
+
+The tree given in Test Case 2, is shown in the image above. Note that node with the value 4, has only one child, thus the given binary tree is not special.
+Sample Input 2:
+2
+5 2 3 8 1 -1 -1 7 9 -1 -1 5 6 -1 -1 -1 -1 -1 -1
+1 5 7 -1 -1 6 3 9 8 -1 -1 -1 -1 13 -1 -1 -1 
+Sample Output 2:
+True
+False
+Prev
+
+Reverse Level Order Traversal
+Contributed by
+Ekansh Saxena
+Medium
+0/80
+30 mins
+52 %
+38 upvotes
+Problem Statement
+Detailed explanation ( Input/output format, Notes, Images )
+Sample Input 1:
+1 2 3 4 -1 5 6 -1 7 -1 -1 -1 -1 -1 -1
+Sample Output 1:
+7 6 5 4 3 2 1
+Explanation Of Sample Input 1:
+Start with the bottom of the tree, i.e. 7, and traverse in the tree in the reverse direction of level order, i.e., bottom to top and right to left. So, the reverse level order traversal will be {7,6,5,4,3,2,1}.
+Sample Input 2:
+2 7 5 2 6 -1 9 -1 -1 5 11 4 -1 -1 -1 -1 -1 -1 -1
+Sample Output 2:
+4 11 5 9 6 2 5 7 2
+Explanation Of Sample Input 2:
+Traverse the tree in the reverse direction of level order, i.e., bottom to top and right to left. So reverse level order traversal will be {4,11,5,9,6,2,5,7,2}.
+
