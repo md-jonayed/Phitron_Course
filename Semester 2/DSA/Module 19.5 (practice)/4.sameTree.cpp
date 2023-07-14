@@ -18,10 +18,10 @@ public:
         {
             return true;
         }
-        else if ((p == NULL || q == NULL) || (p->val != q->val))
+        else if (p == NULL || q == NULL || p->val != q->val)
         {
             return false;
         }
-        return isSameTree(p->left, q->left) && isSameTree(p->right, p->right);
+        return isSameTree(p->left, q->left) && isSameTree(p->right, q->right);
     }
 };
