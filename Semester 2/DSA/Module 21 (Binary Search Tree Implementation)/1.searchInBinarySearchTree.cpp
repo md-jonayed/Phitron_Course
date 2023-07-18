@@ -126,3 +126,43 @@ int main()
     }
     return 0;
 }
+
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+class Solution
+{
+public:
+    TreeNode *search(TreeNode *root, int x)
+    {
+        if (root == NULL)
+        {
+            return NULL;
+        }
+        if (root->val == x)
+        {
+            return root;
+        }
+        if (x < root->val)
+        {
+            return search(root->left, x);
+        }
+        else
+        {
+            return search(root->right, x);
+        }
+    }
+    TreeNode *searchBST(TreeNode *root, int val)
+    {
+        TreeNode *node = search(root, val);
+        return node;
+    }
+};
