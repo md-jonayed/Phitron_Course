@@ -10,7 +10,7 @@ int main()
     }
     cout << endl;
     // we can remove elemnts form a list:
-    list<int> l1 = {5, 1, 4, 2, 3};
+    list<int> l1 = {5, 1, 4, 4, 2, 3};
     l1.remove(4);
     for (int val : l1)
     {

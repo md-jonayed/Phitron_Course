@@ -1,0 +1,258 @@
+Unique Sorted
+Problem
+Submissions
+Leaderboard
+Discussions
+Problem Statement
+
+You will be given a list A of size N. You need to sort those values in descending order and also you need to remove any duplicate values from the list and print the final outcome.
+
+Input Format
+
+First line will contain T, the number of test cases.
+The first line of every test case will contain N.
+The second line of every test case will contain the list A of size N.
+Constraints
+
+1 <= T <= 100
+1 <= N <= 10^4
+-10^9 <= A[i] <= 10^9, Here A[i] means the values of list A.
+Output Format
+
+Output the final list.
+Sample Input 0
+
+4
+5
+20 10 40 50 30
+10
+10 20 40 20 10 30 50 10 20 40
+5
+20 20 20 20 20
+4
+10 30 10 30
+Sample Output 0
+
+50 40 30 20 10 
+50 40 30 20 10 
+20 
+30 10 
+
+
+Count Me
+Problem
+Submissions
+Leaderboard
+Discussions
+Problem Statement
+
+You will be given a string S which will contain Lowercase, Uppercase English alphabets and spaces. You need to tell which word occurs the most times and also the count of that word.
+
+Note: If there are multiple word which occurs the most, print the first word which became the maximum count before others.
+
+Input Format
+
+First line will contain T, the number of test cases.
+Each test case will contain the string S.
+Constraints
+
+1 <= T <= 1000
+1 <= |S| <= 10^4, Here |S| means the length of S.
+Output Format
+
+Output the word and the count that occurs the most.
+Sample Input 0
+
+1
+Ratul loves to play football when he gets time but Ratul is not a good player so his teacher asked Ratul if he can play with him so that Ratul can progress
+Sample Output 0
+
+Ratul 4
+Sample Input 1
+
+2
+ratul piyush fohad shuvo rafi piyush fohad ratul 
+jony jony yes papa eating sugar no papa telling lies no papa open your mouth ha ha ha 
+Sample Output 1
+
+piyush 2
+papa 3
+
+
+Count Me II
+Problem
+Submissions
+Leaderboard
+Discussions
+Problem Statement
+
+You will be given an array A of size N. You need to tell which value occurs the most and the count of that value.
+
+Note: If there are multiple values with the highest count, then pick the maximum value as answer.
+
+Input Format
+
+First line will contain T, the number of test cases.
+First line of each test case will contain N.
+Second line of each test case will contain the array A of size N.
+Constraints
+
+1 <= T <= 100
+1 <= N <= 10^5
+-10^9 <= A[i] <= 10^9
+Output Format
+
+Output the number that occurs the most, then the count of that number.
+Sample Input 0
+
+3
+10
+2 1 3 5 4 6 5 2 1 3
+10
+-5 -2 1 5 -5 4 -2 -1 -2 -1
+5
+-1000000000 -112101 10100101 1000000000 12345
+Sample Output 0
+
+5 2
+-2 3
+1000000000 1
+
+
+Give Current Min
+Problem
+Submissions
+Leaderboard
+Discussions
+Problem Statement
+
+You will be given a list A of size N. Then you will be given Q queries, for each query there will be some commands. Commands are given below -
+
+0 X -> Insert X into the list. Then print the current minimum value from the list.
+1 -> Print the minimum value from the list.
+2 -> Delete the minimum value from the list and print the current minimum value from the list.
+Note: If the list is empty and you can't print anything then you should print "Empty".
+
+Input Format
+
+First line will contain N.
+Second line will contain the list A of size N.
+Third line will contain Q.
+Next Q lines will contain the commands.
+Constraints
+
+1 <= N+Q <= 10^5
+-10^9 <= A[i] <= 10^9 ; Here A[i] means the values of the list A.
+-10^9 <= X <= 10^9
+Output Format
+
+For each command, print as asked from the list.
+Sample Input 0
+
+4
+10 -10 -5 -20
+10
+1
+2
+2
+2
+2
+0 10
+1
+2
+0 20
+1
+Sample Output 0
+
+-20
+-10
+-5
+10
+Empty
+10
+10
+Empty
+20
+20
+Sample Input 1
+
+6
+45 -30 83 -99 19 75 
+9
+1
+2
+2
+0 32
+0 6
+2
+2
+0 -86
+1
+Sample Output 1
+
+-99
+-30
+19
+19
+6
+19
+32
+-86
+-86
+
+
+Give Current Max
+Problem
+Submissions
+Leaderboard
+Discussions
+Problem Statement
+
+You will be given a list A of size N. The list will contain data of some students where each student have Name, Roll and Marks. Then you will be given Q queries, for each query there will be some commands. Commands are given below -
+
+0 X -> Insert X into the list where X is the data of a student which contain Name, Roll and Marks. Then print the current student's data who has the maximum Marks from the list.
+1 -> Print the current student's data who has the maximum Marks from the list.
+2 -> Delete the student who has the maximum Marks from the list and print the current student who has the maximum Marks from the list.
+Note: If there are multiple students with same Marks then we will select whose Roll is smaller. If the list is empty and you can't print anything then you should print "Empty".
+
+Input Format
+
+First line will contain N.
+Next N lines will contain Name, Roll and Marks of student A[i].
+Third line will contain Q.
+Next Q lines will contain the commands.
+Constraints
+
+1 <= N+Q <= 10^5
+1 <= |Name| <= 1000, Name will contain only English lowercase letters and will not contain any spaces.
+0 <= Roll <= 10^5
+0 <= Marks <= 100
+Output Format
+
+For each command, print as asked from the list.
+Sample Input 0
+
+3
+akib 23 95
+jobbar 24 99
+ali 25 100
+8
+1
+2
+2
+2
+0 kabir 15 65
+0 asif 55 65
+2
+0 tamim 35 65
+Sample Output 0
+
+ali 25 100
+jobbar 24 99
+akib 23 95
+Empty
+kabir 15 65
+kabir 15 65
+asif 55 65
+tamim 35 65
+
