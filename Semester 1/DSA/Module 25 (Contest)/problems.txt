@@ -1,0 +1,327 @@
+Triangle locked
+Problem
+Submissions
+Discussions
+Problem Statement
+
+You will be given three non-negative integers A,B and C. You need to tell if these integers form an equilateral triangle (A triangle whose three sides are the same and each side contains a positive value). If the answer is yes, print "Yes" otherwise "No".
+
+Input Format
+
+Input will contain A,B and C.
+Constraints
+
+0 <= A,B,C <= 100
+Output Format
+
+Output "Yes" or "No" without quotation.
+Sample Input 0
+
+2 4 2
+Sample Output 0
+
+No
+Sample Input 1
+
+3 3 3
+Sample Output 1
+
+Yes
+Sample Input 2
+
+0 0 1
+Sample Output 2
+
+No
+Sample Input 3
+
+0 1 2
+Sample Output 3
+
+No
+
+
+
+Find The Thief locked
+Problem
+Submissions
+Discussions
+Problem Statement
+
+Sakib threw a party in his house to celebrate his birthday. He told his friends a dress code to wear, the dress code is to wear even unique pearls in his/her dress, where each pearl will have a code written on it. Unfortunately there was a thief planning to rob the house. The thief knew about the dress code, but he didn't know the exact number of pearls they needed to wear. So the thief wears an odd number of pearls in his dress.
+
+You have N numbers where each number represents a pearl code, you need to detect the code of the thief's pearl so that you can detect the thief.
+
+Input Format
+
+First line will contain T, the number of test cases.
+First line of each test case will contain an positive integer N which is an odd number.
+Second line of each test case will contain N integer values representing pearl code.
+Constraints
+
+1 <= T <= 100
+1 <= N <= 10^4
+-10^9 <= code <= 10^9
+Output Format
+
+Output the code of the thief's pearl.
+Sample Input 0
+
+3
+5
+1 3 2 1 2
+9
+1 2 3 2 3 2 3 1 3
+7
+-10 2 3 -10 2 -3 3
+Sample Output 0
+
+3
+2
+-3
+
+
+Monkey locked
+Problem
+Submissions
+Discussions
+Problem Statement:
+
+Amena has just learned alphabets. She can read write from a to z only in lowercase. But, Amena always writes in alphabetic order what she saw. Also she writes a line as a word. For example, she writes monkey as ekmnoy. Her mother wants to test her reading and writing skills. Her mother gave her some lines, can you tell what she will write?
+
+Note: Input will be given by EOF.
+
+Input Format
+
+Input consist of a line S. The line will contain lowercase letters and spaces. It is possible that there are multiple spaces together and the line end with spaces.
+Constraints
+
+0 < |S| <= 100
+Output Format
+
+Output what Amena will write.
+Sample Input 0
+
+monkey
+i love flower
+Sample Output 0
+
+ekmnoy
+eefilloorvw
+
+
+Qahadi and the Numbers locked
+Problem
+Submissions
+Discussions
+Problem Statement
+
+Qahadi is playing with numbers. He loves unique numbers and wants them a lot. He has some numbers, and it is possible that there are some duplicates. So, he wants to remove those duplicate numbers.
+
+In a move he can remove a number that is currently in the list more than once. Can you tell how many moves does he need to make all the numbers unique.
+
+For example,
+
+If Qahadi had the numbers 1, 5, 10, 5, 2, 5, 10, 5, 1; then he will need 5 moves to remove 1, 5, 5, 5, 10 from the list and make the list: 1, 5, 10, 2 where all of the values are unique.
+
+Input Format
+
+First line will contain T, the number of test cases.
+First line of each test case will contain N, the size of the list.
+Second line of each test case will contain the list A of size N.
+Constraints
+
+1 <= T <= 100
+1<= N <= 10^4
+-10^9 <= A[i] <= 10^9 ; Here A[i] means the values of the list.
+Output Format
+
+Output how many moves does he need to make the list unique.
+Sample Input 0
+
+4
+5
+1 2 3 4 5
+5
+1 1 1 1 1
+10
+-5 2 4 -5 -2 2 4 3 2 -3
+5
+-2 -3 -4 -2 -3
+Sample Output 0
+
+0
+4
+4
+2
+
+
+Dracula and Blood locked
+Problem
+Submissions
+Discussions
+Problem Statement
+
+Once two draculas named Zaza and Kaza went to a hospital to drink blood. There were some bottles of blood arranged in a shelf like a binary string (a binary string is a string such that each character in it is either 0 or 1). If the character is 1, that means there is blood in that bottle else not. Zaza will first start drinking, then Kaza and then again Zaza, and so on.
+
+During eating, at a time they can choose any number of consecutive bottles with the same type, after drinking it will be removed from the list.
+
+For example: If the binary string is 0110111, then the optimal way will be,
+
+Zaza will drink- 0110 111 and the string becomes 0110
+Kaza will drink- 0 11 0 and the string becomes 00
+After that, there is no bottle with blood to drink and they left the hospital. So, Zaza drank 3 bottles, and Kaza drank 2 bottles. Each of them wants to drink more bottles of blood. Can you calculate how many bottles of blood did Zaza drank?
+
+Input Format
+
+First line will contain an integer T, the number of test cases.
+Each test case will contain a binary string S.
+Constraints
+
+T (1 <= T <= 100)
+S (1 <= |S| <= 100), here |S| means the length of S.
+Output Format
+
+For each test case, output a single line - number of bottles of milk Zaza drank.
+Sample Input 0
+
+5
+0110111
+0101010101
+1010101000
+0000
+111111
+Sample Output 0
+
+3
+3
+2
+0
+6
+
+
+Convert It locked
+Problem
+Submissions
+Discussions
+Problem Statement
+
+Yunus Ali is working with binary trees. But he is not loving the order of the tree, he wants to optimize it so that he can do some operation easily. For this reason, he is converting the binary tree into something like that when taking out from the tree the value will be sorted and also he can put new values into that tree.
+
+You will be given an initial binary tree in level order. After that you need to do Q operations on it. Any operation is of two types
+
+Insert a value in that tree.
+Delete the maximum value from that tree and print it.
+It is guranteed that, there will be minimum one type 2 operation.
+
+Input Format
+
+You will be given the initial binary tree in level order, if the value is -1 that means there is no node.
+Next line will contain Q, the number of operations
+Next Q lines will contain the operations. The type will be either 1 or 2.
+Constraints
+
+V (0 <= V <= 100), value of a node.
+0 < Q <= 100
+Output Format
+
+Output for type 2 operation
+Sample Input 0
+
+0
+1 2
+3 -1 -1 4
+-1 -1 -1 -1
+4
+2
+1 10
+1 8
+2
+Sample Output 0
+
+4
+10
+Explanation 0
+
+First operation will print the maximum value from the tree which is 4. After that next two operation inserted 10 and 8 in the tree. So the next type 2 operation will print 10 as the maximum value in the tree is 10.
+
+
+Tree Plant locked
+Problem
+Submissions
+Discussions
+Problem Statement
+
+Zarif has bought a special kind of tree from the amazon shop. This tree gives birth to two plant trees every year. To recognize them, Zarif follows a special kind of technique. For a plant, he gives marking to the tree as the sum of all values of its parent and parents of the parent. Initial tree has a value of 1. Can you tell the sum of all the values of all the plan trees at Yth year?
+
+image
+
+Input Format
+
+Input will consist of only Y
+Constraints
+
+1 <= Y <= 20
+Output Format
+
+Output the sum of all values of plant trees at Yth year.
+Sample Input 0
+
+2
+Sample Output 0
+
+2
+Sample Input 1
+
+3
+Sample Output 1
+
+8
+
+
+String Rules locked
+Problem
+Submissions
+Discussions
+Problem Statement
+
+You have given a string that will be contain a-z, 1-9, '+', '-', '*', '/'.
+
+The string contains some statements (at least one). A statement is defined as -
+
+NC (Here N is defined as a number from 1-9, and C is defined as a group of small alphabets)
+There will be an operator (+,-,*,/) between two statements
+You have to apply the below rules on that string.
+
+The Rules is,
+
+Append the group of alphabets (C) N times to the final string.
+Append the operators (if any) after the statements to the final string.
+Suppose the string is 5a+2bc-9abc*1d
+
+After apply,
+
+5a wil become aaaaa
+2bc will become bcbc
+9abc become abcabcabcabcabcabcabcabcabc
+1d will become d
+Finally the string will be like this after apply the string rules,
+
+aaaaa+bcbc-abcabcabcabcabcabcabcabcabc*d
+
+Input Format
+
+You will be given a string S in the given format.
+Constraints
+
+2 <= |S| <= 5000 ; Here |S| mean the length of the String
+Output Format
+
+Print the final string after applying the rules.
+Sample Input 0
+
+5a+2bc-9abc*1d
+Sample Output 0
+
+aaaaa+bcbc-abcabcabcabcabcabcabcabcabc*d
+
