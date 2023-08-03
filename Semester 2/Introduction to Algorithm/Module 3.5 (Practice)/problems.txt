@@ -1,0 +1,182 @@
+912. Sort an Array
+Medium
+5.3K
+703
+Companies
+Given an array of integers nums, sort the array in ascending order and return it.
+
+You must solve the problem without using any built-in functions in O(nlog(n)) time complexity and with the smallest space complexity possible.
+
+ 
+
+Example 1:
+
+Input: nums = [5,2,3,1]
+Output: [1,2,3,5]
+Explanation: After sorting the array, the positions of some numbers are not changed (for example, 2 and 3), while the positions of other numbers are changed (for example, 1 and 5).
+Example 2:
+
+Input: nums = [5,1,1,2,0,0]
+Output: [0,0,1,1,2,5]
+Explanation: Note that the values of nums are not necessairly unique.
+ 
+
+Constraints:
+
+1 <= nums.length <= 5 * 104
+-5 * 104 <= nums[i] <= 5 * 104
+
+Find Duplicate in Array
+Contributed by
+Dhruv Sharma
+Easy
+0/40
+15 mins
+85 %
+815 upvotes
++7 more
+Problem Statement
+Detailed explanation ( Input/output format, Notes, Images )
+Sample Input 1:
+1
+3
+1 1 2
+Sample Output 1:
+1
+Explanation of Sample Input 1:
+1 is repeated in the array, hence function returns 1.
+Sample Input 2:
+3
+5
+1 3 4 2 2
+5
+3 1 3 4 2
+3
+1 1 1
+Sample Output 2:
+2
+3
+
+
+88. Merge Sorted Array
+Easy
+11.8K
+1.2K
+Companies
+You are given two integer arrays nums1 and nums2, sorted in non-decreasing order, and two integers m and n, representing the number of elements in nums1 and nums2 respectively.
+
+Merge nums1 and nums2 into a single array sorted in non-decreasing order.
+
+The final sorted array should not be returned by the function, but instead be stored inside the array nums1. To accommodate this, nums1 has a length of m + n, where the first m elements denote the elements that should be merged, and the last n elements are set to 0 and should be ignored. nums2 has a length of n.
+
+ 
+
+Example 1:
+
+Input: nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3
+Output: [1,2,2,3,5,6]
+Explanation: The arrays we are merging are [1,2,3] and [2,5,6].
+The result of the merge is [1,2,2,3,5,6] with the underlined elements coming from nums1.
+Example 2:
+
+Input: nums1 = [1], m = 1, nums2 = [], n = 0
+Output: [1]
+Explanation: The arrays we are merging are [1] and [].
+The result of the merge is [1].
+Example 3:
+
+Input: nums1 = [0], m = 0, nums2 = [1], n = 1
+Output: [1]
+Explanation: The arrays we are merging are [] and [1].
+The result of the merge is [1].
+Note that because m = 0, there are no elements in nums1. The 0 is only there to ensure the merge result can fit in nums1.
+ 
+
+Constraints:
+
+nums1.length == m + n
+nums2.length == n
+0 <= m, n <= 200
+1 <= m + n <= 200
+-109 <= nums1[i], nums2[j] <= 109
+
+
+
+Merge Sort
+Contributed by
+Ayush Thakur
+Easy
+0/40
+15 mins
+85 %
+98 upvotes
++70 more
+Problem Statement
+
+Detailed explanation ( Input/output format, Notes, Images )
+Sample Input 1 :
+2
+7
+3 4 1 6 2 5 7
+4
+4 3 1 2
+Sample Output 1 :
+1 2 3 4 5 6 7
+1 2 3 4
+Explanation For Sample Input 1:
+Test Case 1 :
+
+Given ‘ARR’ : { 3, 4, 1, 6, 2, 5, 7 }
+
+Then sorted 'ARR' in non-descending order will be : { 1, 2, 3, 4, 5, 6, 7 }. Non-descending order means every element must be greater than or equal to the previse element.
+
+Test Case 2 :
+
+Given ‘ARR’ : { 4, 3, 1, 2 }
+
+Then sorted 'ARR' in non-descending order will be : { 1, 2, 3, 4 }. 
+Sample Input 2 :
+2
+4
+5 4 6 7
+3
+2 1 1
+Sample Output 2 :
+4 5 6 7
+1 1 2
+
+
+Day 8 : Second largest element in the array
+Contributed by
+Mutiur Rehman khan
+Easy
+0/40
+15 mins
+80 %
+75 upvotes
++42 more
+Problem Statement
+Detailed explanation ( Input/output format, Notes, Images )
+Sample Input 1:
+2
+6
+12 1 35 10 34 1
+5
+10 10 10 10 10
+Sample Output 1:
+34
+-1
+Explanation Of Sample Input 1:
+Test case 1: In the given sequence of numbers, number 35 is the largest element, followed by number 34 which is the second-largest element. Hence we return number 34 which is the second-largest element in the sequence.
+
+Test case 2: In the given sequence of numbers, number 10 is the largest element. However, since all the elements are the same, the second largest element does not exist. So, we return -1.
+Sample Input 2:
+1
+6
+7 8 8 1 4 3 
+Sample Output 2:
+7
+Explanation Of Sample Input 2:
+In the given sequence of numbers, 8 exists two times and is the largest element, followed by 7 which is the second-largest element. Hence we return the number 7 as the second-largest element.
+
+
