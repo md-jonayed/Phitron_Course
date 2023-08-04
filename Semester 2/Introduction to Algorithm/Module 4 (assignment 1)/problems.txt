@@ -1,0 +1,76 @@
+Question: Write a C++ program that takes N integer numbers and sorts them in non-increasing order using Merge Sort. 
+You can’t use any built-in function for sorting.	
+Marks: 20
+
+
+
+Sample Input
+Sample Output
+7
+1 2 9 4 0 2 5
+9 5 4 2 2 1 0
+6
+5 3 -1 3 3 8
+8 5 3 3 3 -1
+
+
+
+
+Question: Write a C++ program that takes N integer numbers that are sorted and distinct. The next line will contain an integer k. You need to tell whether K exists in that array or not. If it exists, print its index otherwise print “Not Found”. 	
+You must solve this in O(logn) complexity.
+Marks: 20
+
+
+
+Sample Input
+Sample Output
+8
+-4 0 2 6 9 10 29 54
+29
+6
+10
+0 1 2 3 4 5 6 7 8 9
+-3
+Not Found
+
+
+
+Question: You are given an array of N positive integers. The next line will contain an integer K. You need to tell whether there exists more than one occurrence of K in that array or not. If there exists more than one occurrence of K print YES, Otherwise print NO.
+See the sample input-output for more clarification.
+The given array will be sorted in increasing order. And it is guaranteed that at least one occurrence of K will exist.	 You must solve this in O(logn) complexity.
+Marks: 20
+
+
+
+Sample Input
+Sample Output
+7
+1 3 4 6 6 9 17		
+6
+YES
+10
+0 1 2 3 4 5 6 7 8 9
+3
+NO
+
+
+
+
+
+
+Question: You are given two sorted arrays arr1 and arr2 in descending order. Your task is to merge these two arrays into a new array result using the merge sort technique, but Instead of merging the arrays in ascending order, you need to merge them in descending order to create the result array.
+	 
+You cannot use stl sort function here
+Marks: 20
+
+
+
+Sample Input
+Sample Output
+4
+8 6 4 2	
+4
+7 5 3 1
+8 7 6 5 4 3 2 1
+
+
