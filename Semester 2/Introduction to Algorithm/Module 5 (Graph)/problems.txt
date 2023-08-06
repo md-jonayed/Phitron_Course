@@ -1,0 +1,1 @@
+graph 2 types depending on the direction as well as weight
