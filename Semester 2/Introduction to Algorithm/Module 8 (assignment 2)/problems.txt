@@ -1,0 +1,265 @@
+Distance
+Problem
+Submissions
+Leaderboard
+Discussions
+Problem Statement
+
+You will be given an undirected graph as input. You will be given a query Q, for each query you will be given a source S and a destination D. You need to tell the minimum distance from source to destination for each query.
+
+Note: If there is no path in between the source and destination, print -1.
+
+Input Format
+
+First line will contain N, the number of nodes and E, the number of edges. The value of nodes will be from 0 to 10^5.
+Next E lines will contain A, B which means there is a edge between node A and B.
+Next line will contain Q, the number of queries.
+For each query every line will contain S and D.
+Constraints
+
+1 <= N, E <= 1000
+1 <= Q <= 1000
+0 <= S, D <= 10^5
+Output Format
+
+Output the minimum distance from source to destination for each query.
+Sample Input 0
+
+6 7
+0 1
+0 2
+1 2
+0 3
+4 2
+3 5
+4 3
+6
+0 5
+1 5
+2 5
+2 3
+1 4
+0 0
+Sample Output 0
+
+2
+3
+3
+2
+2
+0
+Explanation 0
+
+In this test case, the graph is given below.
+image
+
+Sample Input 1
+
+7 6
+0 1
+0 2
+1 2
+0 3
+4 2
+4 3
+4
+3 10
+2 6
+0 6
+0 10
+Sample Output 1
+
+-1
+-1
+-1
+-1
+
+
+
+Know Your Level
+Problem
+Submissions
+Leaderboard
+Discussions
+Problem Statement
+
+Zaman lives in a city of pizzas where every street has several pizza shops and everyone loves pizza there. Suppose there are N pizza shops in Zaman's area. All pizza shops have unique numbers written in the shop, the number of the first pizza shop in his city is from 0 to 10^5. There are E roads between pizza shops, and these pizza shops form a undirected connected graph where you can divide them in levels where the level starts from 0. Zaman lives in level L, now he wants to know which pizza shops are there in his level. Can you help him to get the desired pizza shops?
+
+Note: If there are no pizza shops at level L, then print -1.
+
+Input Format
+
+First line will contain two integers N and E, number of pizza shops and roads repectively.
+The next E lines will contain two integeres A and B, which means there is a road between A and B.
+The last line will contain L, the level where Zaman lives.
+Constraints
+
+0 < N <= 10^5
+1 <= E <= 10^5
+0 <= A, B, L <= 10^5
+Output Format
+
+Output the numbers written on the pizza shops that are in level L in ascending order.
+Sample Input 0
+
+3 2
+0 1
+0 2
+1
+Sample Output 0
+
+1 2 
+Explanation 0
+
+image
+
+Kamal's Neighbourhood - I
+Problem
+Submissions
+Leaderboard
+Discussions
+Problem Statement
+
+Kamal lives in mazenda city. In his neighbourhood there are several houses too. Some of them are directly connected to Kamal's house, and some of them are indirectly connected. But the roads are two-way as usual. If there are N houses and E roads in his area. Every house has a unique number from 0 to N-1. Can you tell how many houses are directly connected to Kamal's house if his house number is K?
+
+Input Format
+
+First line will contain N and E, the number of houses and roads respectively.
+Next E lines will contain A and B, means there is a road between A house and B house. You can go from A to B and also B to A.
+Next line will contain K, the number of Kamal's house
+Constraints
+
+0 < N <=20
+0 <= E <= 190
+0 <= A,B < N
+0 <= K < N
+Output Format
+
+Output the number of houses that are directly connected to Kamal's house.
+Sample Input 0
+
+6 5
+0 1
+0 2
+0 3
+2 3
+4 5
+2
+Sample Output 0
+
+2
+Explanation 0
+
+image
+
+So there are two houses that are directly connected to Kamal's house which are 0 and 3.
+
+Kamal's Neighbourhood - II
+Problem
+Submissions
+Leaderboard
+Discussions
+Problem Statement
+
+Kamal lives in mazenda city. In his neighbourhood there are several houses too. Some of them are directly connected to Kamal's house, and some of them are indirectly connected. This time the roads are only one-way. If there are N houses and E roads in his area. Every house has a unique number from 0 to N-1. Can you tell how many houses Kamal can go directly or indirectly if Kamal's house if his house number is K?
+
+Note: You can go in the road only in one direction.
+
+Input Format
+
+First line will contain N and E, the number of houses and roads respectively.
+Next E lines will contain A and B, means there is a road between A house and B house. You can go only from A to B.
+Next line will contain K, the number of Kamal's house
+Constraints
+
+0 < N <=20
+0 <= E <= 190
+0 <= A,B < N
+0 <= K < N
+Output Format
+
+Output the number of houses that Kamal can go.
+Sample Input 0
+
+6 5
+0 1
+0 2
+0 3
+2 3
+4 5
+2
+Sample Output 0
+
+1
+Explanation 0
+
+image
+
+Kamal can go in only one house that is house no 3.
+Sample Input 1
+
+6 5
+0 1
+0 2
+2 3
+3 0
+4 5
+2
+Sample Output 1
+
+3
+Explanation 1
+
+image
+
+Kamal can go to 3 houses directly or indirectly. Those are house no 3, 0 and 1.
+
+
+Components
+Problem
+Submissions
+Leaderboard
+Discussions
+Problem Statement
+
+You will be given an undirected graph as input. You need to tell the number nodes in each component in ascending order.
+
+Note: There will be no component with single node.
+
+Input Format
+
+First line will contain N, the number of nodes and E, the number of edges. The value of nodes will be from 0 to 1000.
+Next E lines will contain A, B which means there is a edge between node A and B.
+Constraints
+
+1 <= N, E <= 1000
+Output Format
+
+Output the number of nodes in each component in ascending order.
+Sample Input 0
+
+9 7
+0 1
+1 2
+0 2
+2 3
+4 5
+5 7
+8 9
+Sample Output 0
+
+2 3 4 
+Explanation 0
+
+The components are shown for the sample test case:
+image
+
+Sample Input 1
+
+5 3
+999 1000
+100 500
+500 600
+Sample Output 1
+
+2 3
