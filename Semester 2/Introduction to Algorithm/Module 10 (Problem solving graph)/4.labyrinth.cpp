@@ -73,15 +73,14 @@ int main()
 
     BFS(si, sj);
 
-    if (level[di][dj] != 0)
-    {
-        cout << "YES" << endl;
-        cout << level[di][dj] << endl;
-    }
-    else
+    if (!visited[di][dj])
     {
         cout << "NO" << endl;
+        return 0;
     }
+
+    cout << "YES" << endl;
+    cout << level[di][dj] << endl;
 
     vector<pairr> path;
     pairr current = {di, dj};
@@ -90,14 +89,8 @@ int main()
         path.push_back(current);
         current = parent[current.first][current.second];
     }
-    path.push_back({si, sj});
-
     reverse(path.begin(), path.end());
 
-    // for (auto node : path)
-    // {
-    //     cout << node.first << " " << node.second << endl;
-    // }
     for (int i = 1; i < path.size(); i++)
     {
         if (path[i - 1].first == path[i].first)
