@@ -1,0 +1,94 @@
+4
+1 5 3 2
+5 2 4 3
+7
+
+U. Knapsack
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+There are 𝑁
+ items numbered from 1 to 𝑁
+. The 𝑖𝑡ℎ
+ item has a weight of 𝑤𝑖
+ and a value of 𝑣𝑖
+.
+
+You have to choose some items out of the 𝑁
+ items and carry them home in a knapsack. The capacity of the knapsack is 𝑊
+ which donate the maximum weight that can be carried inside the knapsack. In other words, 𝑊
+ means the total summation of all weights of items that can be carried in the knapsack.
+
+Print maximum possible sum of values of items that you can take home.
+
+Note: Solve this problem using recursion.
+
+Input
+First line contains two numbers 𝑁
+ and 𝑊
+ (1≤𝑁≤20,1≤𝑊≤100)
+ number of items and the capacity of the knapsack.
+
+Next 𝑁
+ lines will contain two numbers 𝑤𝑖
+ and 𝑣𝑖
+ (1≤𝑤𝑖≤50,1≤𝑣𝑖≤1000)
+Output
+Print maximum possible sum of values of items that you can take home.
+
+Examples
+inputCopy
+3 8
+3 30
+4 50
+5 60
+outputCopy
+90
+inputCopy
+6 15
+6 5
+5 6
+6 4
+6 6
+3 5
+7 2
+outputCopy
+17
+
+
+0 - 1 Knapsack Problem
+MediumAccuracy: 31.76%Submissions: 344K+Points: 4
+Join the most popular course on DSA. Master Skills & Become Employable by enrolling today! 
+You are given weights and values of N items, put these items in a knapsack of capacity W to get the maximum total value in the knapsack. Note that we have only one quantity of each item.
+In other words, given two integer arrays val[0..N-1] and wt[0..N-1] which represent values and weights associated with N items respectively. Also given an integer W which represents knapsack capacity, find out the maximum value subset of val[] such that sum of the weights of this subset is smaller than or equal to W. You cannot break an item, either pick the complete item or dont pick it (0-1 property).
+
+Example 1:
+
+Input:
+N = 3
+W = 4
+values[] = {1,2,3}
+weight[] = {4,5,1}
+Output: 3
+Explanation: Choose the last item that weighs 1 unit and holds a value of 3. 
+Example 2:
+
+Input:
+N = 3
+W = 3
+values[] = {1,2,3}
+weight[] = {4,5,6}
+Output: 0
+Explanation: Every item has a weight exceeding the knapsack's capacity (3).
+Your Task:
+Complete the function knapSack() which takes maximum capacity W, weight array wt[], value array val[], and the number of items n as a parameter and returns the maximum possible value you can get.
+
+Expected Time Complexity: O(N*W).
+Expected Auxiliary Space: O(N*W)
+
+Constraints:
+1 ≤ N ≤ 1000
+1 ≤ W ≤ 1000
+1 ≤ wt[i] ≤ 1000
+1 ≤ v[i] ≤ 1000
