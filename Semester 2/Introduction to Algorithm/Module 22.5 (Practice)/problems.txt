@@ -1,0 +1,89 @@
+V. Creating Expression1
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Given two numbers 𝑁
+ ,𝑋
+ and an array 𝐴
+ of 𝑁
+ numbers. Determine if there is a way to put '+' or '-' signs between every two numbers in the array 𝐴
+ in order to make an expression that is equal to 𝑋
+.
+
+Note: Solve this problem using recursion.
+
+Input
+First line contains two numbers 𝑁
+ and 𝑋
+ (1≤𝑁≤20,−109≤𝑋≤109)
+.
+
+Second line contains 𝑁
+ distinct numbers 𝐴1,𝐴2,....𝐴𝑁
+ (1≤𝐴𝑖≤105)
+.
+
+Output
+Print "YES" if you can put '+' or '-' signs between every two number to create an expression that is equal to 𝑋
+ otherwise, print "NO".
+
+Examples
+inputCopy
+5 5
+1 2 3 4 5
+outputCopy
+YES
+inputCopy
+5 2
+1 2 3 4 5
+outputCopy
+NO
+Note
+In the first example: 1 - 2 - 3 + 4 + 5 = 5
+
+
+W. Reach Value
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Given a number 𝑁
+. Initially you have a value equal 1 and you can perform one of the following operation any number of times:
+
+Multiply your current value by 10.
+Multiply your current value by 20.
+Determine if your value can reach 𝑁
+ or not.
+
+Note: Solve this problem using recursion.
+
+Input
+First line contains a number 𝑇
+ (1≤𝑇≤100)
+ number of test cases.
+
+Next 𝑇
+ lines will contain a number 𝑁
+ (1≤𝑁≤1012)
+.
+
+Output
+For each test case print "YES" if your value can reach exactly 𝑁
+ otherwise, print "NO".
+
+Example
+inputCopy
+5
+1
+2
+10
+25
+200
+outputCopy
+YES
+NO
+YES
+NO
+YES
+
