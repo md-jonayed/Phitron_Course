@@ -1,0 +1,233 @@
+Given a set of N items, each with a weight and a value, represented by the array w[] and val[] respectively. Also, a knapsack with weight limit W.
+The task is to fill the knapsack in such a way that we can get the maximum profit. Return the maximum profit.
+Note: Each item can be taken any number of times.
+
+ 
+
+Example 1:
+
+Input: N = 2, W = 3
+val[] = {1, 1}
+wt[] = {2, 1}
+Output: 3
+Explanation: 
+1.Pick the 2nd element thrice.
+2.Total profit = 1 + 1 + 1 = 3. Also the total 
+  weight = 1 + 1 + 1  = 3 which is <= W.
+ 
+
+Example 2:
+
+Input: N = 4, W = 8
+val[] = {1, 4, 5, 7}
+wt[] = {1, 3, 4, 5}
+Output: 11
+Explanation: The optimal choice is to 
+pick the 2nd and 4th element.
+ 
+
+Your Task:
+You do not need to read input or print anything. Your task is to complete the function knapSack() which takes the values N, W and the arrays val[] and wt[] as input parameters and returns the maximum possible value.
+
+ 
+
+Expected Time Complexity: O(N*W)
+Expected Auxiliary Space: O(W)
+
+ 
+
+Constraints:
+1 ≤ N, W ≤ 1000
+1 ≤ val[i], wt[i] ≤ 100
+
+
+Coin Change
+MediumAccuracy: 43.1%Submissions: 236K+Points: 4
+Join the most popular course on DSA. Master Skills & Become Employable by enrolling today! 
+Given an integer array coins[ ] of size N representing different denominations of currency and an integer sum, find the number of ways you can make sum by using different combinations from coins[ ].  
+Note: Assume that you have an infinite supply of each type of coin. And you can use any coin as many times as you want.
+
+Example 1:
+
+Input:
+N = 3, sum = 4
+coins = {1,2,3}
+Output: 4
+Explanation: Four Possible ways are: {1,1,1,1},{1,1,2},{2,2},{1,3}.
+Example 2:
+
+Input:
+N = 4, Sum = 10
+coins = {2,5,3,6}
+Output: 5
+Explanation: Five Possible ways are: {2,2,2,2,2}, {2,2,3,3}, {2,2,6}, {2,3,5} and {5,5}.
+Your Task:
+You don't need to read input or print anything. Your task is to complete the function count() which accepts an array coins its size N and sum as input parameters and returns the number of ways to make change for given sum of money. 
+
+Expected Time Complexity: O(sum*N)
+Expected Auxiliary Space: O(sum)
+
+Constraints:
+1 <= sum, N, coins[i] <= 103
+
+
+322. Coin Change
+Medium
+17.6K
+395
+Companies
+You are given an integer array coins representing coins of different denominations and an integer amount representing a total amount of money.
+
+Return the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return -1.
+
+You may assume that you have an infinite number of each kind of coin.
+
+ 
+
+Example 1:
+
+Input: coins = [1,2,5], amount = 11
+Output: 3
+Explanation: 11 = 5 + 5 + 1
+Example 2:
+
+Input: coins = [2], amount = 3
+Output: -1
+Example 3:
+
+Input: coins = [1], amount = 0
+Output: 0
+ 
+
+Constraints:
+
+1 <= coins.length <= 12
+1 <= coins[i] <= 231 - 1
+0 <= amount <= 104
+
+
+1143. Longest Common Subsequence
+Medium
+12.1K
+148
+Companies
+Given two strings text1 and text2, return the length of their longest common subsequence. If there is no common subsequence, return 0.
+
+A subsequence of a string is a new string generated from the original string with some characters (can be none) deleted without changing the relative order of the remaining characters.
+
+For example, "ace" is a subsequence of "abcde".
+A common subsequence of two strings is a subsequence that is common to both strings.
+
+ 
+
+Example 1:
+
+Input: text1 = "abcde", text2 = "ace" 
+Output: 3  
+Explanation: The longest common subsequence is "ace" and its length is 3.
+Example 2:
+
+Input: text1 = "abc", text2 = "abc"
+Output: 3
+Explanation: The longest common subsequence is "abc" and its length is 3.
+Example 3:
+
+Input: text1 = "abc", text2 = "def"
+Output: 0
+Explanation: There is no such common subsequence, so the result is 0.
+ 
+
+Constraints:
+
+1 <= text1.length, text2.length <= 1000
+text1 and text2 consist of only lowercase English characters.
+
+
+
+Print Longest Common Subsequence
+Contributed by
+Utkarsh Kumar Choubey
+Hard
+0/120
+42 upvotes
+Problem Statement
+
+
+
+
+
+Detailed explanation ( Input/output format, Notes, Images )
+Sample Input 1:
+5 6
+ababa
+cbbcad
+
+
+Expected Answer:
+"bba"
+
+
+Output On Console:
+1
+
+
+Explanation Of Sample Output 1:
+“bba” is only possible longest subsequence present in both s1 = “ababa” and s2 = “cbbcad”. '1' is printed if the returned string is equal to "bba". 
+
+Sample Input 2:
+3 3
+xyz
+abc
+
+
+Expected Answer:
+""
+
+
+Output On Console:
+1
+
+
+Explanation Of Sample Output 2:
+There’s no subsequence of ‘s1’ that is also present in ‘s2’. Thus an empty string is returned and '1' is printed.
+
+Expected Time Complexity:
+Try to solve this in O(n*m). Where ‘n’ is the length of ‘s1’ and ‘m’ is the length of ‘s2’. 
+
+
+Constraints:
+1 <= n, m <= 10^3
+
+Time Limit: 1 sec
+
+
+Longest Common Substring
+MediumAccuracy: 42.69%Submissions: 176K+Points: 4
+Join the most popular course on DSA. Master Skills & Become Employable by enrolling today! 
+Given two strings. The task is to find the length of the longest common substring.
+
+
+Example 1:
+
+Input: S1 = "ABCDGH", S2 = "ACDGHR", n = 6, m = 6
+Output: 4
+Explanation: The longest common substring
+is "CDGH" which has length 4.
+Example 2:
+
+Input: S1 = "ABC", S2 "ACB", n = 3, m = 3
+Output: 1
+Explanation: The longest common substrings
+are "A", "B", "C" all having length 1.
+
+Your Task:
+You don't need to read input or print anything. Your task is to complete the function longestCommonSubstr() which takes the string S1, string S2 and their length n and m as inputs and returns the length of the longest common substring in S1 and S2.
+
+
+Expected Time Complexity: O(n*m).
+Expected Auxiliary Space: O(n*m).
+
+
+Constraints:
+1<=n, m<=1000
+
