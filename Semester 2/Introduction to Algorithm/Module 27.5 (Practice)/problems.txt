@@ -1,0 +1,267 @@
+Shortest Common Supersequence
+MediumAccuracy: 55.62%Submissions: 77K+Points: 4
+100+ Candidates recieved offers in the last 3 months through Job-A-Thon. Your call is just a click away
+
+Given two strings X and Y of lengths m and n respectively, find the length of the smallest string which has both, X and Y as its sub-sequences.
+Note: X and Y can have both uppercase and lowercase letters.
+
+Example 1
+
+Input:
+X = abcd, Y = xycd
+Output: 6
+Explanation: Shortest Common Supersequence
+would be abxycd which is of length 6 and
+has both the strings as its subsequences.
+Example 2
+
+Input:
+X = efgh, Y = jghi
+Output: 6
+Explanation: Shortest Common Supersequence
+would be ejfghi which is of length 6 and
+has both the strings as its subsequences.
+Your Task:
+Complete shortestCommonSupersequence() function that takes X, Y, m, and n as arguments and returns the length of the required string.
+
+Expected Time Complexity: O(Length(X) * Length(Y)).
+Expected Auxiliary Space: O(Length(X) * Length(Y)).
+
+Constraints:
+1<= |X|, |Y| <= 100
+
+
+1092. Shortest Common Supersequence
+Hard
+4.4K
+63
+Companies
+Given two strings str1 and str2, return the shortest string that has both str1 and str2 as subsequences. If there are multiple valid strings, return any of them.
+
+A string s is a subsequence of string t if deleting some number of characters from t (possibly 0) results in the string s.
+
+ 
+
+Example 1:
+
+Input: str1 = "abac", str2 = "cab"
+Output: "cabac"
+Explanation: 
+str1 = "abac" is a subsequence of "cabac" because we can delete the first "c".
+str2 = "cab" is a subsequence of "cabac" because we can delete the last "ac".
+The answer provided is the shortest such string that satisfies these properties.
+Example 2:
+
+Input: str1 = "aaaaaaaa", str2 = "aaaaaaaa"
+Output: "aaaaaaaa"
+ 
+
+Constraints:
+
+1 <= str1.length, str2.length <= 1000
+str1 and str2 consist of lowercase English letters.
+
+
+Minimum number of deletions and insertions.
+MediumAccuracy: 65.29%Submissions: 41K+Points: 4
+100+ Candidates recieved offers in the last 3 months through Job-A-Thon. Your call is just a click away
+
+Given two strings str1 and str2. The task is to remove or insert the minimum number of characters from/in str1 so as to transform it into str2. It could be possible that the same character needs to be removed/deleted from one point of str1 and inserted to some another point.
+
+Example 1:
+
+Input: str1 = "heap", str2 = "pea"
+Output: 3
+Explanation: 2 deletions and 1 insertion
+p and h deleted from heap. Then, p is 
+inserted at the beginning One thing to 
+note, though p was required yet it was 
+removed/deleted first from its position 
+and then it is inserted to some other 
+position. Thus, p contributes one to the 
+deletion_count and one to the 
+insertion_count.
+Example 2:
+
+Input : str1 = "geeksforgeeks"
+str2 = "geeks"
+Output: 8
+Explanation: 8 deletions
+ 
+
+Your Task:
+You don't need to read or print anything. Your task is to complete the function minOperations() which takes both strings as input parameter and returns the minimum number of operation required.
+
+Expected Time Complexity: O(|str1|*|str2|)
+Expected Space Complexity: O(|str1|*|str2|)
+
+Constraints:
+1 ≤ |str1|, |str2| ≤ 1000
+All the characters are lower case English alphabets
+
+
+
+Longest Palindromic Subsequence
+MediumAccuracy: 56.57%Submissions: 81K+Points: 4
+100+ Candidates recieved offers in the last 3 months through Job-A-Thon. Your call is just a click away
+
+Given a String, find the longest palindromic subsequence.
+
+NOTE: Subsequence of a given sequence is a sequence that can be derived from the given sequence by deleting some or no elements without changing the order of the remaining elements
+
+Example 1:
+
+Input:
+S = "bbabcbcab"
+Output: 7
+Explanation: Subsequence "babcbab" is the
+longest subsequence which is also a palindrome.
+
+
+Example 2:
+
+Input: 
+S = "abcd"
+Output: 1
+Explanation: "a", "b", "c" and "d" are
+palindromic and all have a length 1.
+
+Your Task:
+You don't need to read input or print anything. Your task is to complete the function longestPalinSubseq() which takes the string S as input and returns an integer denoting the length of the longest palindromic subsequence of S.
+
+Expected Time Complexity: O(|S|*|S|).
+Expected Auxiliary Space: O(|S|*|S|).
+
+Constraints:
+1 ≤ |S| ≤ 1000
+
+
+Minimum number of deletions.
+EasyAccuracy: 65.47%Submissions: 19K+Points: 2
+100+ Candidates recieved offers in the last 3 months through Job-A-Thon. Your call is just a click away
+
+Given a string 'str' of size ‘n’. The task is to remove or delete the minimum number of characters from the string so that the resultant string is a palindrome. Find the minimum numbers of characters we need to remove.
+Note: The order of characters should be maintained.
+
+Example 1:
+
+Input: n = 7, str = "aebcbda"
+Output: 2
+Explanation: We'll remove 'e' and
+'d' and the string become "abcba".
+â€‹Example 2:
+
+Input: n = 3, str = "aba"
+Output: 0
+Explanation: We don't remove any
+character.
+Your Task:  
+You don't need to read input or print anything. Your task is to complete the function minDeletions() which takes the string s and length of s as inputs and returns the answer.
+
+Expected Time Complexity: O(|str|2)
+Expected Auxiliary Space: O(|str|2)
+
+Constraints:
+1 ≤ |str| ≤ 103
+
+
+1312. Minimum Insertion Steps to Make a String Palindrome
+Hard
+4.7K
+60
+Companies
+Given a string s. In one step you can insert any character at any index of the string.
+
+Return the minimum number of steps to make s palindrome.
+
+A Palindrome String is one that reads the same backward as well as forward.
+
+ 
+
+Example 1:
+
+Input: s = "zzazz"
+Output: 0
+Explanation: The string "zzazz" is already palindrome we do not need any insertions.
+Example 2:
+
+Input: s = "mbadm"
+Output: 2
+Explanation: String can be "mbdadbm" or "mdbabdm".
+Example 3:
+
+Input: s = "leetcode"
+Output: 5
+Explanation: Inserting 5 characters the string becomes "leetcodocteel".
+ 
+
+Constraints:
+
+1 <= s.length <= 500
+s consists of lowercase English letters.
+
+392. Is Subsequence
+Easy
+8.3K
+456
+Companies
+Given two strings s and t, return true if s is a subsequence of t, or false otherwise.
+
+A subsequence of a string is a new string that is formed from the original string by deleting some (can be none) of the characters without disturbing the relative positions of the remaining characters. (i.e., "ace" is a subsequence of "abcde" while "aec" is not).
+
+ 
+
+Example 1:
+
+Input: s = "abc", t = "ahbgdc"
+Output: true
+Example 2:
+
+Input: s = "axc", t = "ahbgdc"
+Output: false
+ 
+
+Constraints:
+
+0 <= s.length <= 100
+0 <= t.length <= 104
+s and t consist only of lowercase English letters.
+ 
+
+Follow up: Suppose there are lots of incoming s, say s1, s2, ..., sk where k >= 109, and you want to check one by one to see if t has its subsequence. In this scenario, how would you change your code?
+
+
+392. Is Subsequence
+Easy
+8.3K
+456
+Companies
+Given two strings s and t, return true if s is a subsequence of t, or false otherwise.
+
+A subsequence of a string is a new string that is formed from the original string by deleting some (can be none) of the characters without disturbing the relative positions of the remaining characters. (i.e., "ace" is a subsequence of "abcde" while "aec" is not).
+
+ 
+
+Example 1:
+
+Input: s = "abc", t = "ahbgdc"
+Output: true
+Example 2:
+
+Input: s = "axc", t = "ahbgdc"
+Output: false
+ 
+
+Constraints:
+
+0 <= s.length <= 100
+0 <= t.length <= 104
+s and t consist only of lowercase English letters.
+ 
+
+Follow up: Suppose there are lots of incoming s, say s1, s2, ..., sk where k >= 109, and you want to check one by one to see if t has its subsequence. In this scenario, how would you change your code?
+Accepted
+1M
+Submissions
+2.1M
+Acceptance Rate
