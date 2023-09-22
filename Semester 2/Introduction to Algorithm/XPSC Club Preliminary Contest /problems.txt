@@ -1,0 +1,415 @@
+Water
+Problem
+Submissions
+Leaderboard
+Discussions
+Problem Statement
+
+You are given an array H representing the heights of N vertical lines positioned at equally spaced intervals along a two-dimensional plane. The i-th line's height is represented by the integer H[i] where 0 <= i < N and the height will be unique.
+
+You need to find the two lines, such that together with the x-axis forms a container that can hold the most water in term of height.
+
+Note: Print the left index first, then the right index.
+
+Input Format
+
+First line will contain T, the number of test cases.
+First line of each test case will contain N.
+Second line of each test case will contain the array H.
+Constraints
+
+1 <= T <= 1000
+2 <= N <= 10^5
+0 <= H[i] <= 10^9
+Output Format
+
+Ouptut two integers, the index of those two lines that can contain the most water in term of height.
+Sample Input 0
+
+2
+9
+1 8 3 4 5 7 6 5 2
+5
+5 2 1 6 3
+Sample Output 0
+
+1 5
+0 3
+Explanation 0
+
+In the first test case, you can choose index 1 and 5 that can hold the most water in height which is 7.
+image
+
+
+Sending Message
+Problem
+Submissions
+Leaderboard
+Discussions
+Problem Statement
+
+Ahnaf and Sadia love each other. Ahnaf sends sms to Sadia. But her father checks her cell phone. So Ahnaf sends sms to Sadia by adding some extra letter for avoiding unwanted situation. Sadia reads the message after dropping those letters.
+
+For example, If Ahnaf sends “lomvned”, from that word by dropping some letters 'm', 'n' and 'd' Sadia get “love” which was original.
+
+In this problem you are given two words Word1 and Word2. Word1 is the encoded and word2 is the exact word which Ahnaf wants to send. You have to find either it’s possible to make word2 from word1 or not by dropping some letters (maybe 0).
+
+Input Format
+
+There are several lines of input in the input file. Each line contains two strings Word1 and Word2, separated by a blank space. Input is terminated by EOF. The strings doesn't contain any space.
+Constraints
+
+1 <= |Word1|, |Word2| <= 10^6; Here || means length of string.
+Output Format
+
+For each line of input you have to print either “Possible” or “Impossible” in a line. If it is possible to make Word2 from Word1 then print “Possible” otherwise print “Impossible”.
+Sample Input 0
+
+cealllmmee callme
+howareyou iloveyou
+lomvned love
+Sample Output 0
+
+Possible
+Impossible
+Possible
+
+
+Blood Bottle
+Problem
+Submissions
+Leaderboard
+Discussions
+Problem Statement
+
+Once two draculas named Zaza and Kaza went to a hospital to drink blood. There were some bottles of blood arranged in a shelf like a binary string (a binary string is a string such that each character in it is either 0 or 1). If the character is 1, that means there is blood in that bottle else not. Zaza will first start drinking, then Kaza and then again Zaza, and so on.
+
+During eating, at a time they can choose any number of consecutive bottles with the same type, after drinking it will be removed from the list.
+
+For example: If the binary string is 0110111, then the optimal way will be,
+
+Zaza will drink- 0110 111 and the string becomes 0110
+Kaza will drink- 0 11 0 and the string becomes 00
+After that, there is no bottle with blood to drink and they left the hospital. So, Zaza drank 3 bottles, and Kaza drank 2 bottles. Each of them wants to drink more bottles of blood. Can you calculate how many bottles of blood did Zaza drank?
+
+Input Format
+
+First line will contain an integer T, the number of test cases.
+Each test case will contain a binary string S.
+Constraints
+
+T (1 <= T <= 1000)
+S (1 <= |S| <= 100000), here |S| means the length of S.
+Output Format
+
+For each test case, output a single line - number of bottles of milk Zaza drank.
+Sample Input 0
+
+5
+0110111
+0101010101
+1010101000
+0000
+111111
+Sample Output 0
+
+3
+3
+2
+0
+6
+
+
+123 Ka 4
+Problem
+Submissions
+Leaderboard
+Discussions
+Problem Statement
+
+You will be given an integer number N and you need to create this pattern for the corresponding inputs.
+
+For example,
+
+If N=4, the xoss pattern look like this,
+image
+
+If N=7, the xoss pattern look like this,
+image
+
+Input Format
+
+You will be given a positive integer N as input.
+Constraints
+
+1 <= N <= 9
+Output Format
+
+Output the pattern
+Sample Input 0
+
+4
+Sample Output 0
+
+1234
+2  4
+3  4
+4444
+Sample Input 1
+
+1
+Sample Output 1
+
+1
+
+Emperor Alexander
+Problem
+Submissions
+Leaderboard
+Discussions
+Problem Statement
+
+Emperor Alexander is envisioning an extensive network of roads connecting the N cities in his vast empire. To achieve this, he has devised a plan to construct E roads, each with its construction cost. However, upon closer examination, it has come to his attention that some of these roads may be redundant, leading to unnecessary expenses. He seeks your expertise in identifying these expendable roads and determining the minimum total construction cost to bring his vision to life. If it is impossible to realize this plan, please convey the message by printing "Not Possible".
+
+Could you assist Emperor Alexander in finding the number of roads that can be removed from the plan to optimize costs and in calculating the minimum total construction cost?
+
+Note: There can be multiple roads between two cities in that plan. But there will be no roads from city A to A.
+
+Input Format
+
+First line will contain N and E. Each city is numbered from 1 to N.
+Next E lines will contain A, B and W. Which means there is a road between A and B where construction cost is W.
+Constraints
+
+1 <= N <= 10^5
+1 <= E <= 10^5
+1 <= A, B <= N
+1 <= W <= 10^9
+Output Format
+
+Output the number of roads need to remove, then the minimum construction cost to build the plan. If it's not possible print "Not Possible".
+Sample Input 0
+
+4 6
+1 2 10
+2 3 4
+3 4 5
+4 2 3
+4 1 5
+1 3 2
+Sample Output 0
+
+3 9
+Explanation 0
+
+He can build those roads in the following way, so 3 roads will be removed and minimum cost will be 9 to connect all cities.
+image
+
+Sample Input 1
+
+4 4
+1 2 10
+1 3 2
+2 1 5
+3 1 6
+Sample Output 1
+
+Not Possible
+Explanation 1
+
+As there is no way to get to the 4th city, so it is not possible to connect all the cities using this plan.
+
+Romeo and Juliet
+Problem
+Submissions
+Leaderboard
+Discussions
+Problem Statement
+
+Romeo and Juliet are a newly married couple. They went to Switzerland for their honeymoon. They had a plan in mind: they would test their fortune by staying in different cities and seeing if they could reunite in at most K steps. Switzerland has N cities numbered from 0 to N-1, with E two-way roads connecting them.
+
+Romeo is in city X, and Juliet is in city Y. In each step, they can cross one road and move from one city to another. It is not mandatory for both of them to cross; one can choose to stay in the same city if desired. However, the step will still be counted.
+
+Can you tell if they can be reunited or not?
+
+Input Format
+
+First line will contain N and E; The number of city and number of roads respectively.
+Next E lines will contain A and B which means there is a road between city A and B.
+Last line will contain X,Y and K.
+Constraints
+
+2 <= N <= 100
+0 <= E <= 1000
+0 <= X, Y < N and X != Y
+0 <= K <= 1000
+Output Format
+
+Output "YES" if they can be reunited otherwise output "NO".
+Sample Input 0
+
+8 9
+0 1
+4 0
+4 2
+2 3
+1 3
+2 5
+5 6
+6 7
+6 3
+4 7 2
+Sample Output 0
+
+YES
+Explanation 0
+
+Initial city of Romeo and Juliet are 4 and 7.
+image
+
+Romeo at city 2 and Juliet at city 6 after step 1 -
+image
+
+Romeo and Juliet are both at city 5 after step 2 -
+image
+
+Sample Input 1
+
+8 9
+0 1
+4 0
+4 2
+2 3
+1 3
+2 5
+5 6
+6 7
+6 3
+2 7 2
+Sample Output 1
+
+YES
+Sample Input 2
+
+8 9
+0 1
+4 0
+4 2
+2 3
+1 3
+2 5
+5 6
+6 7
+6 3
+2 7 1
+Sample Output 2
+
+NO
+Sample Input 3
+
+7 6
+4 0
+0 1
+3 1
+3 2
+4 2
+5 6
+4 6 10
+Sample Output 3
+
+NO
+
+
+Subsets
+Problem
+Submissions
+Leaderboard
+Discussions
+Problem Statement
+
+Alice and Bob are facing a fun mathematical challenge involving a set of positive numbers. They have an array A of N numbers and want to figure out the number of ways to divide the array into two subsets such that the absolute difference between the sums of the elements in these subsets equals a given number D. Help them to do it.
+
+Note: As the answer could be very big, print the answer modulo 1e9+7.
+
+Input Format
+
+First line will contain T, the number of test cases.
+First line of each test case will contain N and D.
+Next line of each test case will contain the array A.
+Constraints
+
+1 <= T <= 100
+2 <= N <= 1000
+1 <= D <= 100
+1 <= A[i] <= 100
+Output Format
+
+Output the number of ways to do the given task.
+Sample Input 0
+
+1
+5 3
+1 2 3 4 5
+Sample Output 0
+
+3
+Explanation 0
+
+In the first test case, you can divide them in 3 ways so that the difference remains 3.
+1. {1,2,3} and {4,5}
+2. {2,3,4} and {1,5}
+3. {2,4} and {1,3,5}
+
+
+Chinki and Minki
+Problem
+Submissions
+Leaderboard
+Discussions
+Problem Statement
+
+Chinki and Minki are two sisters who share a deep bond of love, and they extend this love even to their food. They have a habit of splitting everything equally between them. One fine day, their father gave them a total of N coins and asked them to divide it amongst themselves. However, there's a twist - the coins they received are not of equal value; they can have different denominations. This presents a challenge because there is no guarantee that they can divide the coins equally.
+
+So, Chinki and Minki devised a plan to divide the coins in a way that minimizes the difference between the sums of the coins they receive. They agreed that each of them should get N/2 coins (if N is even). In case N is odd, one of them will receive an extra coin. However, they are not sure how to execute this plan efficiently. Can you help them achieve their goal?
+
+For example: Let's consider a scenario where their father gives them 8 coins with the following denominations: 23, 45, 34, 12, 0, 3, 1, and 4. They need to divide these coins among themselves in the following manner:
+
+Chinki: 45, 12, 3, 1
+Minki: 23, 34, 0, 4
+In this division, both Chinki and Minki receive subsets of equal size, each containing 4 coins. Remarkably, the sum of coins in both parts is identical, amounting to 61 for each of them. Consequently, the minimum difference in the sum of coins between the two parts is 0.
+
+This example illustrates their strategy for dividing the coins, ensuring that the difference in the sum of coins is minimized.
+
+Input Format
+
+First line will contain an integer T, the number of test cases.
+For each test case, the first line will contain an integer N - number of coins need to be divided.
+For each test case, the second line will contain the value (Ei) of the coins.
+Constraints
+
+1 <= T <= 1000
+1 <= N <= 20
+0 <= Ei <= 1000
+Output Format
+
+For each test case, output a single line - the minimum difference described in the statement.
+Sample Input 0
+
+3
+8
+23 45 34 12 0 3 1 4
+5
+10 20 30 40 50
+4
+1 2 3 10
+Sample Output 0
+
+0
+10
+6
+Explanation 0
+
+The first test case was explained in the problem statement.
+For the second test case, one possible answer is Chinki takes {10,30,40} and Minki takes {20,50}.
+For the third test case, one possible answer is Chinki take {1,10} and Minki takes {2,3}
+
