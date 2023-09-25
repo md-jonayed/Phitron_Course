@@ -1,0 +1,157 @@
+Q. Digits
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Given a number N. Print the digits of that number from right to left separated by space.
+
+Input
+First line contains a number T (1 ≤ T ≤ 10) number of test cases.
+
+Next T lines will contain a number N (0 ≤ N ≤ 109)
+
+Output
+For each test case print a single line contains the digits of the number separated by space.
+
+Example
+inputCopy
+4
+121
+39
+123456
+1200
+outputCopy
+1 2 1
+9 3
+6 5 4 3 2 1
+0 0 2 1
+
+
+S. Sum of Consecutive Odd Numbers
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Given two numbers X and Y. Print the sum of all odd numbers between them, excluding X and Y.
+
+Input
+First line contains a number T (1 ≤ T ≤ 10) number of test cases.
+
+Next T lines will contain two numbers X and Y (0 ≤ X, Y ≤ 104).
+
+Output
+Print the sum of all odd numbers between X and Y (excluding X and Y).
+
+Example
+inputCopy
+3
+5 6
+10 4
+4 9
+outputCopy
+0
+21
+12
+
+
+
+Y. Easy Fibonacci
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Given a number N. Print first N numbers of the Fibonacci sequence.
+
+Note: In order to create the Fibonacci sequence use the following function:
+
+fib(1) = 0.
+fib(2) = 1.
+fib(n) = fib(n - 1) + fib(n - 2).
+Input
+Only one line containing a number N (1 ≤ N ≤ 45).
+
+Output
+Print the first N numbers from the Fibonacci Sequence .
+
+Example
+inputCopy
+7
+outputCopy
+0 1 1 2 3 5 8 
+Note
+For more information visit Fibonacci: https://www.mathsisfun.com/numbers/fibonacci-sequence.html.
+
+
+
+F. Equation
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Given two numbers X and N. Print the result of the following equation:
+
+S = (X0 - 1) + (X2) + (X4) + (X6) + ............... + (XN)
+
+Note: Solve this problem using function and don't use built-in function.
+
+Input
+Only one line contains two numbers X and N (0 ≤ X, N ≤ 10)
+
+Output
+Print the equation result S.
+
+Example
+inputCopy
+5 5
+outputCopy
+650
+Note
+First Test :
+
+(50 - 1) + 52 + 54 = 0 + 25 + 625 = 650.
+
+Z. Three Numbers
+time limit per test3 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Given two numbers 𝐾
+ and 𝑆
+. Determine how many different values of 𝑋,𝑌
+ and 𝑍
+ such that (0≤𝑋,𝑌,𝑍≤𝐾)
+ and 𝑋+𝑌+𝑍=𝑆
+.
+
+Input
+Only one line containing two numbers 𝐾
+ and 𝑆
+ (0≤𝐾≤3000,0≤𝑆≤3𝐾)
+.
+
+Output
+Print the answer required above.
+
+Examples
+inputCopy
+2 1
+outputCopy
+3
+inputCopy
+9 4
+outputCopy
+15
+Note
+In the first test case all values of 𝑋,𝑌,𝑍
+ that satisfy the conditions are :
+
+0 0 1
+
+0 1 0
+
+1 0 0
+
+In the second test case all values of 𝑋,𝑌,𝑍
+ that satisfy the conditions are :
+
+
