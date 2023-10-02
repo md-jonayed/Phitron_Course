@@ -1,0 +1,34 @@
+inheritance is one of the 4 pillers of object oriented programming. using inheritance we can inherit attributes and methods of a class into another class. in order to do so first we need to inherit the class. the class which is inheriting, is known as derived class or child class and the class where it is inheriting is known as parent class.
+class Human:
+    def __init__(self,name,age):
+        self.name=name
+        self.age=age
+    
+    def eat(self):
+        print("They eats food")
+
+class Man(Human):
+    def __init__(self,name,age):
+    super.__init__(name,age)
+
+there are 4 kinds of inheritance:
+1. simple inheritance
+2. multilevel inheritance
+3. multiple inheritance
+4. hybrid inheritance
+
+# What are Encapsulation and Access Modifiers? Explain with examples
+Encapsulation is process of restricting a certain variable accesing from teh outside. we use access modifiers to encapsulate variables and methods. There are 3 types of access modifiers.
+1. public
+2. private
+3. protected
+
+public variables and methods are accessible from any where, private variables and methods are accessible from only inside of that class where it is encapsulated.
+
+class Bank:
+    def __init__(self,name,balance):
+        self.name=name              (declared as a public variable)
+        self.__balance=balance       (declared as a private variable)
+
+holder  = Bank("jonayed",10000)
+holder.__balance=100            # not possible
