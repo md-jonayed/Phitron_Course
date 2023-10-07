@@ -1,0 +1,231 @@
+1. Write what is meant by operator overloading and method overriding with examples.
+ans : operator overloading is feature of OOP that allows us to define how operator should work in user defined data types or classes. there are some predefined operators +,-,*,/ etc and we want to use them in our own class or data types. Operator overloading enables us to define custom implementations of these operators which we can apply to our classes and objects.
+
+class Cricketer:
+    def __init__(self,age):
+        self.age=age
+    def __add__(self,other):
+        return self.age+other.age
+player1 = Cricketer(24)
+player2 = Cricketer(23)
+
+total  = player1+player2
+print(total)
+
+Method overriding is a process of implenting same method with different functionality into derived class.
+
+
+class Player:
+    def __init__(self,age):
+        self.age=age
+    def __add__(self,other):
+        return self.age+other.age
+    def play(self):
+        pass
+
+class Cricketer(Player):
+    def __init__(self,age):
+        self.age=age
+    def __add__(self,other):
+        return self.age+other.age
+    def play(self):
+        print("Play cricket)
+
+
+here are four key differences between class methods and static methods in Python, along with examples for each:
+
+1. Access to Class Variables
+Class Method: Can access and modify class variables.
+Static Method: Cannot access or modify class variables directly.
+Example for Class Method:
+class MyClass:
+    class_variable = 0
+    
+    def __init__(self, value):
+        self.instance_variable = value
+    
+    @classmethod
+    def update_class_variable(cls, new_value):
+        cls.class_variable = new_value
+
+obj1 = MyClass(5)
+obj2 = MyClass(10)
+
+obj1.update_class_variable(100)
+print(obj1.class_variable)  # Output: 100
+print(obj2.class_variable)  # Output: 100
+
+Example for Static Method:
+class MyClass:
+    class_variable = 0
+    
+    def __init__(self, value):
+        self.instance_variable = value
+    
+    @staticmethod
+    def static_method():
+        print("This is a static method.")
+
+obj = MyClass(5)
+obj.static_method()  # Output: This is a static method.
+obj.class_variable = 50
+print(obj.class_variable)  # Output: 50
+
+2. Access to Instance Variables
+Class Method: Cannot access or modify instance variables directly.
+Static Method: Cannot access or modify instance variables directly.
+3. Decorator Usage
+Class Method: Decorated with @classmethod.
+Static Method: Decorated with @staticmethod.
+4. Parameters
+Class Method: Takes the class itself as its first parameter conventionally named cls.
+Static Method: Does not take any special first parameter.
+Example for Class Method:
+class MyClass:
+    @classmethod
+    def class_method(cls, x, y):
+        return f"Sum: {x + y}"
+
+result = MyClass.class_method(3, 5)
+print(result)  # Output: Sum: 8
+
+Example for Static Method:
+class MyClass:
+    @staticmethod
+    def static_method(x, y):
+        return f"Product: {x * y}"
+
+result = MyClass.static_method(3, 5)
+print(result)  # Output: Product: 15
+
+Understanding these differences helps you choose the appropriate method type for your specific use case in object-oriented programming.
+
+
+In object-oriented programming, getters and setters are methods used to access and modify the private attributes (variables) of a class. They are a form of encapsulation, allowing controlled access to the internal state of an object.
+
+Getter Method:
+A getter method is used to retrieve the value of a private attribute from a class. It provides read access to the attribute by returning its value.
+
+Example of a getter method:
+
+class Person:
+    def __init__(self, name, age):
+        self._name = name  # Private attribute with a single underscore prefix
+        self._age = age    # Private attribute with a single underscore prefix
+
+    def get_name(self):
+        return self._name
+
+    def get_age(self):
+        return self._age
+
+# Usage
+person = Person("Alice", 30)
+print(person.get_name())  # Output: Alice
+print(person.get_age())   # Output: 30
+
+In this example, get_name() and get_age() are getter methods allowing access to the private attributes _name and _age respectively.
+
+Setter Method:
+A setter method is used to modify the value of a private attribute from a class. It provides write access to the attribute by setting its value.
+
+Example of a setter method:
+class Person:
+    def __init__(self, name, age):
+        self._name = name  # Private attribute with a single underscore prefix
+        self._age = age    # Private attribute with a single underscore prefix
+
+    def set_name(self, name):
+        self._name = name
+
+    def set_age(self, age):
+        self._age = age
+
+# Usage
+person = Person("Alice", 30)
+print(person.get_name())  # Output: Alice
+person.set_name("Bob")
+print(person.get_name())  # Output: Bob
+In this example, set_name() and set_age() are setter methods allowing modification of the private attributes _name and _age respectively.
+
+Using getters and setters provides a way to control how attributes are accessed and modified, enabling better management of the object's state and ensuring data encapsulation. Note that in Python, there are property decorators that can be used to create cleaner syntax for getters and setters.
+
+
+Inheritance and composition are two fundamental concepts in object-oriented programming that enable code reuse and help in creating more maintainable and modular code.
+
+Inheritance:
+Inheritance is the mechanism by which a new class inherits properties and behaviors (methods) from an existing class. The existing class is called the base class or parent class, and the new class is called the derived class or child class. The child class can inherit attributes and methods from the parent class and can also override or extend the behavior of the parent class.
+
+Example:
+
+class Animal:
+    def __init__(self, species):
+        self.species = species
+    
+    def sound(self):
+        pass
+
+class Dog(Animal):
+    def __init__(self, name):
+        super().__init__("Dog")
+        self.name = name
+    
+    def sound(self):
+        return "Woof!"
+
+class Cat(Animal):
+    def __init__(self, name):
+        super().__init__("Cat")
+        self.name = name
+    
+    def sound(self):
+        return "Meow!"
+
+dog = Dog("Buddy")
+print(dog.species)  # Output: Dog
+print(dog.sound())  # Output: Woof!
+
+cat = Cat("Whiskers")
+print(cat.species)  # Output: Cat
+print(cat.sound())  # Output: Meow!
+
+In this example, Dog and Cat are subclasses of the Animal base class. They inherit the species attribute and the sound() method from the Animal class. The sound() method is overridden in each subclass to provide specific behavior for dogs and cats.
+
+Composition:
+Composition is the practice of creating complex objects by combining simpler objects. Instead of inheriting from a base class, a class can contain instances of other classes, creating relationships between objects.
+
+Example:
+class Engine:
+    def start(self):
+        return "Engine started."
+
+class Car:
+    def __init__(self):
+        self.engine = Engine()  # Composition: Car has an Engine
+    
+    def start_engine(self):
+        return self.engine.start()
+
+my_car = Car()
+print(my_car.start_engine())  # Output: Engine started.
+
+In this example, the Car class has an instance of the Engine class as an attribute. This is composition, where a Car is composed of an Engine. The Car class does not inherit from the Engine class but uses it as a part of its composition.
+
+Differences:
+Code Reusability:
+
+Inheritance: Allows reuse of code by inheriting attributes and methods from a base class.
+Composition: Allows reuse of code by creating relationships between objects without inheritance.
+Flexibility:
+
+Inheritance: Provides a "is-a" relationship. Child class is a type of the parent class.
+Composition: Provides a "has-a" relationship. An object can contain other objects.
+Dependency:
+
+Inheritance: Subclasses are tightly coupled with the base class.
+Composition: Objects can be more independent and can be easily replaced without affecting the containing object.
+In summary, inheritance emphasizes an "is-a" relationship, while composition emphasizes a "has-a" relationship. The choice between inheritance and composition depends on the specific requirements of the problem you are solving and the relationships between the objects in your system.
+
+
+
+
