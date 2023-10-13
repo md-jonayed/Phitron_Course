@@ -13,13 +13,16 @@ class User:
         User.account_list['ac_number'] = self.__ac_number
         self.ts_history = []
         self.bank_status = True
-        self.__loan=0
-    
+        self.__loan = 0
+        self.ac_type = ""
+        self.is_loan_enabled = True
+        self.loan_count = 0
+
     def create_account(self):
         type = input("enter account type : ")
         self.ac_type = type
-        amount=float(input("deposit an initial amount : "))
-        self.__balance=amount+self.__balance
+        amount = float(input("deposit an initial amount : "))
+        self.__balance = amount+self.__balance
         self.ts_history.append(f"inital deposit {amount} taka")
 
     def deposit(self, amount: float):
@@ -34,7 +37,6 @@ class User:
             print("withdrawal amount exceeded you balance, can not withdraw")
         elif (self.ac_type == "savings"):
             print("savings account can't withdraw untill the deadline arrive")
-            pass
         elif self.bank_status == False:
             print("can't withdraw money , bank has gone bankrupted")
         else:
@@ -47,10 +49,21 @@ class User:
         print(f"account type : {self.ac_type}")
         print(f"transaction history : {self.ts_history}")
 
+    def get_balance(self):
+        return self.__balance
+
+    def get_loan(self):
+        return self.__loan
+
     def take_loan(self):
-        amount=float(input("enter desired loan amount : "))
-        self.__loan=amount+self.__loan
-        self.ts_history.append(f"asked for loan {amount} taka")
+        if (self.is_loan_enabled == True and self.loan_count <= 2):
+            amount = float(input("enter desired loan amount : "))
+            self.__loan = amount+self.__loan
+            self.__balance = self.__balance+self.__loan
+            self.ts_history.append(f"asked for loan {amount} taka")
+            self.loan_count = self.loan_count+1
+        else:
+            print("you are not eligible for taking loan")
 
     def transfer_balance(self, amount: float, number: int):
         for ac_number in User.account_list:
@@ -63,15 +76,3 @@ class User:
                     print("balance amount exceeded")
             else:
                 print(f"Account : {number} does not exist in our system")
-
-
-s1 = User("jonayed", "jonayed@gmail.com", "dhaka")
-# s1 = User("jonayed", "jonayed@gmail.com", "dhaka", "current")
-s1.create_account()
-print(s1.account_list)
-s1.deposit(100)
-print(s1.ts_history)
-s1.withdraw(15)
-print(s1.ts_history)
-s1.check_balance()
-s1.take_loan()
