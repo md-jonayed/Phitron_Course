@@ -1,0 +1,84 @@
+1. ans : difference between data and information:
+data is some unorganized values but information is collection of  organized data which bears some meaning.
+
+2. primary key :
+this kind of key helps  uniquely identify a record from a database.
+e.g roll can be a primary key for a student table in a database.
+
+composit primary key :
+a composit primary key consist of 2 or more column values of a table in a database.
+e.g 
+-> course table
+course_code       course_name         offered_by
+cse 101            intro to c         UAP
+cse 102            intro to java      BUET
+
+here if we combine course code and course name we can build a composit primary key
+primary key (course_code,course_name)
+
+foreign key :
+if we use one table's primary key in another table than it would be called foreign key.
+suppose if we use roll the primary key of student table in a table called library then the roll will be called foreign key interms of library table.
+
+3. ans : creating a table
+
+use phitron;
+create table employee(
+    id char(4) primary key,
+    name varchar(20) not null,
+    salary float     not null,
+    joining_date date
+
+);
+
+# inserted 2 employee details :
+
+insert into employee
+(id,name,salary,joining_date) values ('1234','Jonayed',25000, '2023-10-19');
+
+insert into employee
+(id,name,salary,joining_date) values ('1245','Mohammad',10000000,'2023-10-18');
+
+# delete query:
+in order to dlete we need to disable the safety feature first
+set sql_safe_updates = 0              (to off safety feature)
+
+delete from employee
+where id = '1234';
+
+set sql_safe_updates = 1              (to on safety feature)
+
+
+q1 :
+
+using phitron;
+
+create table stuff(
+    empId char(4) primary key,
+    empName varchar(20) not null,
+    joingYear int,
+    birthday  date check (year(birthday) <= 2000),
+    designation varchar(20) not null,
+    salary float check(salary>0)
+);
+
+q2. How to make composite primary key constraint? Show with example.
+create table student(
+    id char(4),
+    name varchar(20) not null,
+    class int,
+    primary key(id,name)
+);
+
+q3: Can LIMIT+OFFSET features can be done using only LIMIT Syntax? How?
+yes it can be done:
+for example, suppose there are 100 players in a sports club, if we want to see whose are listed in that club from 60 to 80 number we can run this query
+
+select name
+from club
+limit 10
+offset 59
+
+or 
+select name
+from club limit(59,10)
