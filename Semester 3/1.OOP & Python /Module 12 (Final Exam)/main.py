@@ -2,23 +2,9 @@ from users import User
 from admin import Admin
 # admin = Admin()
 
-# s1 = User("Jonayed", "jonayed@gmail.com", "dhaka")
-# s2 = User("Mohammad", "mohammad@gmail.com", "dhaka")
+s1 = User("Jonayed", "jonayed@gmail.com", "dhaka")
+s2 = User("Mohammad", "mohammad@gmail.com", "dhaka")
 
-
-# admin.add_users(s1)
-# admin.add_users(s2)
-# admin.disable_loan("Jonayed")
-# s1.create_account()
-# s2.create_account()
-# s1.deposit(2000)
-# s2.deposit(2000)
-# s1.take_loan()
-# s2.take_loan()
-
-# admin.see_user_account("Jonayed")
-# admin.check_total_balance_of_bank()
-# admin.check_total_loan_of_bank()
 while (True):
     print("enter admin or user")
     x = input()
@@ -33,7 +19,6 @@ while (True):
             newAccount = User(name=input("enter name : "), email=input(
                 "enter email : "), address=input("enter address : "))
             newAccount.create_account()
-
         elif (key == 2):
             newAccount.deposit(amount=float(input("enter amount : ")))
         elif (key == 3):
