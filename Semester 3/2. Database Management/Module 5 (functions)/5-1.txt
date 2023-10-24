@@ -1,0 +1,119 @@
+* use of select---------------
+# show all countries from country table:
+select *
+from country;
+
+# show department table :
+select *
+from department;
+
+# show employee table:
+select *
+from employee;
+
+# show first name of every employee
+select first_name
+from employee;
+
+# show first and last names of each employee:
+select first_name,last_name
+from employee;
+
+
+
+* use of where --------------
+
+# show employees whose department id is 60
+select *
+from employee
+where dept_id = 60;
+
+# show employees whose department id is 60 and salary is greater than 6000
+select *
+from employee
+where dept_id = 60 and salary>6000;
+
+# show employees whose department id is 60 or salary is greater than 6000
+select *
+from employee
+where dept_id=60 or salary>6000;
+
+
+* uses of arithmatic operators----------------
+
+# increase all employess salary by 10k:
+select name,salary,salary+10000
+from employees;
+
+# increase salary of each employee having id = 100
+select name,salary,salary+10000
+from employees
+where dept_id=100;
+
+* uses of comparison operators ----------------
+
+#show eomployees whose salary greater than 6000
+select *
+from employee
+where salary>6000;
+
+
+* uses of distinct operators ----------------
+# show distinct designations from the employee table:
+select distinct designations
+from employee;
+
+* uses of order by operators ----------------
+# show eomplyess according to salary in ascending order:
+
+select *
+from employee
+order by salary asc;
+
+# show eomplyess according to salary in descending order:
+
+select *
+from employee
+order by salary desc;
+
+* uses of limit & offset by operators ----------------
+# show first 5 records or rows from a table:
+
+select *
+from employee
+limit 5;
+
+# if we want to see 5 rows excluding first 5 rows, from 6th row to 10th row.
+select *
+from employee
+limit 5,5;      (limit  no_of_rows_to_be_excluded,                                                no_of_rows_to_be_shown_fromthe_excluded_part)
+
+select *
+from employee
+limit 5                    no of rows we want to see.
+offset 4;                  no of rows we want to exclude.
+
+
+* uses of like & as operators ----------------
+
+# find employees whose name starts with green:
+
+select name
+from employee
+where name like 'green%';
+
+# find employees whose name contains 'ee' :
+select name
+from employee
+where name like '%ee%';
+
+# show employee first name as name
+
+select first_name as name
+from employee;
+
+# increase salary of employees by 10k and rename the row as current salary
+select name,salary+10000 as 'current salary'
+from employee;
+
+

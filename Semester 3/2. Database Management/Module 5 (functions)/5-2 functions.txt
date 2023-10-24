@@ -1,0 +1,37 @@
+1. upper ---> aBc/abc/ABc = ABC  upper('aBc') =ABC
+2. lower ---> aBc/abc/ABc = abc  lower('aBc') =abc
+3. abs -----> abs(-2) = 2 / abs(2)=2
+4. degrees--> converts radian input into degree value e.g - degree(3)= value^degree
+5. radians--> converts degree value into radian e.g - radians(90) = 90*(pi/180) = 1.57..
+6. cos -----> takes radian value as input e.g- cos(1.5..)=0 or cos(radians(90))=0
+7. acos-----> works as cos^-1(cos inverse) takes radian value as input
+8. sin------> takes radian value as input 
+9. asin-----> works as sin^-1(sin inverse) takes radian value as input
+10. tan-----> same as above
+11. atan----> same as above
+12. ceil----> ceil(25.5)=26
+13. floor---> floor(25.6)=25
+14. division> 10/2=5 or 10 div 2= 5
+15. exponent> exp(10) or exp(-10)
+16. greatest> greatest(1,2,3,4,5)=5
+17. least---> least(1,2,3,4,5)=1
+18. ln------> ln=log base e ---e.g= ln(10)
+19. log-----> same as ln. ln(10) is same as log(10)
+20. log10---> it is 10 base log . log10(10)=1
+21. log2----> it is 2 base log. log2(10)
+22. mod-----> it gives the remainder value from the division e.g - 5 mod 2=1
+23. pi------> 3.1415 -------- e.g pi()
+24. pow-----> pow(2,5)=32     -----------2^5
+25. rand----> rand() gives any value between 0-1
+26. round---> round(12.567,2) it will round up the value at after decimal 2 spaces = 12.57
+27. sqrt----> sqrt(4)=2
+28. truncate> truncate(12.567)=12.56
+
+
+
+# show all names from the employee table in upper case:
+
+select upper(name)
+from employee;
+
+select cos(radinas(90));

@@ -1,0 +1,127 @@
+Assignment 1
+
+Create tables
+Make a student table
+Make a Library table
+Make a Fees table
+	Create tables with proper relations.
+
+Ans : 
+use Assignment;
+create table student(
+	id char(4) primary key,
+    name varchar(20) not null,
+    class int ,
+    section char(1)
+);
+
+create table library(
+	id char(4),
+    membershipId char(3) primary key,
+    bookName varchar(20) not null,
+    studentName varchar(20) not null,
+    foreign key (id) references student(id)
+);
+
+create table fees(
+	id char(4),
+    amount float check(amount>=500),
+    studentName varchar(20) not null,
+	foreign key (id) references student(id),
+    primary key(id,studentName)
+);
+   
+Add proper constraints with the No 1 question
+
+Ans : 
+use Assignment;
+create table student(
+	id char(4) primary key,
+    name varchar(20) not null,
+    class int ,
+    section char(1)
+);
+
+create table library(
+	id char(4),
+    membershipId char(3) primary key,
+    bookName varchar(20) not null,
+    studentName varchar(20) not null,
+    foreign key (id) references student(id)
+);
+
+create table fees(
+	id char(4),
+    amount float check(amount>=500),
+    studentName varchar(20) not null,
+	foreign key (id) references student(id),
+    primary key(id,studentName)
+);
+    
+Write the differences between data and information.
+Ans : 
+
+Data
+Information
+
+Data is unorganized.
+
+Information is organized data.
+
+Data bears no clear meaning.
+2. Collection of meaningful data is called information.
+3. Data is usually unsorted and not properly characterized. 
+3. Information is sorted and properly characterized.
+
+
+
+In MySQL, the Update and Delete query wasn’t executing, what was the reason and how to run those query? Write the code to enable the feature. (If you followed the class, you should know this).
+
+ans : in MySQL update and delete query is by default is prohibited for execution for protection as well as security purpose. So, we need to use a certain command to enable this feature which is “set sql_safe_updates” to determine if the system would check unsafe operations.
+‘Set sql_safe_updates = 0’ indicates that the system would not check unsafe operations.
+‘Set sql_safe_updates = 1’ indicates that the system would check unsafe operations like ‘update’ and ‘delete’.
+
+Answer the following questions with this table data. Table name Employee.
+
+
+Write a query to show the distinct department names
+
+Ans: 
+select distinct Department
+from Employee;
+
+Write a query to show the LastNames of the employees sorted by descending ages
+
+Ans: 
+select LastNames
+from Employee
+order by age desc;
+
+Write a query to show the employee LastName whose age is greater than 30 and works in the Marketing department.
+
+Ans:
+select LastName
+from Employee
+where age>30 and Department=’Marketing’;
+Write a query to select all the employees
+Ans : 
+select *
+from Employee;
+Write a query to get employees whose names includes ‘son’
+
+Ans:
+select *
+from Employee
+where LastName like ‘%son%’ or FirstName like ‘%son%’;
+
+
+
+
+Write a query to get the engineers
+
+Ans : 
+select *
+from Employee
+Where Department = ‘Engineering’;
+
+

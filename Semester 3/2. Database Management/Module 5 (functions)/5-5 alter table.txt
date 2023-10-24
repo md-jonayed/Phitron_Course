@@ -1,0 +1,25 @@
+alter table query is for structural changes in a table.
+# update and delete query works on tables data
+ update salary of an employee from employee table
+alter and drop works on table's structure
+using alter :
+1. new column adding
+e.g-
+alter table employee
+add column email varchar(30);
+
+to drop a column named salary-
+alter table employee
+drop column salary;
+
+to modify email column's data type from decimal to varchar-
+alter table employee
+modify column email varchar(60);
+ 
+
+
+for deleting a column we will use drop query e.g drop(name)
+for adding a column we will use add query e.g add(name)
+
+fro modifying a column's data type we will use modify 
+

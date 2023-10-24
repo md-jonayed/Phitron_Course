@@ -1,0 +1,34 @@
+# group functions -
+max - gives the max value from a group of values
+min - gives the min value from a group of values
+count-counts the number of elements in a certain group
+sum- gives the summation of all values given in the sun function
+avg - gives the average value from the values given in the sun function
+
+# find maximum salary from the employee table
+
+select max(salary)
+from employee;
+
+
+# find min salary from the employee table
+
+select min(salary)
+from employee;
+
+# find average salary
+
+select avg(salary)
+from employee;
+
+# find number of employees in the employee table:
+
+select count(name)
+from eomployees;
+
+count does not include null values
+
+# show the number of rows in employee table:
+
+select count(*)
+from employee;
