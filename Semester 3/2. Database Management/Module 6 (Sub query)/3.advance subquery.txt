@@ -1,0 +1,42 @@
+# find who gets the second highest salary and what is the amount:
+
+select *
+from employees
+where salary = (select distinct salary
+                from employee
+                order by salary desc 
+                limit 1
+                offset 1);
+
+or 
+
+select *
+from employee
+where salary = (select max(salary)
+                from employees
+                where salary < (select max(salary)
+                                from employees)
+                );
+
+# which employess get salary > manager:
+select *
+from employees as emp
+where salary > (select salary
+                from employees as mng
+                where emp.manager_id = mng.employee_id
+                );
+
+select *
+from employees 
+where salary > (select salary
+                from employees 
+                where manager_id = employee_id
+                );
+
+# find employees whose designation is same as his or her manager:
+select *
+from employees
+where designation = (select designation
+                    from employee
+                    where employee_id = manager_id
+                    );

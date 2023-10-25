@@ -1,0 +1,53 @@
+common table expression is storing a query results a table which is stored under some name or variable
+here we need to use with and as keywords for implementing cte(common table expression)
+
+find first 5 employee information from employee table :
+with emp_info as
+(
+    select * 
+    from employee
+    limit 5
+)
+
+select *
+from emp_info;
+
+
+# find employees whose salary is higher than IT department's average salary and less than marketing department's maximum salary:
+
+with avg_it as
+(
+    select avg(salary) as salary1
+    from employees
+    where department_id = 60
+)
+
+with max_marketing as
+(
+    select max(salary) as salary2
+    from employees
+    where department_id = 20
+)
+
+select *
+from employess
+where salary > (select salary 1 from avg_it) and salary < (select salary 2 from max_marketing);
+
+
+or 
+with avg_it as
+(
+    select avg(salary) as salary1
+    from employees
+    where department_id = 60
+),
+max_marketing as
+(
+    select max(salary) as salary2
+    from employees
+    where department_id = 20
+)
+
+select *
+from employess
+where salary > (select salary 1 from avg_it) and salary < (select salary 2 from max_marketing);

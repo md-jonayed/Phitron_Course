@@ -1,0 +1,14 @@
+subquery is more like query whin a query
+
+eg. get salaries of employees where each employees salary is higher than 'abc'
+
+select *
+from employees
+where salary >              -------------------  select salary
+                                                 from employees
+                                                 where name = 'abc';
+
+we can use subquery-
+select(subquery)
+from (subquery)
+where (subquery)
