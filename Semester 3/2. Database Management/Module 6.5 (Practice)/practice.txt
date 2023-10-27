@@ -1,0 +1,27 @@
+Determine the third highest salary and which employee receives it?
+ans :
+using practice1;
+SELECT MAX(salary)
+FROM employees
+WHERE salary <(SELECT MAX(salary) 
+			   FROM employees 
+			   WHERE salary < (SELECT MAX(salary) 
+							   FROM employees)
+);
+
+
+Determine the third lowest salary and which employee receives it?
+SELECT min(salary)
+FROM employees
+WHERE salary > (SELECT min(salary) 
+				FROM employees 
+				WHERE salary > (SELECT min(salary) 
+								FROM employees)
+);			
+
+Which employee has been hired after Steven?
+SELECT first_name
+FROM employees
+WHERE hire_date > (SELECT hire_date FROM employees WHERE first_name = 'Steven'and employee_id=100)
+
+With common table expression solve the question 1 and 2
