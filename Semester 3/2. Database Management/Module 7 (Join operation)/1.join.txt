@@ -1,0 +1,100 @@
+joining operation gives a view
+e.g
+employee table:                                    department table
+name    salary  department_id               department_id   dept_name            
+
+we need to find 
+            name        dept_name
+
+here we joined name from employee table and dept_name from department table
+
+joining without join query
+
+select employees.first_name, departments.dept_name
+from employees,departments
+where employees.department_id=departments.department_id
+-> here where condition will compare each department id of the employees table with the each and every department_id of the department table , which is very costly work and inefficient.
+suppose there are m id in employees and n id in departments
+so it will check m*n times.
+
+joining with join keyword:
+
+select employees.first_name,departments.dept_name
+from employees join departments on employees.department_id=departments.department_id
+
+but here database will internally map those ids and this is very efficient way
+
+if we have same name in the both table we can use join query like that:
+select employees.first_name, departments.dept_name
+from employees join departments using(department_id)
+
+->if same name is not avialable in the both table then it won't work
+
+# inner,left,right,cross join:
+
+*inner join or join :
+it joins the common elements from both table
+e.g - from the above example department_id which are both same in the employees and departments table it will show only those elements.
+it is like set intersection operation
+ex- select employees.first_name,departments.dept_name
+    from employees inner join departments on employees.department_id=departments.department_id
+
+
+* left outer join or left join:
+in this kind of left join operation according to above example it will show all elements from the employee table it doesn't matter if they both have the same elements or not but won't show departments table elements (null will be shown)
+if both table contains common elements then it will show both employee and departments table's desired elements.
+ex- select employees.first_name,departments.dept_name
+    from employees left join departments on employees.department_id=departments.department_id
+
+* right join :
+in this kind of right join operation according to above example it will show all elements from the departments table it doesn't matter if they both have the same elements or not but won't show employees table elements (null will be shown)
+if both table contains common elements then it will show both employee and departments table's desired elements.
+ex-select employees.first_name,departments.dept_name
+    from employees right join departments on employees.department_id=departments.department_id
+
+* cross join:
+it will show both table elements if any of the element don't match then on their respective part it will show null.
+ex-select employees.first_name,departments.dept_name
+    from employees cross join departments on employees.department_id=departments.department_id
+
+# self join
+it is used to join 2 or more columns of a table:
+
+select employee.id,employee.namager_id
+from employee as emp join employee as map
+on emp.emp_id=m.emp_id
+
+
+# examples join query:
+from a single table print employees 1st name and his or her's corresponding manager name:
+
+select m.first_name,e.first_name 
+from employees as e
+join employees as m
+on e.employee_id = m.employee_id
+
+
+# show department names which has no employee
+
+select department.dept_name
+from departments
+left join employee
+on department.department_id = employee.department_id
+where employee.department_id=null
+
+# show employee name,salary,how much he gets less salary than his department's average salary
+
+select employee.first_name,
+       employee.salary
+       (select avg(salary) from employee where department_id=employee.department_id)-employee.salary
+from employee
+join department
+on employee.department_id = department.department_id
+
+# show department names where minimum salary > 5000
+select department_name, min(salary)
+from employee
+join department
+on employee.department_id = department.department_id
+group by department_name
+having min(salary)>5000
