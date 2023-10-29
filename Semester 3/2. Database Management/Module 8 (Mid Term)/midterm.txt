@@ -1,0 +1,158 @@
+Mid Term Exam
+Total Marks:100
+100 Marks Deadline: 31 October, 2023
+90 Marks Deadline: 01 November,2023
+Q.No
+QUESTIONS
+Marks
+1
+Write the difference between Primary Key and Composite Primary Key
+Ans : primary key consist of a single parameter or attributes, in contrast composite primary key consist of two or more parameters or attributes.
+5
+2
+Write the difference between using JOIN Query and not using JOIN query
+Ans : using join query database internally maps the attributes which we need to join. It is an efficient way.
+On the other hand  if we don’t use a join query database will try to compare a certain attribute every time with another attribute which is not an efficient way and it is computationally costly.
+5
+3
+Create a table of Employees which has the following fields
+First Name
+Last Name
+Date of Birth
+Department Id
+Salary
+Create a table of Departments which has the following fields
+Department Id
+Department Name
+Create both of the tables using proper constraints
+
+
+Ans : 
+create table employees(
+first_name varchar(20) not null,
+last_name varchar(20) not null,
+date_of_birth date,
+department_id char(10) primary key,
+salary float check(salary>0
+);
+
+Create table departments(
+department_id char(10) primary key,
+Department_name varchar(30) not null
+);
+
+
+
+
+
+
+
+20
+Use dummydb in MySQL to answer the following questions: Link
+4
+Write SQL Query to get the second max salary 
+Ans : 
+select max(salary)
+from employees
+where salary<(select max(salary)
+		from employees
+ );
+10
+5
+Write SQL Query to show  the department names and the average salary of the departments
+Ans : 
+select departments.department_name, avg(employees.salary)
+from employees
+join departments
+on employees.department_id = departments.department_id
+group by departments.department_name;
+10
+6
+Illustrate the INNER, LEFT, RIGHT, SELF Joins
+Ans : 
+Inner join : it joins the common elements from both table.it is like a set intersection operation.
+select employees.first_name,departments.department_name
+from employees 
+inner join departments 
+on employees.department_id=departments.department_id
+
+
+Left join : it will show all elements from the employee table. It doesn't matter if they both(employee and departments) have the same elements or not. If department table does not have an element which is in employee table it will show null.
+
+select employees.first_name,departments.department_name
+from employees 
+left join departments 
+on employees.department_id=departments.department_id;
+
+
+Right join : it will show all elements from the departments table. It doesn't matter if they both(employee and departments) have the same elements or not. If employees table does not have an element which is in departments table it will show null.
+
+
+Self join : it joins two or more columns from a single table
+
+select emp.first_name,m.first_name 
+from employees as emp 
+join employees as m
+on m.manager_id=emp.employee_id
+
+
+
+10
+7
+What is a subquery? Write with an example
+Ans : subquery is more like query within a query
+select first_name
+from employees
+where salary>(select salary
+			  from employees
+              where employee_id = 101
+              );
+
+
+10
+8
+Show the names of the employees who get less salary than Steve
+Ans : 
+select first_name
+from employees
+where salary < (select max(salary)
+                from employees
+                where first_name = 'Steven');
+
+
+
+
+select first_name
+from employees
+where salary<(select min(salary)
+			  from employees
+              where first_name ='steven'
+              );
+         
+
+
+
+10
+9
+Count the number of employees of each job type
+Ans : 
+
+select count(*), job_id
+from employees
+group by job_id;
+
+10
+10
+Show the names of Departments which doesn’t have any employees
+Ans : 
+
+select departments.department_name
+from departments
+left join employees
+on employees.department_id = departments.department_id
+where employees.department_id is null;
+
+10
+
+
+

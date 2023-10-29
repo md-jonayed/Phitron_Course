@@ -1,4 +1,4 @@
-subquery is more like query whin a query
+subquery is more like query within a query
 
 eg. get salaries of employees where each employees salary is higher than 'abc'
 

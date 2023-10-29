@@ -50,4 +50,4 @@ max_marketing as
 
 select *
 from employess
-where salary > (select salary 1 from avg_it) and salary < (select salary 2 from max_marketing);
+where salary > (select salary1 from avg_it) and salary < (select salary2 from max_marketing);
