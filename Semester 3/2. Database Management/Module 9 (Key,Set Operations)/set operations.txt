@@ -1,0 +1,78 @@
+set stores data in sorted order and duplicate is not allowed
+ 
+set operations:
+1. union
+2. union all
+3. intersection
+4. minus
+
+union example:
+a = {1,2,3,4,5}
+b = {2,3,4}
+
+a union b ={1,2,3,4,5} union {2,3,4} ----> {1,2,3,4,5}
+
+union all example:
+union all stores duplicate elements also:
+a = {1,2,3,4,5}
+b = {2,3,4}
+
+a union all b ={1,2,3,4,5} union {2,3,4} ----> {1,2,3,4,5,2,3,4}
+
+intersection : 
+it takes only common elements from both sets:
+a = {1,2,3,4,5}
+b = {2,3,4}
+a intersection b = {1,2,3,4,5} intersection {2,3,4} ------->{2,3,4}
+
+minus :
+it takes only those elements which is not in the other set
+e.g
+a = {1,2,3,4,5}
+b = {2,3,4}
+a minus b ={1,2,3,4,5} minus {2,3,4,7} = {1,5}
+
+
+
+union :
+select *
+from employees
+where salary > 10000
+union
+select *
+from employees
+where department_id=100
+
+union all:
+select *
+from employees
+where salary > 10000
+union all
+select *
+from employees
+where department_id=100
+
+intersect:
+select *
+from employees
+where salary > 10000
+intersect
+select *
+from employees
+where department_id=100
+
+
+minus :
+select *
+from employees
+where salary > 10000
+minus
+select *
+from employees
+where department_id=100
+
+or -
+
+select *
+from employees
+where salary > 10000 and department_id != 100

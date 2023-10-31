@@ -1,0 +1,19 @@
+1. find duplicate emails from a table:
+select email
+from person
+group by email
+having count(email)>1;
+
+2. find employees whose salary is greater than their managers:
+select emp.name as employee
+from employee as emp , employee as man
+where emp.manager_id = man.id and emp.salary > man.salary
+
+3. find customers who naver ordered:
+
+select name as customers
+from customers
+left join orders 
+on customers.id = orders.customer_id
+group by customers.id
+havin count(orders.id) = 0

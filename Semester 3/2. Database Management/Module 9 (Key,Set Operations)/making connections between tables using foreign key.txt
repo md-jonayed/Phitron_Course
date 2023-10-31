@@ -1,0 +1,42 @@
+for making connection between two table we use foreign key
+e.g
+create table student(
+    roll varchar(5) primary key,
+    name varchar(20) not null,
+    phone varchar(11) not null
+);
+
+create table courses(
+    course_name varchar(50) primary key,
+    f_roll varchar(5),
+    foreign key(f_roll) references student(roll)
+);
+
+foreign key on delete operation : 
+it is used to delete a certain data which is use in several tables:
+on delete cascade
+
+if we want to delete a student's information from one table and his or her's informations on other table will be replaced as null then we will use:
+on delete set null
+
+e.g :
+
+create table student(
+    roll varchar(5) primary key,
+    name varchar(50) not null
+);
+
+create table course(
+    course_no int primary key,
+    course_name varchar(20)
+);
+
+create table enroll(
+    roll varchar(5),
+    course_no int,
+    date date,
+    foreign key (roll) references student(roll)
+    on delete cascade,
+    foreign key(course_no) references course(course_no)
+    on delete set null
+);
