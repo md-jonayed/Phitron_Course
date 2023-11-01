@@ -1,0 +1,22 @@
+database design can be 2 types:
+1. top down
+2. bottom up
+
+# top down :
+here we first design the model then insert data into those models.
+e.g- a database for hopital , a hospital can have doctors,nurse,patient,medicine etc table, we will first design those tables then we will insert data under those tables.
+
+# bottom up :
+here we first takes data then according to those data we create  models to store those data.
+bottom up approach is needed for when there is an existing database.
+
+# in order to design a database we will first perform requirement analysis
+
+# what to avoid:
+1. redundancy
+same attribude should not be in multiple tables. except foreign key
+2. incompleteness
+data should be in both tables
+
+
+# er diagram ( entity relationship)

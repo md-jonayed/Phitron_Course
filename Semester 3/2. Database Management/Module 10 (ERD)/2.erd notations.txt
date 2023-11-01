@@ -1,0 +1,30 @@
+entity is like tables inside database
+
+# erd notations :
+
+|----------------------------|
+|        student       ------|------>   entity name
+|----------------------------|
+| name                       |
+|                            |
+| roll                  -----|----->     attributes     
+|                            |
+| contact                    |
+|                            |
+|----------------------------|
+              |                    |----------------|
+              |                    |  relationship  |
+     <relationship name> ----------|  attribute     |
+              |                    |----------------|             
+              |
+              |  
+|----------------------------|
+|        student       ------|------>   entity name
+|----------------------------|
+| name                       |
+|                            |
+| roll                  -----|----->     attributes     
+|                            |
+| contact                    |
+|                            |
+|----------------------------|
