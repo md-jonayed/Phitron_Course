@@ -1,0 +1,44 @@
+create database studentLibraryManagament;
+
+use studentLibraryManagament;
+
+create table student(
+     roll varchar(3) primary key,
+     name varchar(20) not null
+);
+
+create table librarian(
+     librarian_id(3) primary key,
+     librarian_name varchar(20) not null
+);
+
+create table book(
+     book_id varchar(3) primary key,
+     book_name varchar(20) not null,
+     book_genre varchar(10) not null
+);
+
+create table borrow(
+    who_borrowed_roll varchar(3),
+    which_book_id varchar(4),
+    borrow_date date,
+    return_date date,
+
+    foreign key (who_borrowed_roll) references student(roll),
+    foreign key (which_book_id) references book(book_id),
+    primary key(who_borrowed_roll,which_book_id)
+     
+);
+
+
+create table persmission(
+
+    who_permitted_librarian_id varchar(4),
+    which_book_id varchar(4),
+
+    foreign key (who_permitted_librarian_id) references librarian(librarian_id),
+    foreign key (which_book_id) references book(book_id),
+    primary key(which_book_id,who_permitted_librarian_id)
+);
+
+

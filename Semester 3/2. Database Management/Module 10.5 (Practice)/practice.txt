@@ -1,0 +1,24 @@
+create table student(
+    name varchar(20) not null,
+    id varchar(8) not null,
+    class int check (class>0)
+);
+create table course(
+    course_name varchar(50) not null,
+    course_id varchar(8) not null,
+    student_id varchar(8) not null,
+    foreign key (student_id) references student(id)
+);
+
+create table enroll(
+    student_id varchar(8) not null,
+    course_id varchar(8) not null,
+    enroll_date date,
+    foreign key (student_id) references student(id) on delete cascade,
+    foreign key(course_id) references course(course_id) on delete set null
+);
+
+# differences between union and union all:
+union only selects elements which are unique
+union all selects duplicates also.
+
