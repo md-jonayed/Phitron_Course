@@ -1,17 +1,17 @@
 import mysql.connector
-dbName ="pythonTestDb"
+dbName = "pythonDb"
 myDbConnection = mysql.connector.connect(
-    host = "localhost",
+    host="localhost",
     user="root",
-    password="password",
-    database = dbName
+    password="shetaginaga101514",
+    database=dbName
 )
 
 
 myCursor = myDbConnection.cursor()
 sqlQuery = """
-inser into student(roll,name)
-values('101','jonayed')
+    insert into student(roll,name)
+    values('101','jonayed')
 """
 myCursor.execute(sqlQuery)
 # after insert or update we need to commit or save:

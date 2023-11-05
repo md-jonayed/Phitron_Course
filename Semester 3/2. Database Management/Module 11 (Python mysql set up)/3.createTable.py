@@ -1,9 +1,9 @@
 import mysql.connector
-dbName ="pythonTestDb"
+dbName ="pythonDb"
 myDbConnection = mysql.connector.connect(
     host = "localhost",
     user="root",
-    password="password",
+    password="shetaginaga101514",
     database = dbName
 )
 

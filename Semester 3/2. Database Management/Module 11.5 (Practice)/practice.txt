@@ -1,0 +1,62 @@
+1. Types of Entity Attributes:
+In the context of databases and entity-relationship modeling, entity attributes can be classified into different types:
+
+Simple Attribute: An attribute that contains atomic (indivisible) values. For example, a person's age or name.
+
+Composite Attribute: An attribute that can be divided into smaller sub-parts, which represent more basic attributes with independent meanings. For example, an address attribute can be divided into sub-parts like street, city, and postal code.
+
+Derived Attribute: An attribute whose value is derived from other attributes in the database. For example, a person's age can be derived from their date of birth.
+
+Multi-valued Attribute: An attribute that can hold multiple values. For example, a person's phone number attribute can have multiple phone numbers associated with it.
+
+Key Attribute: An attribute that uniquely identifies an entity within an entity set. For example, an employee ID in an employee database.
+
+2. Difference between Executing SQL Queries in Python and MySQL Workbench:
+Python: When executing SQL queries in Python, you use a database connector library (such as mysql-connector-python) to establish a connection to the database server. Python sends the SQL queries to the server through this connection and retrieves the results. Python allows you to dynamically generate and modify queries based on logic within your code, making it versatile for various applications.
+
+MySQL Workbench: MySQL Workbench is a visual database design tool and administration tool. It provides a graphical interface to interact with the database server. You can create, modify, and execute SQL queries using a point-and-click interface. While it offers a visual way to work with databases, it might not be as flexible as using a programming language like Python for complex logic and data manipulation tasks.
+
+
+3. ERD and SQL Schema for School Attendance System:
+ERD (Entity-Relationship Diagram) for School Attendance System:
+
+Entities: Student, Class, Teacher, Attendance
+Relationships:
+Many-to-One: Student attends Class, Teacher teaches Class
+Many-to-Many: Student has Attendance Records
+Here's a simplified textual representation of the ERD:
+Student (StudentID, Name, ClassID)
+Class (ClassID, ClassName, TeacherID)
+Teacher (TeacherID, TeacherName)
+Attendance (AttendanceID, StudentID, ClassID, Date, Status)
+
+SQL Schema for School Attendance System:
+
+CREATE TABLE Student (
+    StudentID INT PRIMARY KEY,
+    Name VARCHAR(255),
+    ClassID INT,
+    FOREIGN KEY (ClassID) REFERENCES Class(ClassID)
+);
+
+CREATE TABLE Class (
+    ClassID INT PRIMARY KEY,
+    ClassName VARCHAR(255),
+    TeacherID INT,
+    FOREIGN KEY (TeacherID) REFERENCES Teacher(TeacherID)
+);
+
+CREATE TABLE Teacher (
+    TeacherID INT PRIMARY KEY,
+    TeacherName VARCHAR(255)
+);
+
+CREATE TABLE Attendance (
+    AttendanceID INT PRIMARY KEY,
+    StudentID INT,
+    ClassID INT,
+    Date DATE,
+    Status VARCHAR(50),
+    FOREIGN KEY (StudentID) REFERENCES Student(StudentID),
+    FOREIGN KEY (ClassID) REFERENCES Class(ClassID)
+);
