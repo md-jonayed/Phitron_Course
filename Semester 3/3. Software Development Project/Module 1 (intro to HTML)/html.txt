@@ -1,0 +1,9 @@
+HTML - hyper text markup language.
+HTML has 3 parts:
+1. header   - contains name, title(shows tiple in chrome window), meta type etc
+2. body - contains contents
+
+h1 tag - highest tag which makes a text size bigger 
+
+semantic tags :
+those tags are self explanatory e.g- article, address, audio,video etc from which we can assump the implecation of a tag they are known as semantic tags
