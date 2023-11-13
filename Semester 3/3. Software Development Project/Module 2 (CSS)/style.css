@@ -1,0 +1,135 @@
+    /* if we use import font styles then we do not need to link the fonts inside html file  */
+    /* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=Roboto:ital,wght@0,100;0,300;1,100;1,300&display=swap'); */
+    
+    body{
+        background-color: azure;
+        font-family: 'Open Sans', sans-serif;
+            font-family: 'Roboto', sans-serif;
+    }
+
+    .heading {
+        color: #FF5733;
+        font-size: 60px;
+        font-weight: 100;
+        font-style: italic;
+        text-align: center;
+        background: linear-gradient(45deg, red, green);
+    }
+
+    .description {
+        color: yellowgreen;
+        line-height: 1.5em;
+        
+    }
+
+    #h2 {
+        color: blue;
+    }
+
+    p {
+        color: brown;
+    }
+    .box{
+        width: 200px;
+        height: 200px;
+        /* border: 5px dotted #FF5733; */
+        /* border: 1px solid #FF5733; */
+        padding: 10px;
+        /* padding-left: 100 px; */
+        margin: 50px;
+        /* margin: -69px; */
+        background-color: blueviolet;
+        box-shadow: 4px 4px 8px red;
+    }
+
+    .test{
+        padding: 50;
+        background-color: #FF5733;
+        border: 5px solid black;
+        margin: auto;
+        width: 50%;
+
+    }
+
+    .child{
+        width: 50%;
+        background-color: aliceblue;
+        padding: 20px;
+    }
+    /* we can make block level element into inline element  */
+    .div1{
+        width: 50px;
+        height: 50px;
+        background-color: #FF5733;
+        float: left;
+        padding: 10px;
+        /* display: inline; */
+    }
+    .div2{
+        width: 50px;
+        height: 50px;
+        background-color: gray;
+        float: left;
+        padding: 10px;
+        /* display: inline; */
+    }
+
+    .box1{
+        height: 200px;
+        width: 200px;
+        border: 5px solid black;
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .container{
+        display: flex;
+        /* we can mode these boxes into center :  */
+        justify-content: center;
+        justify-content: space-around;
+        justify-content: space-between;
+        justify-content: space-evenly;
+        gap: 10px;
+        /* we can show these boxes in reverse order :  */
+        flex-direction: row-reverse;
+        /* we can set container height :  */
+        height: 100vh;
+        /* to take center  of the page vertically :  */
+        align-items: center;
+        /* we can use flex wrap to contain all boxes and its elements as it is :  */
+        flex-wrap: wrap;
+    }
+    .bx1{
+        background-color: antiquewhite;
+        position: absolute;
+        /* z-index: -1; */
+    }
+
+    .bx2 {
+        background-color: orangered;
+        position: fixed;
+        /* margin-top: 20px; */
+
+    }
+
+    .bx3 {
+        background-color: black;
+        margin-top: 20px;
+    }
+
+    .green{
+        width: 450px;
+        background-color: green;
+        height: 400px;
+        margin: 20px;
+        position: relative;
+    }
+    .red{
+        width: 120px;
+        height: 120px;
+        border-radius: 60px;
+        background-color: red;
+        position: absolute;
+        top: 35%;
+        left: 35%;
+    }

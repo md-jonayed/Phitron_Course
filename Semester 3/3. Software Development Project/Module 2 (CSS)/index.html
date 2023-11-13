@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- example of internal css :  -->
+    <!-- <style> -->
+        <!-- /* here we can use class name to imply desired attributes in it  */ -->
+        <!-- .heading{
+            color: green;
+            font-size: 60px;
+        }
+        .description{
+            color: yellowgreen;
+            line-height: 1.5em;
+        } -->
+        <!-- /* we can also update values using id method:  */ -->
+        <!-- #h2{
+            color: blue;
+        } -->
+        <!-- /* if we want to give same attributes for a certain tag : */
+        /* changing all p tag design  */ -->
+        <!-- p{
+            color: brown;
+        } -->
+        <!-- /* previous p tag is not chnaging cause its attributes are set by using class so it holds higher priority , id holds superiority above class */ -->
+    <!-- /* </style> */ -->
+    <!-- in order to use external css we need to link that css file with the html file : -->
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agbalumo&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- example of inline css :  -->
+    <h1 style="color: red;font-size: 50px;">Hi I am Jonayed</h1>
+    <h1 class="heading"> hi i am jonayed</h1>
+    <p class="description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni hic, aut explicabo aspernatur omnis, cum voluptatibus unde, numquam aperiam quia temporibus! Nihil omnis ea cupiditate architecto quos! Magnam, aliquid iure!</p>
+    <h2 id="h2">this is an use case of id</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, voluptates.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui iusto, praesentium dicta quod, voluptas facilis, iure consequuntur fugit fugiat accusamus saepe omnis? At obcaecati quisquam molestiae libero soluta natus nesciunt?</p>
+    <section class="box">
+        this a content
+    </section>
+    <i class="fa fa-car"></i>
+    <i class="fa fa-car" style="font-size:48px;"></i>
+    <i class="fa fa-car" style="font-size:60px;color:red;"></i>
+    <section class="test">
+        <section class="child">
+            this is another content
+        </section>
+        
+    </section>
+    <!-- blocklevel element takes the whole area:  -->
+    <!-- <section>
+        <div class="div1">hello</div>
+        <div class="div2">i am jo</div>
+        
+    </section> -->
+    <!-- inline element doesn't take the whole area -->
+    <!-- <span>hello</span>
+    <span>i am jo</span> -->
+    <!-- we can use contailer inorder to use flex to show these boxes side by side : -->
+    <section>
+        <!-- <div class="container">
+
+            <div class="box1">1</div>
+            <div class="box1">2</div>
+            <div class="box1">3</div>
+
+            <div class="box1">1</div>
+            <div class="box1">2</div>
+            <div class="box1">3</div>
+
+            <div class="box1">1</div>
+            <div class="box1">2</div>
+            <div class="box1">3</div>
+
+            <div class="box1">1</div>
+            <div class="box1">2</div>
+            <div class="box1">3</div>
+
+            <div class="box1">1</div>
+            <div class="box1">2</div>
+            <div class="box1">3</div>
+        </div> -->
+            <div class="box1 bx1">1</div>
+            <div class="box1 bx2">2</div>
+            <div class="box1 bx3">3</div>
+            <div class="box1 bx3">3</div>
+            <div class="box1 bx3">3</div>
+            <div class="box1 bx3">3</div>
+            <div class="box1 bx3">3</div>
+            <div class="box1 bx3">3</div>
+
+            <div class="box1 bx3">3</div>
+            <div class="box1 bx3">3</div>
+            <div class="box1 bx3">3</div>
+            <div class="box1 bx3">3</div>
+            <div class="box1 bx3">3</div>
+            <div class="box1 bx3">3</div>
+    </section>
+    <div class="green">
+        <div class="red">
+
+        </div>
+    </div>
+</body>
+</html>

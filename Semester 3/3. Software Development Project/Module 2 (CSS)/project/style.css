@@ -1,0 +1,181 @@
+body{
+    margin: 0%;
+    padding: 0px;
+}
+.navbar_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: aquamarine;
+}
+.logo{
+    width: 100px;
+}
+.manus_container{
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    font-size: 20px;
+    color:black;
+    font-weight: bold;
+}
+.banner_container{
+    display: flex;
+    width: 80%;
+    height: 80vh;
+    margin: auto;
+    align-items: center;
+    text-align: center;
+}
+.doctor_image{
+    width: 100%;
+}
+
+.title{
+    font-size: 76px;
+    font-weight: bold;
+    color:gray;
+    text-align: center;
+}
+.description{
+    font-size: 22px;
+}
+
+button{
+    padding: 15px 25px;
+    border: none;
+    font-size: 18px;
+    text-align: center;
+    /* color:white; */
+}
+.appointmentButton{
+    background-color: aquamarine;
+    color: black;
+    font-weight: bold;
+}
+.doctorButton{
+    color: white;
+    font-weight: bold;
+    background-color: #fd3c6d;
+}
+
+.service_card{
+    width: 300px;
+    height: 400px;
+    box-shadow: 8px 8px 16px  gray;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    
+}
+.fever{
+    padding-top: 50px;
+    width: 150px;
+}
+.cancer {
+    padding-top: 50px;
+    width: 150px;
+}
+.diabetes {
+    padding-top: 50px;
+    width: 150px;
+}
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 100px;
+}
+.contact_container{
+    text-align: center;
+}
+.inputbox{
+    padding: 15px 100px;
+    margin: 10px;
+    font-size: 15px;
+    
+}
+.textbox{
+    padding: 50px 100px;
+    margin: 10px;
+    font-size: 15px;
+    
+}
+.submitbutton{
+    padding: 10px 20px;
+    width: 30%;
+    margin: 10px;
+    background-color:#fd3c6d;
+    color: white;
+    font-size: 18px;
+    border: none;
+    font-weight: bold;
+}
+
+/* .footer_container{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color:#fd3c6d;
+    gap: 10%;
+    text-align: center;
+    /* text-indent: 10em; */
+/* } */
+
+/* .footer_manu_container{
+    text-indent: 1em;
+    margin-right: 30px;
+    display: flex;
+    list-style: none;
+    /* text-align: left; */
+    /* gap: 25px;
+    font-size: 15px;
+    color: white; */
+/* }  */
+
+/* Add your existing styles and modify as needed */
+.footer_container {
+    display: flex;
+    justify-content: space-around;
+    background-color:#fd3c6d;
+    color: #fff;
+    padding: 20px;
+}
+
+.footer_sections {
+    display: flex;
+    /* flex-wrap: wrap; */
+}
+
+.about_us,
+.useful_links,
+.support,
+.contact_info {
+    text-align: center;
+    width: 25%;
+    padding: 10px;
+}
+
+h3 {
+    color:azure;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 8px 0;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* a:hover {
+    text-decoration: underline;
+} */
