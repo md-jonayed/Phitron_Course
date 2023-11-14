@@ -1,0 +1,14 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+.banner_container{
+    height: 100vh;
+    background-image: url(./images/wallpaperflare.com_wallpaper\ \(3\).jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: overlay;
+    
+}

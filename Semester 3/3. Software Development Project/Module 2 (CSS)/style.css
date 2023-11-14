@@ -86,8 +86,8 @@
         display: flex;
         /* we can mode these boxes into center :  */
         justify-content: center;
-        justify-content: space-around;
-        justify-content: space-between;
+        justify-content: space-around; 
+        justify-content: space-between; 
         justify-content: space-evenly;
         gap: 10px;
         /* we can show these boxes in reverse order :  */
@@ -95,7 +95,7 @@
         /* we can set container height :  */
         height: 100vh;
         /* to take center  of the page vertically :  */
-        align-items: center;
+        /* align-items: center; */
         /* we can use flex wrap to contain all boxes and its elements as it is :  */
         flex-wrap: wrap;
     }
