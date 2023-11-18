@@ -1,0 +1,96 @@
+.navbarContainer {
+  justify-content: space-around;
+  gap: 20px;
+  display: flex;
+  width: auto;
+  background-color: blue;
+}
+.posterContainer {
+  padding: 20px;
+  text-align: left;
+  height: fit-content;
+  width: 30px;
+  display: flex;
+}
+
+.posterContainerWhole {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.button {
+  background-color: blue;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.footer_container {
+  display: flex;
+  text-align: justify;
+  justify-content: center;
+  padding: 10px;
+  background-color: blue;
+  color: white;
+}
+.carousel-inner {
+  display: flex;
+  text-align: justify;
+  padding: auto;
+}
+
+.bannerImage {
+  padding-left: 20px;
+  height: 100%;
+}
+
+.card {
+  text-align: center;
+  padding: 5px;
+  justify-content: center;
+}
+
+.browseByCategoryConatiner {
+  display: flex;
+  padding: 10px;
+  justify-content: space-evenly;
+  height: 400px;
+  flex-wrap: wrap;
+}
+
+.newArrival {
+  display: flex;
+  padding: 10px;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.poster {
+  margin-top: 30px;
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  background-color: #bbd0ff;
+}
+.textContainer {
+  text-align: center;
+}
+
+.sale{
+    color: white;
+}
+
+.text{
+    color:darkblue;
+}
+
+.bannerPartContainer{
+    height: 100%;
+    padding: 10px;
+    justify-content: center;
+    width: 100%;
+    background-color: #bbd0ff;
+}
