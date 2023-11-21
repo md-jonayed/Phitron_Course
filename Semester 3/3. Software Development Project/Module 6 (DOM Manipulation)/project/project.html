@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Banking System</title>
+    <link rel="stylesheet" href="project.css" />
+  </head>
+  <body>
+    <div class="amountContainer">
+      <div class="deposit amountBox">
+        <div>
+          <h1 class="amount" id="depositAmount">00</h1>
+          <p>Deposit</p>
+        </div>
+      </div>
+      <div class="withdraw amountBox">
+        <div>
+          <h1 id="withdrawAmountId" class="amount">00</h1>
+          <p>Withdraw</p>
+        </div>
+      </div>
+      <div class="total amountBox">
+        <div>
+          <h1 id="totalAmount" class="amount">00</h1>
+          <p>Total</p>
+        </div>
+      </div>
+    </div>
+    <div class="dipositWithdrawContainer">
+      <div class="depositBox inputBox">
+        <input type="number"  id="depositInput"/>
+        <br />
+        <button onclick="handleDeposit()" class="btn depositButton">Deposit</button>
+      </div>
+      <div class="withdrawBox inputBox">
+        <input id="withdrawInputAmountId" type="number" />
+        <br />
+        <button onclick="withdrawHandle()" class="btn withdrawButton">Withdraw</button>
+      </div>
+    </div>
+    <script src="project.js"></script>
+  </body>
+</html>
