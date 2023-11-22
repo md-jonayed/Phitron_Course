@@ -1,0 +1,28 @@
+.searchBox{
+    padding: 50px;
+    text-align: center;
+    /* border: none; */
+}
+
+.searchInput{
+    padding: 20px 30px;
+    /* border: none; */
+}
+
+#searchButton{
+    padding: 20px 30px;
+    border: none;
+    background-color: yellowgreen;
+    font-size: 22px;
+    color: white;
+
+}
+
+#loadDataButton{
+    padding: 20px 30px;
+    border: none;
+    background-color: yellowgreen;
+    font-size: 22px;
+    color: white;
+
+}
