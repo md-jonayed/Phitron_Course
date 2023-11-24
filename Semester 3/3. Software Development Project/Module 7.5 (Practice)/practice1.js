@@ -1,5 +1,6 @@
 // Using fetch
-fetch('https://jsonplaceholder.typicode.com/comments')
+// fetch('https://jsonplaceholder.typicode.com/comments')
+fetch('https://openapi.programming-hero.com/api/videos/categories/1005')
   .then(response => response.json())
   .then(data => console.log(data))
   .catch(error => console.error('Error fetching data:', error));
