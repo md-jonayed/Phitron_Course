@@ -1,0 +1,18 @@
+there are 4 type of request we call them all together CRUD.
+we perform CRUD operation 
+C--> Create (post)
+R--> Retrive (get)
+U--> Update
+D--> Delete
+
+from frontend we send request-->
+(Database/ server) Backedn for a certain request send response.
+
+in frontend we use HTML,CSS,Javascript
+backend we will use django
+
+frontend+backend=Full system.(software development)
+
+frontend__request --> URLS --> views --> views__response --> frontend.
+
+
