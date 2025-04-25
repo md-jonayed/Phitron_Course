@@ -15,4 +15,19 @@ frontend+backend=Full system.(software development)
 
 frontend__request --> URLS --> views --> views__response --> frontend.
 
+django uses MVT Model View template.
 
+first we search url --> url goes to views --> views goes to mode/databases --> then database gives response to views --> then view sends data to template --> then template rendered by views --> then view sends the template to the user.
+
+# view is known as request handler returns relevant templates nd contents. 
+# templete -> it presents how data should be presented to the application users. template consists of HTML,CSS,Javascript,Dango template language.
+
+# django has an admin interface which can be used for handling all features from backend.
+# django has ORM (Object relational mapping) which converts python code into sql 
+
+* django has some other unique features such as:
+1. URL routing.
+2. Template system.
+3. from handling.
+4. security features.
+5. scalability. 

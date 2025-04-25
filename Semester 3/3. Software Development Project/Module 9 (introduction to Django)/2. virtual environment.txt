@@ -1,0 +1,81 @@
+virtual environments help keep separation between diffiernt python dependencies in a single laptop. 
+it will help eradicate conflicts.
+
+* how to setup virtual environments(windows)?
+1. while installing python a pacckage named pip is installed automatically.
+2. test installation: pipenv --version.
+3. create virtual environment --> python -m venv nameOfTheVirtualEnvironment
+4.activating virtual environment --> nameOfTheVirtualEnvironment\scripts\activate.bat 
+
+* how to setup virtual environments(mac)?
+python3 --version
+brew install python
+1. while installing python a pacckage named pip is installed automatically.
+2. test installation: pipenv --version.
+3. create virtual environment --> pip3 install nameOfTheVirtualEnvironment ->python3 -m venv nameOfTheVirtualEnvironment
+4.activating virtual environment --> source nameOfTheVirtualEnvironment/bin/activate
+ 
+
+Setting up a virtual environment on a Mac is simple and recommended for Python projects to isolate dependencies. Here's how to do it:
+
+---
+
+### ✅ Step-by-step: Set Up a Virtual Environment on Mac
+
+#### 1. **Make sure Python is installed**
+Check the version:
+```bash
+python3 --version
+```
+
+If it’s not installed, install it via Homebrew:
+```bash
+brew install python
+```
+
+---
+
+#### 2. **Install `virtualenv` (optional, but recommended)**
+```bash
+pip3 install virtualenv
+```
+
+---
+
+#### 3. **Create a virtual environment**
+Navigate to your project folder, then run:
+```bash
+python3 -m venv env
+```
+
+Here, `env` is the name of the virtual environment folder—you can name it anything.
+
+---
+
+#### 4. **Activate the virtual environment**
+```bash
+source env/bin/activate
+```
+
+You’ll know it’s activated when the terminal shows `(env)` before your prompt.
+
+---
+
+#### 5. **Install your project dependencies**
+```bash
+pip install <your-packages>
+```
+
+Example:
+```bash
+pip install django
+```
+
+---
+
+#### 6. **Deactivate when done**
+```bash
+deactivate
+```
+
+---
