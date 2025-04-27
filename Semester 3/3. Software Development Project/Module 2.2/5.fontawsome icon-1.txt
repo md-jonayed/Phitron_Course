@@ -1,0 +1,26 @@
+<div class="test">
+    <div class='child'>
+        hi i am jonayed
+    </div>
+</div>
+
+we can get this class inside css file :
+.test{
+    padding:50;
+    background-color:red;
+    border:1px solid black;
+    width:50%;
+    text-align:center;
+    margin:auto;
+}
+.child{
+    padding:50;
+    background-color:green;
+    border:1px solid black;
+    width:50%; it will take parent div's 50% place.
+    text-align:center;
+    margin:auto;
+    height:10vh (means vertical height)
+}
+
+in order to use icons we will go to font awesome, copy the link and paste it before head tag, click on the icon you want then a code will appear, copy that and paste it inside your desired html page the icon will appear in your website.
