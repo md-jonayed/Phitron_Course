@@ -1,0 +1,28 @@
+<div></div> this tag is block level element each div section will show output one below another.
+<span></span> this tag is inline l=element each span section will show output one after another.
+
+# inorder to make div tags inline
+<div class="first">hello</div>
+<div class="second">hi</div>
+their output would be hello
+                        hi
+.first{
+    display:inline;
+}
+
+.second{
+    display:inline;
+}
+
+now they will show output inline manner 
+hello hi
+
+to make it block just use display property in its class css display:block.
+we can use float: left property in each div to make them available side by side.
+.first{
+    float:left;
+}
+
+.second{
+    float:left;
+}

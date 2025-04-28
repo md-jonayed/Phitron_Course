@@ -1,0 +1,26 @@
+virtual environment --> project folder(outer) --> project folder (inner) -- django app/apps folder/folders 
+
+outer folder is known as root directory which contains inner folder with the same name as root directory and manage.py file. 
+inner folder has :
+init.py
+asgi.py
+settings.py
+urls.py
+wsgi.py
+
+_init_.py :
+The folder which contains_init_.py file is considered as python package.
+wsgi.py :
+WSGI (Web Server Gateway Interface) is a specification that describes how a web server communicates with web applications, synchronous.
+asgi.py:
+Asynchronous Server Gateway Interface. ASGI provides standard for both asynchronous and synchronous
+settings.py:
+This file contains all the information or data about project settings. E.g.:-Database Config information, Template, Installed Application, Validators etc.
+urls.py:
+contains information of url attached with application.
+manage.py :
+manage.py is a project-specific command-line utility
+
+suppose we want a school management project it will have multiple apps e.g 
+students, teachers, courses, fees,results.
+
