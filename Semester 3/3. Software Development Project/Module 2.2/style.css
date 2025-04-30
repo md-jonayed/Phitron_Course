@@ -79,8 +79,8 @@ body {
   }
 }
 .title {
-  color:rgb(red, green, blue);
-  background: linear-gradient(to right,red,orange,green);
+  color: rgb(red, green, blue);
+  background: linear-gradient(to right, red, orange, green);
   font-size: 60px;
   font-weight: 400px;
   font-style: italic;
@@ -100,3 +100,29 @@ body {
 p {
   color: burlywood;
 }
+
+.box {
+  width: 200px;
+  height: 150px;
+  border: 1px solid black;
+  margin: 5px;
+  font-size: 25px;
+}
+
+/* we have center alligned the boxes and it takes all the width of the screen. 
+we can also allign them vertically and horizontally.  */
+.container{
+  display: flex;
+  /* justify-content: space-around; */
+  /* justify-content: space-evenly; */
+  justify-content: center;
+  gap: 10px;
+  flex-direction: row-reverse;
+  height: 100vh;
+  align-items: center;
+
+  /* we will use flex wrap for smooth transitioning of the box sizes regardless of the screen size. */
+  flex-wrap: wrap;
+}
+
+ 
