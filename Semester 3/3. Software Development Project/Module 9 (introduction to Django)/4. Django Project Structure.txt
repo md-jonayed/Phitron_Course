@@ -24,3 +24,11 @@ manage.py is a project-specific command-line utility
 suppose we want a school management project it will have multiple apps e.g 
 students, teachers, courses, fees,results.
 
+* we can create app inside our django project by this command:
+django-admin startapp appname
+the app will be created inside out project folder and it will have admin,apps,models,tests,views these py files but no urls.py so we need to create urls.py inside our app.
+
+* after creating as app django doesn't know about it, we need to explicitely tell django that we have created an app in our project. for this reason we need to go to our project's settings.py file under installed_apps list we need to add our app's name.
+
+* when we created a urls.py file inside our app our project doesn't know about it, we also need to tell our project about this file. in order to do so we need to perform these steps:
+1. inside project's urls.py file create a path give it our app name and use include function give our appname.urls

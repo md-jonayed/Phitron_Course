@@ -1,7 +1,7 @@
 /* external css example */
 
 body {
-  background-color: bisque;
+  background-color:white;
   /* font-family: "Playwrite CU", cursive; */
   /* font-optical-sizing: auto;
   font-weight: <weight>;
@@ -125,4 +125,37 @@ we can also allign them vertically and horizontally.  */
   flex-wrap: wrap;
 }
 
+.box1{
+  background-color: red;
+  /* position:absolute;
+  z-index: -1; */
+}
+
+.box2{
+  background-color: green;
+  /* position: fixed; */
+}
+
+.box3{
+  background-color: blue;
+}
+
+.green{
+  background-color: green;
+  height: 250px;
+  margin: 50px;
+  width: 450px;
+  position: relative;
+}
+
+.red{
+  background-color: red;
+  height: 130px;
+  margin: 50px;
+  width: 130px;
+  border-radius: 100px;
+  position: absolute;
+  top: 5%;
+  left: 25%;
+}
  
