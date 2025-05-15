@@ -1,0 +1,17 @@
+1-> download git
+2-> git --version
+3-> create github account
+4-> create a repository
+5-> the folder(in our pc) we want to upload to github give command - git init
+6-> to add all the files  git add .
+7->  then we need to commit  git commit "message whatever you want to give"
+8-> store files in our main branch   git branch -M main
+9-> store the files in the repository we just created 
+    git remote add origin https:WhatEverTheLinkIs
+10-> to finally upload our data into our repository
+    git push -u
+
+after all of this whenever we will add a new file we will just give these commands
+git add .
+git commit -m "message"
+git push

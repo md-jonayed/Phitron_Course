@@ -9,7 +9,8 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: aquamarine;
+    background-color: #04abf3;
+    color: white;
 }
 
 .navLogo{
@@ -27,4 +28,84 @@ body{
     font-size: 20px;
     font-weight: bold;
     /* color: aliceblue; */
+}
+
+/* .bannarImg{
+    width: 700px;
+    height: 700px;
+    justify-content: center;
+} */
+.bannarImg {
+    width: 700px;
+    height: 700px;
+    justify-content: center;
+    border-radius: 50%; /* This makes it a circle */
+    overflow: hidden;   /* Ensures corners are clipped */
+}
+
+.banner-container{
+    display: flex;;
+    width: 80%;
+    margin: auto;
+    height: 100vh;
+    align-items: center;
+    text-align: center;
+}
+
+.title{
+    font-size: 50px;
+    font-weight: bold;
+    color: #04abf3;
+    text-align: center;
+}
+
+.description{
+    font-size: 25px;
+    color: #03618a;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+button{
+    background-color: #04abf3;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.doctorButton {
+    background-color: #0e80b1;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.doctorButton:hover {
+    background-color: #04adf5;
+}
+
+
+.appointButton{
+    background-color: #04adf5;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    }
+    
+    .appointButton:hover {
+        background-color: #0e80b1;
 }
