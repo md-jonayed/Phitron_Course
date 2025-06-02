@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page 1</title>
+  </head>
+  <body>
+    <h1><a href="/">Home</a></h1>
+    <h1><a href="/myapp/page1/">Page 1</a></h1>
+    <h1><a href="/myapp/page2/">Page 2</a></h1>
+
+    <h1>Srudent information:</h1>
+    <h2>{{information.name}}</h2>
+    <h2>{{information.courses|length}}</h2>
+    <h2>add It is used to add an argument to the value</h2>
+    <h2>{{information.roll|add:"2"}}</h2>
+    <h2>addslashes, It is used to add slashes before quotes</h2>
+    <h2>{{"i'm jonayed"|addslashes}}</h2>
+
+    <h2>
+      capfirst, It is used to capitalize the first character of the value.
+    </h2>
+    <h2>{{information.name|capfirst}}</h2>
+
+    <h2>center, It is used to center the value in a field of a given width</h2>
+    <h2>{{information.name|center:"15"}}</h2>
+
+    <h2>cut, It is used to remove all values of arg from the given string.</h2>
+    <h2>{{"I am Jonayed"|cut:" "}}</h2>
+
+    <h2>date, It is used to format a date according to the given format.</h2>
+    <h2>{{information.date|date:"D d M Y"}}</h2>
+
+    <h2>
+      default It is used to give a default value to a variable. If variable
+      evaluates to False, it will use the default argument given else the
+      variable value itself.
+    </h2>
+    <h2>{{""|default:"empty"}}</h2>
+
+    <h2>
+      dictsort, It takes a list of dictionaries and returns that list sorted by
+      the key given in the argument.
+    </h2>
+    <h2>{{information.values|dictsort:"age"}}</h2>
+
+    <h2>
+      divisibleby, It returns True if the value is divisible by the argument
+    </h2>
+    <h2>{{23|divisibleby:"3"}}</h2>
+
+    <h2>
+      filesizeformat, It is used to format the value like a ‘human-readable’
+      file size (i.e. '13 KB', '4.1 MB', '102 bytes', etc.)
+    </h2>
+
+    <h2>{{123456789|filesizeformat}}</h2>
+
+    <h2>first, It is used to return the first item in a list.</h2>
+    <h2>{{information.courses|first}}</h2>
+
+    <h2>
+      join, It is used to join a list with a string, like Python’s
+      str.join(list)
+    </h2>
+    <h2>{{information.courses|join:"//"}}</h2>
+
+    <h2>last, It is used to return the last item in a list.</h2>
+    <h2>{{information.courses|last}}</h2>
+
+    <h2>
+      length, It is used to return the length of the value. This works for both
+      strings and lists.
+    </h2>
+    <h2>{{information.courses|length}}</h2>
+
+    <h2>linenumbers, It is used to display text with line numbers.</h2>
+    <h2>{{information.courses|linenumbers}}</h2>
+
+    <h2>lower, It is used to converts a string into all lowercase.</h2>
+    <h2>{{information.name|lower}}</h2>
+
+    <h2>
+      make_list, It is used to return the value turned into a list. For a
+      string, it’s a list of characters. For an integer, the argument is cast to
+      a string before creating a list.
+    </h2>
+    <h2>{{information.id|make_list}}</h2>
+
+    <h2>random, It is used to return a random item from the given list.</h2>
+    <h2>{{information.courses|random}}</h2>
+
+    <h2>slice, It is used to return a slice of the list.</h2>
+    <h2>{{information.courses|slice:"3"}}</h2>
+
+    <h2>
+      slugify, It is used to convert to ASCII. It converts spaces to hyphens and
+      removes characters that aren’t alphanumerics, underscores, or hyphens.
+      Converts to lowercase. Also strips leading and trailing whitespace.
+    </h2>
+    <h2>{{"i am jon"|slugify}}</h2>
+
+    <h2>time, It is used to format a time according to the given format.</h2>
+    <h2>{{information.date|time:"H:i"}}</h2>
+    <h2>
+      timesince, It is used to format a date as the time since that date (e.g.,
+      “4 days, 6 hours”). blog_date | timesince:comment_date "
+    </h2>
+    <h2>
+      title, It is used to convert a string into titlecase by making words start
+      with an uppercase character and the remaining characters lowercase. This
+      filter makes no effort to keep “trivial words” in lowercase.
+    </h2>
+    <h2>{{"this is an introduction to django"|title}}</h2>
+    <h2>
+      unordered_list It is used to recursively take a self-nested list and
+      returns an HTML unordered list WITHOUT opening and closing "ul" tags.
+      Example, var | unordered_list
+    </h2>
+    <h2>upper, It is used to convert a string into all uppercase.</h2>
+    <h2>{{"i am jonayed"|upper}}</h2>
+
+    <h2>wordcount, It is used to return the number of words</h2>
+    <h2>{{"I love python"|wordcount}}</h2>
+    
+  </body>
+</html>
