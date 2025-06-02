@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- value acces through DTL -->
+    <h1>Home from context app</h1>
+    <h1>Age: {{info.age}}</h1>
+    <h1>Name: {{info.name}}</h1>
+    <h2>Favorite Fruits: {{info.favorite_fruits}}</h2>
+    <!-- Conditional statements -->
+    {% if info.age >= 18 %}
+    <h2>You are an adult</h2>
+    {% elif info.age < 18 %}
+    <h2>You rae underaged</h2>
+    {% endif %}
+
+    <!-- for loop -->
+    <h1>My favorite fruits:</h1>
+    {% for fruit in info.favorite_fruits %}
+    <h2>{{fruit}}</h2>
+    {% endfor %}
+
+    <h1>Courses i am taking:</h1>
+    {% for course in info.courses %}
+    <h3>
+      {{course.course_id}} -> {{course.course_name}} -> {{course.course_fee}}
+    </h3>
+    {% endfor %} {{info.favorite_fruits}}
+    <h1>{{info.favorite_fruits|join:"-"}}</h1>
+    <h1>{{info.birthday|date:"D d M Y"}}</h1>
+    <h1>age after adding 5 : {{info.age|add:"5"}}</h1>
+    <h1>making name's first letter capital : {{info.name|capfirst}}</h1>
+    <h1>{{"Python is fun"|cut:" "}}</h1>
+    <h1>showing last value from a list: {{info.favorite_fruits|last}}</h1>
+    <h1>showing first value from a list: {{info.favorite_fruits|first}}</h1>
+    <h1>length of a list: {{info.favorite_fruits|length}}</h1>
+    <!-- <h1>Numbering values: {{info.favorite_fruits|linenumbers}}</h1> -->
+     <h1>Making upper case : {{'jonayed'|upper}}</h1>
+     <h1>Making lower case : {{'JONAYED'|lower}}</h1>
+     <h1>Making all word's first char upper : {{"i am jonayed"|title}}</h1>
+     <h1>we ca use timesince filter to show how many min or hour ago a post is published</h1>
+     <h1>{{"hey what's up. Happy Coding"|truncatechars:7}}</h1>
+     <h1>{{"hey what's up. Happy Coding"|truncatewords:3}}</h1>
+  </body>
+</html>
