@@ -1,0 +1,173 @@
+1. create a django project 
+2. create templates and static folder inside that project
+3. create base.html file inside the templates folder.
+4. store the templates folder inside project's settings.py 
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': ['templates'],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
+5. store the static folder inside project's settings.py 
+STATIC_URL = 'static/'
+
+STATICFILES_DIRS = [
+    BASE_DIR/'static',
+]
+
+6. create views.py inside the project folder 
+
+from django.shortcuts import render
+
+
+def home(request):
+    return render(request, 'base.html')
+
+7. modify urls.py of project folder.
+"""
+URL configuration for project5 project.
+
+The `urlpatterns` list routes URLs to views. For more information please see:
+    https://docs.djangoproject.com/en/5.2/topics/http/urls/
+Examples:
+Function views
+    1. Add an import:  from my_app import views
+    2. Add a URL to urlpatterns:  path('', views.home, name='home')
+Class-based views
+    1. Add an import:  from other_app.views import Home
+    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
+Including another URLconf
+    1. Import the include() function: from django.urls import include, path
+    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
+"""
+from django.contrib import admin
+from django.urls import path, include
+from .import views
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path("", views.home, name="home"),
+    path("myapp/", include("myapp.urls")),
+]
+
+8. create a django app inside project folder
+
+9. connect the app in the project folder's settings.py
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'myapp', #our app.
+]
+
+
+10. now add urls.py file inside our app 
+from django.contrib import admin
+from django.urls import path, include
+from .import views
+
+urlpatterns = [
+    path("", views.meal, name="meal"),
+]
+
+
+11. modify our app's views.py file 
+from django.shortcuts import render
+
+# Create your views here.
+
+meals = [
+    {
+        "strMeal": "BeaverTails",
+        "strMealThumb": "https://www.themealdb.com/images/media/meals/ryppsv1511815505.jpg",
+        "idMeal": "52928"
+    },
+    {
+        "strMeal": "Breakfast Potatoes",
+        "strMealThumb": "https://www.themealdb.com/images/media/meals/1550441882.jpg",
+        "idMeal": "52965"
+    },
+    {
+        "strMeal": "Canadian Butter Tarts",
+        "strMealThumb": "https://www.themealdb.com/images/media/meals/wpputp1511812960.jpg",
+        "idMeal": "52923"
+    },
+    {
+        "strMeal": "Montreal Smoked Meat",
+        "strMealThumb": "https://www.themealdb.com/images/media/meals/uttupv1511815050.jpg",
+        "idMeal": "52927"
+    },
+    {
+        "strMeal": "Nanaimo Bars",
+        "strMealThumb": "https://www.themealdb.com/images/media/meals/vwuprt1511813703.jpg",
+        "idMeal": "52924"
+    },
+    {
+        "strMeal": "Pate Chinois",
+        "strMealThumb": "https://www.themealdb.com/images/media/meals/yyrrxr1511816289.jpg",
+        "idMeal": "52930"
+    },
+    {
+        "strMeal": "Pouding chomeur",
+        "strMealThumb": "https://www.themealdb.com/images/media/meals/yqqqwu1511816912.jpg",
+        "idMeal": "52932"
+    },
+    {
+        "strMeal": "Poutine",
+        "strMealThumb": "https://www.themealdb.com/images/media/meals/uuyrrx1487327597.jpg",
+        "idMeal": "52804"
+    },
+    {
+        "strMeal": "Rappie Pie",
+        "strMealThumb": "https://www.themealdb.com/images/media/meals/ruwpww1511817242.jpg",
+        "idMeal": "52933"
+    },
+    {
+        "strMeal": "Split Pea Soup",
+        "strMealThumb": "https://www.themealdb.com/images/media/meals/xxtsvx1511814083.jpg",
+        "idMeal": "52925"
+    }
+]
+
+def meal(request):
+    return render(request,'index.html',context={"meals":meals})
+
+
+12. to inherit our project's base html file create a templates and static folder inside our  app folder.
+
+13. inherit base.html from project folder to app folder 
+
+{% extends 'base.html' %} 
+{% load static %} 
+
+{% block content %}
+<!-- <h1>Index Page</h1> -->
+
+<div style="display: flex; flex-wrap: wrap; gap: 20px">
+  {% for meal in meals %}
+  <div class="card" style="width: 18rem">
+    <img
+      src="{{ meal.strMealThumb }}"
+      class="card-img-top"
+      alt="{{ meal.strMeal }}"
+    />
+    <div class="card-body">
+      <h5 class="card-title">{{ meal.strMeal }}</h5>
+      <p class="card-text">Meal ID: {{ meal.idMeal }}</p>
+      <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
