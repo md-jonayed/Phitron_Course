@@ -1,0 +1,47 @@
+{% extends 'base.html' %} {% load static %} {% block title %}Meals{% endblock %}
+{% block body %}
+<div class="container mt-5">
+  <h1 class="text-center mb-5 fw-bold display-5 text-primary">
+    Our Meal Categories
+  </h1>
+
+  <div class="row g-4">
+    {% for category in items.categories %}
+    <div class="col-md-6 col-lg-4">
+      <div
+        class="card shadow-sm border-0 h-100 transition"
+        style="border-radius: 16px"
+      >
+        <img
+          src="{{ category.strCategoryThumb }}"
+          class="card-img-top"
+          alt="{{ category.strCategory }}"
+          style="border-top-left-radius: 16px; border-top-right-radius: 16px"
+        />
+        <div class="card-body">
+          <h5 class="card-title text-primary fw-semibold">
+            {{ category.strCategory }}
+          </h5>
+          <p class="card-text text-muted">
+            {{ category.strCategoryDescription|truncatewords:25 }}
+          </p>
+        </div>
+        <div class="card-footer bg-white border-0 text-end">
+          <!-- <a href="#" class="btn btn-outline-primary btn-sm">Explore</a> -->
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+  .transition {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .transition:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  }
+</style>
+{% endblock %}

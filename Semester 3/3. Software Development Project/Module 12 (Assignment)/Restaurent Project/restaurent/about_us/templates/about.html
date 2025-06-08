@@ -1,0 +1,45 @@
+{% extends 'base.html' %} {% load static %} {% block title %}About Us - Baper
+Hotel{% endblock %} {% block body %}
+<div class="container mt-5">
+  <div class="row align-items-center">
+    <div class="col-md-6">
+      <h2 class="mb-4">About Baper Hotel</h2>
+      <p>
+        Welcome to <strong>Baper Hotel</strong> – where flavors find a home.
+        Established in 2024, our mission has been to serve soulful food that’s
+        as comforting as it is inspiring. <br /><br />
+        Whether you're stopping by for a casual lunch, a romantic dinner, or a
+        family celebration, Baper Hotel promises an unforgettable dining
+        experience powered by authentic recipes, seasonal ingredients, and warm
+        hospitality.
+      </p>
+      <ul>
+        <li>🌿 Locally sourced ingredients</li>
+        <li>👨‍🍳 Expert chefs with global experience</li>
+        <li>🍽️ Cozy and elegant atmosphere</li>
+      </ul>
+    </div>
+
+    
+    <div class="col-md-6 text-center">
+      <img
+        src="{% static 'restaurent1-bg.png' %}"
+        alt="Inside Baper Hotel"
+        class="img-fluid"
+        style="width: 120%; margin-left: -10%"
+      />
+    </div>
+
+    <div class="row mt-5">
+      <div class="col text-center">
+        <h4 class="mb-3">
+          “Good food is all the sweeter when shared with good friends.”
+        </h4>
+        <p class="text-muted">
+          Join us at Baper Hotel and be part of our food-loving family.
+        </p>
+      </div>
+    </div>
+  </div>
+  {% endblock %}
+</div>
