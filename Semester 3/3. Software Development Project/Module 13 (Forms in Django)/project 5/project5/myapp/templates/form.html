@@ -1,0 +1,96 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<!-- <form method="post">
+  {% csrf_token %}
+  <div class="mb-3">
+    <label for="exampleInputName" class="form-label">Name</label>
+    <input
+      type="text"
+      class="form-control"
+      id="exampleInputName"
+      aria-describedby="nameHelp"
+      name="username"
+    /> -->
+<!-- <div id="emailHelp" class="form-text">
+      We'll never share your email with anyone else.
+    </div> -->
+<!-- </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail" class="form-label">Email Address</label>
+    <input
+      type="Email"
+      class="form-control"
+      id="exampleInputName"
+      aria-describedby="emailHelp"
+      name="email"
+    />
+  </div> -->
+<!-- <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" />
+  </div>
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div> -->
+<!-- <button type="submit" class="btn btn-primary">Submit</button>
+</form> -->
+
+<!-- <br />
+<h3>Hello {{username}}</h3>
+<h3>Email: {{email}}</h3>
+<h3>Welcome abord</h3> -->
+
+<div style="width: 50%; height: 500px; margin: auto" class="pt-5">
+  <h4 style="text-align: center">Movie rating Form</h4>
+  <br />
+  <form method="post" action="{% url 'about' %}">
+    {% csrf_token %}
+    <div class="mb-3">
+      <label for="exampleInputName" class="form-label">Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="exampleInputName"
+        aria-describedby="nameHelp"
+        name="username"
+      />
+      <!-- <div id="emailHelp" class="form-text">
+              We'll never share your email with anyone else.
+            </div> -->
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail" class="form-label">Email Address</label>
+      <input
+        type="Email"
+        class="form-control"
+        id="exampleInputName"
+        aria-describedby="emailHelp"
+        name="email"
+      />
+    </div>
+    <!-- <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" />
+          </div>
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+          </div> -->
+    <select
+      class="form-select"
+      aria-label="Default select example"
+      name="select"
+    >
+      <option selected>Ratings</option>
+      <option value="0">Zero</option>
+      <option value="1">One</option>
+      <option value="2">Two</option>
+      <option value="3">Three</option>
+      <option value="4">Four</option>
+      <option value="5">Five</option>
+    </select>
+    <br />
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+{% endblock %}
