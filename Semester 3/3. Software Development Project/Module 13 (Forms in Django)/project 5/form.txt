@@ -1,0 +1,11 @@
+we use {% csrf_token %} token to sucure form in django.
+there are 2 types of request get and post, post is used for submiting something or creating some thing new and get used for fetching data. 
+
+# now we will learn about django form 
+2 types of form is in django :
+1. model form 
+2. form api. 
+
+# form api:
+we will write in python it will be converted to html .
+
