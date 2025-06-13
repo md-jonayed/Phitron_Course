@@ -4,6 +4,7 @@
   method="post"
   style="width: 50%; height: 500px; margin: auto"
   class="pt-5"
+  enctype="multipart/form-data"
 >
   {% csrf_token %} {{form | crispy}}
   <br />

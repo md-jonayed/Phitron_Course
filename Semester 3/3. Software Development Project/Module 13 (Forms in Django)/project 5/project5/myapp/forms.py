@@ -27,6 +27,7 @@ from django import forms
 
 class ContactForm(forms.Form):
     name = forms.CharField(label="Username")
+    file = forms.FileField()
     email = forms.EmailField(label="Email")
     age = forms.IntegerField(label="Age")
     height = forms.FloatField(label="Height")
