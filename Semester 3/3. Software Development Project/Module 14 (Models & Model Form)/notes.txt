@@ -1,0 +1,66 @@
+# ORM -> Object Relational Mapper
+- it helps our application to interact with out database. 
+- it creates a database schema from defined python classes or objects.
+- it generates SQL from python code. 
+- SQLite is used in Django which is another lite version of MySQL
+- helps to change the database easily.
+- use connectors to connect with database.
+
+# all the objects which are created from django model is all-together knwon as queryset.
+it helps in reading data from database, filter data and order data.
+
+# model is a definative source of information of our data, each model maps to single database table.
+# model class represents a table. 
+# model class is a python class and each attribute of that class is a field in database table.
+# django provide by default sqlite database.
+# we can use other databases such as MySQL, ORACLE etc in django.
+
+# to let django know about our model we use concept of migration (Class->ORM->DB)
+python3 mangae.py makemigrations -> converts python code into sql.
+python3 manage.py migrate -> run the sql code 
+
+# built in field operations:
+1. null 
+2. blank 
+3. default 
+4. verbose name 
+5. db column 
+6. primary key 
+7. unique 
+
+
+# creating super user and accessing admin panel :
+in order to access admin panel we need to create superuser 
+-> python3 manage.py createsuperuser 
+arslan
+# in order to show our models(data table) in admin panel we need to register our models in admin.py inside out app folder. 
+admin.site.register(models.Model_Name)
+
+# showing model data to frontend 
+def home(request):
+    students = models.Students.objects.all()
+    print(students)
+    return render(request, 'home.html', context={'data': students})
+
+# deleting model data from frontend 
+def delete_student(request, roll):
+    std = models.Students.objects.get(pk=roll).delete()
+    print(std)
+    return redirect("home")
+
+here redirect is used for taking us back to our desired page.
+
+#Model Form 
+it is used for creating form from existing model in django. 
+
+# Meta class 
+it is used to  modify another class bhaviour inside that class. 
+meta class can have attributes such as:
+1. model : the model we are about to work with 
+2. fields : which fields are we going to work with 
+3. exclude : a list of fields we want to exclude from our form
+4. widgets
+5. help_text
+6. error_message
+
+we use save() method in our model form to save data into our database. 
