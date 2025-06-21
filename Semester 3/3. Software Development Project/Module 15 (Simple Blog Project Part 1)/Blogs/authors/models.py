@@ -4,7 +4,7 @@ from django.db import models
 
 
 class Author(models.Model):
-    name = models.CharField(max_length=100, help_text="Enter author's name")
+    name = models.CharField(max_length=100)
     bio_data = models.TextField()
     phone_number = models.CharField(max_length=14)
 
