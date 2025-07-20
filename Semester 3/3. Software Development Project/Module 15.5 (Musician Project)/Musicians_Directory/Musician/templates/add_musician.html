@@ -1,0 +1,27 @@
+{% extends 'base.html' %} {% load crispy_forms_tags %} {% block title %}
+<title>Add Musician</title>
+{% endblock %} {% block content %}
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+      <div class="card shadow border-0 rounded-4">
+        <div class="card-body p-4">
+          <h2 class="mb-4 text-center text-primary fw-semibold">
+            Add Musician
+          </h2>
+
+          <form method="POST" novalidate>
+            {% csrf_token %} {{ form|crispy }}
+
+            <div class="d-grid mt-4">
+              <button type="submit" class="btn btn-primary btn-lg rounded-pill">
+                Save Musician
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

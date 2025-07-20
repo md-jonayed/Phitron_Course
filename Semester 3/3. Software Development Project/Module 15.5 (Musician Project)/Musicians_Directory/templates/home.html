@@ -1,0 +1,102 @@
+{% extends 'base.html' %} {% load static %} {% block title %}
+<title>Home Page</title>
+{% endblock %} {% block content %}
+<style>
+  body {
+    background: linear-gradient(to right, #e0f7fa, #fff);
+  }
+
+  .glass-card {
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+
+  .table th,
+  .table td {
+    vertical-align: middle;
+  }
+
+  .action-btn {
+    transition: all 0.2s ease-in-out;
+  }
+
+  .action-btn:hover {
+    transform: scale(1.05);
+  }
+</style>
+
+<div class="container py-5">
+  <div class="row mb-5">
+    <div class="col text-center">
+      <h1 class="fw-bold display-5 text-primary">🎶 Music Library</h1>
+      <p class="text-muted fs-5">
+        Manage your albums and musicians effortlessly
+      </p>
+    </div>
+  </div>
+
+  <div class="glass-card p-4">
+    <div class="table-responsive">
+      <table class="table table-hover align-middle mb-0 text-center">
+        <thead class="table-primary">
+          <tr>
+            <th>ID</th>
+            <th>Musician</th>
+            <th>Email</th>
+            <th>Instrument</th>
+            <th>Album</th>
+            <th>Rating</th>
+            <th>Release Date</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody class="table-light">
+          {% for album in album_data %}
+          <tr>
+            <td>{{ album.id }}</td>
+            <td class="fw-semibold">
+              {{ album.musician.first_name }} {{ album.musician.last_name }}
+            </td>
+            <td>{{ album.musician.email }}</td>
+            <td>{{ album.musician.instrument_type }}</td>
+            <td>{{ album.album_name }}</td>
+            <td>
+              <span class="badge bg-gradient bg-info text-dark fs-6">
+                ⭐ {{ album.rating }}/5
+              </span>
+            </td>
+            <td>{{ album.album_release_date }}</td>
+            <td>
+              <div class="d-flex justify-content-center gap-2">
+                <a
+                  href="{% url 'edit_album' album.id %}"
+                  class="btn btn-outline-warning btn-sm action-btn"
+                >
+                  ✏️ Edit
+                </a>
+                <a
+                  href="{% url 'delete_album' album.id %}"
+                  class="btn btn-outline-danger btn-sm action-btn"
+                  onclick="return confirm('Are you sure you want to delete this album?');"
+                >
+                  🗑️ Delete
+                </a>
+              </div>
+            </td>
+          </tr>
+          {% empty %}
+          <tr>
+            <td colspan="8" class="text-center text-muted py-4 fs-5">
+              No album records found.
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+{% endblock %}

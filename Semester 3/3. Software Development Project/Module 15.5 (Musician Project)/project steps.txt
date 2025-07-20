@@ -1,0 +1,99 @@
+1. create folder 
+2. go to that folder and create virtual environment
+3. install django and other necessary things
+4. start django project 
+5. go inside that project folder
+6. start apps 
+7. go inside project folder's settings.py and insert all the apps name inside INSTALLED_APP =[] list. 
+8. create urls.py files inside each app folders.
+9. include path of those app's urls.py inside the project folder's urls.py file. 
+10. add urls path in all app's urls.py files.
+11. now define views in each views.py files of those apps.
+12. then create models in each models'py files inside all apps.
+13. in order to activate my ORMS (models) go to all admins.pu files inside all apps then regster all apps models (admin.site.register(models.name_of_the_apps_model))
+14. now we need to migrate the models as a database table so we will use python manage.py makemigrations and then python manage.py migrate commands 
+15. then create superuser to access admin panel. 
+16. now create global template inside project folder (Templates folder -> base.html)
+17. let our project know that we are using a global template so go to settings file of the project and inside TEMPLATES list under DIRS list insert the global template folder name. 
+18. now insert bootstrap inside our base html.
+19. create templates folder inside all apps.
+20. setup base html so that we can inherit the base html structure inside our all html files according to our need. 
+21. go to all   views.py files and render our html files of each app.
+22. now create a home page (html file) which will inherit from base.html inside our main project folder's templates folder, as well as it will be used inside our project folder's views.py 
+NOTE:[href="{% url 'url pattern name simillar to views name' %}"] remember to configure urls 
+23. in order to add informations from frontend  we need forms so we will craete forms.py in each apps.
+24. after creating forms we need to pass the forms inside our views as context then inside our html file of that app.
+
+25. our forms might not be looking good, in order to make it look good we will use crispy forms. In order to do so add 'crispy_form', 'cirspy_bootstarp5' inside main project folder's settings.py files under INSTALLED_APP list, also add these 
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
+
+under INSTALLED_APP list.
+
+26. Then add required tags inside our app's html file to load the crispy form,
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block title %} <title>Page Name</title>  {% endblock %}
+{% block content %}
+<form>
+    {% csrf_token %}
+    {{ form | crispy }}
+</form>
+
+{% endblock %}
+
+27. as we have displayed our form to user now we need to store the user inputs which will be collected through forms. we need to validate our form through post method and save the informations into our databases. Then redirect to our home page/in the form page. All these are done though our views.py of our app. 
+
+Example code views.py:
+
+from django.shortcuts import render, redirect
+from .import forms
+# Create your views here.
+
+
+def add_musician(request):
+    if request.method == "POST":
+        musician_form = forms.MusicianForm(request.POST)
+        if musician_form.is_valid():
+            musician_form.save()
+            return redirect('home')
+    else:
+        musician_form = forms.MusicianForm()
+    return render(request, 'add_musician.html', context={'form': musician_form})
+
+
+28. after the 27th step we need to tell our app's html file which method we are using otherwise it will by default use the get method and it will show all informations inside our urls.
+inside form tag use method="post"
+Example syntax:
+{% extends 'base.html' %} {% load crispy_forms_tags %} {% block title %}
+<title>Add Musician</title>
+{% endblock %} {% block content %}
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+      <div class="card shadow border-0 rounded-4">
+        <div class="card-body p-4">
+          <h2 class="mb-4 text-center text-primary fw-semibold">
+            Add Musician
+          </h2>
+
+          <form method="POST" novalidate>
+            {% csrf_token %} {{ form|crispy }}
+
+            <div class="d-grid mt-4">
+              <button type="submit" class="btn btn-primary btn-lg rounded-pill">
+                Save Musician
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+
+29. in order to show our musicians and albums in our homepage we need to pass all our data through project's settings.py. 
+30. to edit or delete any value we need to get the value through id and pass it in our url and view file.
+
