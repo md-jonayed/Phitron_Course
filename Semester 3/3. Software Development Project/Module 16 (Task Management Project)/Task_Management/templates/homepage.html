@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+  <title>Task Manager | Tasks</title>
+{% endblock %}
+
+{% block content %}
+<!-- Hover card effect styling -->
+<style>
+  .hover-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .hover-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
+</style>
+
+<div class="container py-5">
+  <h2 class="text-center mb-5 fw-bold text-primary">Your Task List</h2>
+
+  {% if task %}
+  <div class="row g-4">
+    {% for t in task %}
+    <div class="col-md-6 col-lg-4">
+      <div class="card h-100 border-0 shadow-sm rounded-4 hover-card">
+        <div class="card-body d-flex flex-column justify-content-between">
+          <div>
+            <h5 class="card-title fw-semibold text-dark mb-2">
+              <i class="fas fa-tasks me-2 text-primary"></i>{{ t.task_title }}
+            </h5>
+            <p class="card-text text-muted">{{ t.task_description|truncatewords:20 }}</p>
+            <p class="mb-2">
+              <small class="text-muted">Assigned on: {{ t.task_assign_date|date:"M d, Y" }}</small>
+            </p>
+          </div>
+
+          <div class="mt-auto">
+            {% if t.is_task_completed %}
+              <span class="badge bg-success w-100 py-2 rounded-pill mb-3 text-center">
+                ✅ Completed
+              </span>
+            {% else %}
+              <span class="badge bg-warning text-dark w-100 py-2 rounded-pill mb-3 text-center">
+                ⏳ Pending
+              </span>
+            {% endif %}
+
+            <div class="d-flex justify-content-between">
+              <a href="{% url 'edit_task' t.id %}" class="btn btn-sm btn-outline-primary w-100 me-2">
+                ✏️ Edit
+              </a>
+
+              {% if t.is_task_completed %}
+              <a href="{% url 'delete_task' t.id %}" class="btn btn-sm btn-outline-danger w-100">
+                🗑️ Delete
+              </a>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% else %}
+    <p class="text-center text-muted mt-5 fs-5">No tasks available. Add one to get started!</p>
+  {% endif %}
+</div>
+{% endblock %}

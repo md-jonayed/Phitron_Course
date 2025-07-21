@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block title %}
+  <title>Task Manager | Add Task</title>
+{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <!-- Card container -->
+      <div class="card shadow-sm border-0">
+        <div class="card-body">
+          <!-- Page Title -->
+          <h3 class="card-title mb-4 text-center text-success">
+            <i class="fas fa-tasks me-2"></i>Create a New Task
+          </h3>
+
+          <!-- Task Form -->
+          <form method="post" novalidate>
+            {% csrf_token %}
+            {{ form|crispy }}
+            <div class="d-grid mt-3">
+              <button type="submit" class="btn btn-success btn-lg">
+                <i class="fas fa-plus me-1"></i> Submit
+              </button>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
