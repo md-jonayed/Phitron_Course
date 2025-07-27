@@ -1,0 +1,48 @@
+{% extends 'base.html' %} {% load static %} {% block title %}
+<title>Sign up Page</title>
+{% endblock%} {% block content %}
+<form method="post" class="mt-4" style="width: 50%; margin: auto" novalidate>
+  {% load crispy_forms_tags%} {% if messages %}
+  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+    <div
+      id="liveToast"
+      class="toast show"
+      role="alert"
+      aria-live="assertive"
+      aria-atomic="true"
+    >
+      <div class="toast-header">
+        <strong class="me-auto">Message</strong>
+        <small class="text-muted">just now</small>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="toast"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="toast-body">
+        {% for msg in messages %}
+        <small {% if msg.tags %} class="{{msg.tags}} {% endif %}">
+          {{ msg }}
+        </small>
+
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  {% endif %} {% csrf_token %} {% for f in form %}
+  <div class="mb-3">
+    <label for="{{ f.id_for_label }}" class="form-label">{{ f.label }}</label>
+    {{ f }} {% if f.errors %}
+    <div class="text-danger small mt-1">{{ f.errors|striptags }}</div>
+    {% endif %}
+  </div>
+  {% endfor %}
+  <div class="d-grid">
+    <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+  </div>
+  </br>
+  <p>Already have an account?<a href="{% url 'login'%}">Go to login page</a></p>
+</form>
+{% endblock %}
