@@ -1,0 +1,137 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+  <title>Home</title>
+{% endblock %}
+
+{% block content %}
+<style>
+  /* Prevent button text wrapping and keep consistent shape */
+  .btn {
+    white-space: nowrap;
+  }
+
+  /* Fix the post header layout */
+  .post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: nowrap; /* Prevent wrapping */
+  }
+
+  .post-header-left {
+    flex: 1 1 auto; /* Flexible but can shrink */
+    min-width: 0; /* Allow shrinking below content width */
+    padding-right: 1rem; /* Space between text and button */
+    overflow-wrap: break-word; /* Break long words/titles nicely */
+  }
+
+  .post-header-right {
+    flex: 0 0 auto; /* Fixed width, no shrink */
+    display: flex;
+    align-items: flex-start;
+    min-width: 150px; /* Width of the button container */
+    justify-content: flex-end;
+  }
+</style>
+
+<div class="container py-5">
+
+  <!-- Category Filter -->
+  <div class="row mb-5">
+    <div class="col text-center">
+      <h2 class="fw-bold text-primary mb-4">Filter by Category</h2>
+      <form class="d-flex justify-content-center flex-wrap gap-3">
+
+        <!-- All categories -->
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="category" id="all"
+            {% if not request.resolver_match.kwargs.categorySlug %}checked{% endif %}
+            onclick="window.location.href='/'">
+          <label class="form-check-label" for="all">All</label>
+        </div>
+
+        <!-- Dynamic categories -->
+        {% for cat in category %}
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="category" id="cat-{{ cat.id }}"
+            {% if request.resolver_match.kwargs.categorySlug == cat.slug %}checked{% endif %}
+            onclick="window.location.href='{% url 'postByCategory' cat.slug %}'">
+          <label class="form-check-label" for="cat-{{ cat.id }}">{{ cat.name }}</label>
+        </div>
+        {% endfor %}
+
+      </form>
+    </div>
+  </div>
+
+  <!-- Posts -->
+  <div class="row justify-content-center">
+    {% for post in data %}
+    <div class="col-lg-10 mb-5">
+      <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
+        <div class="card-body p-5">
+
+          <!-- Post Header -->
+          <div class="post-header mb-3">
+            <div class="post-header-left">
+              <h3 class="fw-bold text-dark mb-1">
+                <i class="bi bi-journal-text me-2 text-primary"></i>{{ post.title }}
+              </h3>
+              <p class="text-muted mb-0 small">
+                <i class="bi bi-person-circle me-1"></i>Author:
+                <strong>
+                  {% if post.author.first_name or post.author.last_name %}
+                    {{ post.author.first_name }} {{ post.author.last_name }}
+                  {% else %}
+                    {{ post.author.username }}
+                  {% endif %}
+                </strong>
+              </p>
+              {% for cat in post.category.all %}
+              <p class="text-muted mb-0 small">
+                <i class="bi bi-tag me-1"></i>Category:
+                <strong>{{ cat.name }}</strong>
+              </p>
+              {% endfor %}
+            </div>
+
+            <!-- Read More Button -->
+            <div class="post-header-right">
+              <a class="btn btn-outline-primary btn-sm rounded-pill px-4 shadow-sm"
+                data-bs-toggle="collapse" href="#post-{{ post.id }}" role="button"
+                aria-expanded="false" aria-controls="post-{{ post.id }}">
+                <i class="bi bi-eye me-1"></i>Read More
+              </a>
+            </div>
+          </div>
+
+          <!-- Short Preview -->
+          <p class="text-muted mb-0 text-truncate" style="font-size: 0.95rem;">
+            {{ post.content|truncatewords:30 }}
+          </p>
+
+          <!-- Collapsible Full Content -->
+          <div class="collapse mt-4" id="post-{{ post.id }}">
+            <div class="bg-light p-4 rounded-4 border-start border-4 border-primary shadow-sm">
+              <h6 class="text-secondary fw-semibold mb-3">
+                <i class="bi bi-file-earmark-text me-1"></i>Full Content
+              </h6>
+              <p class="text-dark" style="white-space: pre-wrap;">
+                {{ post.content }}
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    {% empty %}
+    <div class="col text-center">
+      <p class="text-muted">No posts found in this category.</p>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
