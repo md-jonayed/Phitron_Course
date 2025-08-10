@@ -1,0 +1,71 @@
+{% extends 'base.html' %} {% load static %} {% load crispy_forms_tags %} {% block title %}
+<title>Homepage</title>
+{% endblock %} {% block content %}
+<div class="container py-5">
+  <!-- Hero Section -->
+  <div class="row align-items-center mb-5">
+    <!-- Text Section -->
+    <div class="col-md-6">
+      <h1 class="display-5 fw-bold">Secure & Simple Authentication</h1>
+      <p class="lead text-muted">
+        We believe that authentication should be seamless, secure, and
+        user-friendly. Whether you’re signing up for the first time or logging
+        in, our system ensures your data stays safe while giving you fast access
+        to what matters most.
+      </p>
+      <ul class="list-unstyled">
+        <li>✅ Hassle-free sign up process</li>
+        <li>🔒 Advanced password protection</li>
+        <li>⚡ Instant access to your account</li>
+      </ul>
+      {% if user.is_authenticated %}
+      <div class="mt-4">
+        <a href="{% url 'profile' %}" class="btn btn-outline-info">Profile</a>
+        <a href="{% url 'logout' %}" class="btn btn-outline-danger">Logout</a>
+      </div>
+      {% else %}
+      <div>
+        <a href="{% url 'signup' %}" class="btn btn-outline-primary">Sign-up</a>
+        <a href="{% url 'login' %}" class="btn btn-outline-success">Login</a>
+      </div>
+    </div>
+    {% endif %}
+    <!-- Image Section -->
+    <div class="col-md-6 text-center">
+      <img
+        src="https://img.freepik.com/free-vector/cyber-security-concept_53876-93190.jpg"
+        alt="Authentication Illustration"
+        class="img-fluid rounded shadow-sm"
+      />
+    </div>
+  </div>
+
+  <!-- Features Section -->
+  <div class="row text-center mt-5">
+    <div class="col-md-4">
+      <div class="p-4 border rounded shadow-sm">
+        <h3>Strong Security</h3>
+        <p>
+          Your passwords are encrypted and protected by industry-standard
+          algorithms.
+        </p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="p-4 border rounded shadow-sm">
+        <h3>Quick Access</h3>
+        <p>Log in in seconds with our optimized authentication system.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="p-4 border rounded shadow-sm">
+        <h3>User-Friendly</h3>
+        <p>
+          Simple forms, clear instructions, and helpful error messages every
+          step of the way.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block title %}
+<title>Profile Page</title>
+{% endblock %}
+{% block content %}
+<h1>This is my profile page </h1>
+<h2>Hi this is {{user}} </h2>
+<a href="{% url 'changeUserData' %}">Update Profile</a>
+<br/>
+<a href="{% url 'passwordChange' %}">Change your password</a>
+<br/>
+<a href="{% url 'passwordChange2' %}">Change your password without old password</a>
+{% endblock %}
