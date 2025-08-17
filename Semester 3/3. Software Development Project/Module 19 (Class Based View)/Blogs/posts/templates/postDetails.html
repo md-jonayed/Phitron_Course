@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}<title>{{ post.title }}</title>{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-10">
+
+      <!-- Post Card -->
+      <article class="card border-0 shadow-sm rounded-4 overflow-hidden mb-5">
+        {% if post.image %}
+        <img src="{{ post.image.url }}" alt="{{ post.title }}"
+             class="img-fluid w-100"
+             style="max-height:420px; object-fit:cover;">
+        {% endif %}
+
+        <div class="card-body p-4 p-lg-5">
+          <!-- Title -->
+          <h1 class="fw-bold text-primary mb-3">{{ post.title }}</h1>
+
+          <!-- Meta -->
+          <p class="text-muted mb-4 small">
+            <i class="bi bi-person-circle me-1"></i>
+            {% if post.author.first_name or post.author.last_name %}
+              {{ post.author.first_name }} {{ post.author.last_name }}
+            {% else %}
+              {{ post.author.username }}
+            {% endif %}
+            •
+            {% for cat in post.category.all %}
+              <span class="badge bg-light text-dark border">{{ cat.name }}</span>
+            {% endfor %}
+          </p>
+
+          <!-- Content -->
+          <div class="fs-5 text-dark" style="white-space: pre-wrap; line-height:1.7;">
+            {{ post.content }}
+          </div>
+
+          <a href="{% url 'home' %}" class="btn btn-outline-secondary mt-4 rounded-pill">
+            ← Back to Home
+          </a>
+        </div>
+      </article>
+
+      <!-- Comments Section -->
+      <section class="mb-5">
+        <div class="card border-0 shadow-sm rounded-4">
+          <div class="card-body p-4">
+
+            <!-- Existing Comments -->
+            <h3 class="mb-4 text-primary">
+              <i class="bi bi-chat-dots me-2"></i>
+              Comments ({{ comment_count }})
+            </h3>
+            {% if comments %}
+              <ul class="list-unstyled mb-4">
+                {% for comment in comments %}
+                <li class="mb-3 pb-3 border-bottom">
+                  <p class="mb-1">
+                    <strong>{{ comment.name }}</strong>
+                    <span class="text-muted small"> • {{ comment.created_on|date:"M d, Y H:i" }}</span>
+                    <p class="mb-0">{{ comment.body }}</p>
+
+                </li>
+                {% endfor %}
+              </ul>
+            {% else %}
+              <p class="text-muted fst-italic">No comments yet. Be the first one!</p>
+            {% endif %}
+
+            <!-- Add Comment Form -->
+            <h4 class="mb-3 text-secondary">Add a Comment</h4>
+            <form method="post" class="needs-validation">
+              {% csrf_token %}
+              {{ commentForm|crispy }}
+              <div class="d-grid mt-3">
+                <button type="submit"
+                        class="btn btn-primary btn-lg rounded-pill shadow-sm">
+                  <i class="bi bi-send-fill me-2"></i> Submit
+                </button>
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</div>
+{% endblock %}

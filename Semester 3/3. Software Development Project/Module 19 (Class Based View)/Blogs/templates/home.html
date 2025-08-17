@@ -1,0 +1,143 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+  <title>Home</title>
+{% endblock %}
+
+{% block content %}
+<style>
+  .post-card {
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .post-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+  }
+  .post-image {
+    height: 200px;
+    overflow: hidden;
+  }
+  .post-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+  .post-card:hover .post-image img {
+    transform: scale(1.08);
+  }
+  .post-content {
+    padding: 1rem 1.25rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .post-title a {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #212529;
+    text-decoration: none;
+  }
+  .post-title a:hover {
+    color: #0d6efd;
+  }
+  .post-meta {
+    font-size: 0.85rem;
+    color: #6c757d;
+  }
+  .read-more {
+    margin-top: auto; /* pushes button to bottom */
+  }
+</style>
+
+<div class="container py-5">
+
+  <!-- Category Filter -->
+  <div class="row mb-5">
+    <div class="col text-center">
+      <h2 class="fw-bold text-primary mb-4">Filter by Category</h2>
+      <form class="d-flex justify-content-center flex-wrap gap-3">
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="category" id="all"
+            {% if not request.resolver_match.kwargs.categorySlug %}checked{% endif %}
+            onclick="window.location.href='/'">
+          <label class="form-check-label" for="all">All</label>
+        </div>
+        {% for cat in category %}
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="category" id="cat-{{ cat.id }}"
+            {% if request.resolver_match.kwargs.categorySlug == cat.slug %}checked{% endif %}
+            onclick="window.location.href='{% url 'postByCategory' cat.slug %}'">
+          <label class="form-check-label" for="cat-{{ cat.id }}">{{ cat.name }}</label>
+        </div>
+        {% endfor %}
+      </form>
+    </div>
+  </div>
+
+  <!-- Posts Grid -->
+  <div class="row g-4">
+    {% for post in data %}
+    <div class="col-md-6 col-lg-4">
+      <div class="post-card">
+
+        <!-- Image -->
+        {% if post.image %}
+        <div class="post-image">
+          <img src="{{ post.image.url }}" alt="{{ post.title }}">
+        </div>
+        {% endif %}
+
+        <!-- Content -->
+        <div class="post-content">
+          <h3 class="post-title mb-2">
+            <a href="{% url 'DetailPostView' post.id %}">
+              {{ post.title }}
+            </a>
+          </h3>
+
+          <p class="post-meta mb-2">
+            <i class="bi bi-person-circle me-1"></i>
+            {% if post.author.first_name or post.author.last_name %}
+              {{ post.author.first_name }} {{ post.author.last_name }}
+            {% else %}
+              {{ post.author.username }}
+            {% endif %}
+            <br>
+            {% for cat in post.category.all %}
+              <span class="badge bg-light text-dark border">{{ cat.name }}</span>
+            {% endfor %}
+          </p>
+
+          <!-- Short Preview -->
+          <p class="text-muted small mb-3">
+            {{ post.content|truncatewords:20 }}
+          </p>
+
+          <!-- Read More Button -->
+          <div class="read-more">
+            <a href="{% url 'DetailPostView' post.id %}" 
+               class="btn btn-outline-primary btn-sm rounded-pill px-3 shadow-sm">
+              <i class="bi bi-eye me-1"></i> Read More
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    {% empty %}
+    <div class="col text-center">
+      <p class="text-muted">No posts found in this category.</p>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
