@@ -37,7 +37,7 @@ def setSession(request):
     return render(request, 'home.html')
 
 
-def getSession(request):
+def getSession(request):   # not accomplished full functionality of this function
     if 'name' in request.session:
         name = request.session.get('name', 'Guest')
         data = request.session
