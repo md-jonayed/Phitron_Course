@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+<title>CarZ | Profile</title>
+{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+
+      <div class="card shadow-lg rounded-4 border-0 mb-4">
+        <div class="card-header bg-dark text-white text-center py-4 rounded-top-4">
+          <h3 class="mb-0 fw-bold">Your Profile Summary</h3>
+        </div>
+        <div class="card-body text-center p-4">
+          <h4 class="card-title fw-bold mb-2">{{ request.user.username }}</h4>
+          <p class="text-muted mb-3">{{ request.user.email }}</p>
+
+          <div class="row text-center mt-4">
+            <div class="col-12">
+              <h5 class="fw-bold mb-1">{{ request.user.purchase.count }}</h5>
+              <p class="text-muted mb-0">Purchased Cars</p>
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-center gap-3 mt-4">
+            <a href="{% url 'logout' %}" class="btn btn-danger btn-lg rounded-pill fw-bold py-2">
+              Logout
+            </a>
+            <a href="{% url 'password_change' %}" class="btn btn-primary btn-lg rounded-pill fw-bold py-2">
+              Change Password
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <h4 class="fw-bold mb-4 text-center">Your Purchased Cars</h4>
+      {% if request.user.purchase.all %}
+      <div class="row g-4">
+        {% for purchase in request.user.purchase.all %}
+        <div class="col-md-6 col-lg-4">
+          <div class="card shadow-sm rounded-4 border-0 h-100 hover-scale">
+            {% if purchase.car.carImage %}
+            <img src="{{ purchase.car.carImage.url }}"
+                 class="card-img-top rounded-top-4" alt="{{ purchase.car.carModel }}"
+                 style="height: 180px; object-fit: cover">
+            {% else %}
+            <img src="{% static 'default_car.png' %}" 
+                 class="card-img-top rounded-top-4" style="height: 180px; object-fit: cover">
+            {% endif %}
+            <div class="card-body text-center">
+              <h5 class="fw-bold">{{ purchase.car.brand.brandName }} {{ purchase.car.carModel }}</h5>
+              <p class="text-success fw-bold mb-2">💲{{ purchase.car.price }}</p>
+              <span class="badge bg-primary mb-2">Qty: {{ purchase.quantity }}</span>
+              <p class="text-muted small mb-0">Purchased: {{ purchase.purchaseDate|date:"M d, Y" }}</p>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      {% else %}
+      <p class="text-muted text-center">You haven’t purchased any cars yet.</p>
+      {% endif %}
+
+    </div>
+  </div>
+</div>
+
+<style>
+
+.hover-scale {
+  transition: all 0.3s ease;
+}
+.hover-scale:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+}
+
+
+.rounded-circle {
+  border: 3px solid #e63946;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.rounded-circle:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+.card-body > .row > .col-12 {
+  padding: 1rem;
+}
+</style>
+{% endblock %}

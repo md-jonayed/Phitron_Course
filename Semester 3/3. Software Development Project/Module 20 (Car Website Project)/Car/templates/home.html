@@ -1,0 +1,162 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+<title>CarZ | Home</title>
+{% endblock %}
+
+{% block content %}
+<style>
+  
+  .hero-section {
+    background: linear-gradient(135deg, #f8f9fa, #eef1f6);
+    padding: 4rem 2rem;
+    border-radius: 20px;
+    margin-bottom: 4rem;
+  }
+  .hero-text h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+  }
+  .hero-text p {
+    font-size: 1.1rem;
+    color: #6c757d;
+  }
+  .hero-btn {
+    margin-top: 1.2rem;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    border-radius: 50px;
+    transition: 0.3s;
+  }
+  .hero-btn:hover {
+    transform: translateY(-3px);
+  }
+
+  
+  .brand-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+    margin-bottom: 2.5rem;
+  }
+  .brand-btn {
+    border-radius: 50px;
+    padding: 0.4rem 1rem;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+  }
+  .brand-btn.active, .brand-btn:hover {
+    background-color: #e63946;
+    color: white;
+  }
+
+  
+  .car-card {
+    border: none;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    height: 100%;
+  }
+  .car-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+  }
+  .car-image {
+    height: 220px;
+    overflow: hidden;
+  }
+  .car-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+  .car-card:hover .car-image img {
+    transform: scale(1.08);
+  }
+  .price-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #e63946;
+    color: #fff;
+    font-weight: 600;
+    padding: 0.4rem 0.8rem;
+    border-radius: 12px;
+    font-size: 0.85rem;
+  }
+</style>
+
+
+<div class="container hero-section">
+  <div class="row align-items-center">
+    
+    <div class="col-md-6 text-center mb-4 mb-md-0">
+      <img src="{% static 'carHome.png' %}" alt="Car" class="img-fluid rounded shadow">
+    </div>
+
+    
+    <div class="col-md-6 hero-text">
+      <h5 class="text-danger fw-bold">Best Car Deals</h5>
+      <h2>Find Your Dream Car Today</h2>
+      <p>
+        Discover the latest models and unbeatable offers from trusted brands.  
+        Whether you're buying or selling, CarZ connects you with the best options.
+      </p>
+      <a href="#cars" class="btn btn-dark hero-btn">Browse Cars</a>
+    </div>
+  </div>
+</div>
+
+
+<div class="brand-filter">
+  <a href="{% url 'home' %}" 
+     class="btn brand-btn {% if not selected_brand %}active{% endif %}">
+     All
+  </a>
+  {% for brand in brands %}
+    <a href="?brand={{ brand.id }}" 
+       class="btn brand-btn {% if selected_brand == brand.id %}active{% endif %}">
+       {{ brand.brandName }}
+    </a>
+  {% endfor %}
+</div>
+
+
+<div id="cars" class="container my-5">
+  <h2 class="text-center fw-bold mb-4">Available Cars</h2>
+  <div class="row g-4">
+    {% for car in cars %}
+    <div class="col-md-6 col-lg-4">
+      <div class="car-card position-relative">
+
+        
+        <span class="price-badge">${{ car.price }}</span>
+
+        
+        <div class="car-image">
+          {% if car.carImage %}
+            <img src="{{ car.carImage.url }}" alt="{{ car.carModel }}">
+          {% else %}
+            <img src="{% static 'default_car.png' %}" alt="No Image">
+          {% endif %}
+        </div>
+
+        
+        <div class="card-body">
+          <h5 class="fw-bold mb-2">{{ car.brand.brandName }} {{ car.carModel }}</h5>
+          <p class="text-muted mb-2">Stock: {{ car.quantity }}</p>
+          <a href="{% url 'carDeatils' car.id %}" class="btn btn-outline-dark w-100 rounded-pill">View Details</a>
+        </div>
+      </div>
+    </div>
+    {% empty %}
+    <p class="text-center text-muted">No cars available right now.</p>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
